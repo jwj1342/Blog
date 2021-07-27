@@ -18,7 +18,7 @@
   <meta name="author" content="John Wen">
   <meta name="keywords" content="">
   
-  <title>建站的一些心得 - JWJ &#39;S Blog</title>
+  <title>与翻墙有关的一切 - JWJ &#39;S Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -158,7 +158,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="建站的一些心得">
+            <span class="h2" id="subtitle" title="与翻墙有关的一切">
               
             </span>
 
@@ -168,8 +168,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-07-05 14:23" pubdate>
-        2021年7月5日 下午
+      <time datetime="2021-07-20 21:12" pubdate>
+        2021年7月20日 晚上
       </time>
     </span>
   
@@ -180,7 +180,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      602 字
+      1.3k 字
     </span>
   
 
@@ -190,7 +190,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7
+      15
        分钟
     </span>
   
@@ -220,35 +220,58 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">建站的一些心得</h1>
+            <h1 style="display: none">与翻墙有关的一切</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：33 分钟前
+                  本文最后更新于：几秒前
                 
               </p>
             
             <div class="markdown-body">
-              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=83 src="//music.163.com/outchain/player?type=2&id=1441897348&auto=1&height=66"></iframe>
+              <h1 id="什么是“墙”？"><a href="#什么是“墙”？" class="headerlink" title="什么是“墙”？"></a>什么是“墙”？</h1><hr>
+<p>  一般情况下，中国国家防火墙（GFW），即防火长城，主要指中国政府用于过滤互联网国际出口上内容的软硬件系统的集合。<br><strong>个人理解</strong>：国家用于阻止访问境外网站与阻止境外访问国内网站的一种技术。    </p>
+<h1 id="为什么会存在“墙”？"><a href="#为什么会存在“墙”？" class="headerlink" title="为什么会存在“墙”？"></a>为什么会存在“墙”？</h1><hr>
+<p>由于我国网络审查广泛，国内含有“不合适”内容的网站，会受到政府直接的行政干预，被要求自我审查、自我监管，乃至关闭，故防火长城<strong>主要作用</strong>在于分析和过滤中国境外网络的信息互相访问。中国工程院院士、北京邮电大学前校长方滨兴是防火长城关键部分的首要设计师，被称为中国国家防火墙之父。  </p>
+<h1 id="墙那边都有什么？"><a href="#墙那边都有什么？" class="headerlink" title="墙那边都有什么？"></a>墙那边都有什么？</h1><hr>
+<ul>
+<li>谷歌系产品<ul>
+<li>Youtube(油管)</li>
+<li>Twitter（推特）</li>
+<li>Google服务(包括但不限于Gmail，Google scholar)</li>
+</ul>
+</li>
+<li>Wiki（维基百科） </li>
+<li>不符合国情的网站</li>
+<li>不能让国人知情的历史或事件</li>
+<li>等等等<h1 id="墙的技术原理？"><a href="#墙的技术原理？" class="headerlink" title="墙的技术原理？"></a>墙的技术原理？</h1></li>
+</ul>
+<hr>
+<ul>
+<li>域名解析服务缓存污染</li>
+<li>IP地址或传输层端口封锁</li>
+<li>针对TCP和UDP连接的封锁</li>
+<li>TCP连接重置</li>
+<li>中间人攻击</li>
+<li>加密流量探测</li>
+<li>对Tor的刺探（Tor:一种暗网访问工具与技术）</li>
+<li>间歇性封锁国际出口（俗称：高强时期）</li>
+<li>针对流量AI封锁<h1 id="如何突破封锁？"><a href="#如何突破封锁？" class="headerlink" title="如何突破封锁？"></a>如何突破封锁？</h1></li>
+</ul>
+<hr>
+<p><strong>先祭出以下这张图</strong><br><img src="https://cdn.jsdelivr.net/gh/jwj1342/web-file@2021.7.20/1.png" srcset="/img/loading.gif" lazyload>   </p>
+<p>开始之前，我们先聊聊正常的流量是如何运作的。首先，假设你输入了一个网址,相当于发送了一包数据，他会经过本地网络，接入骨干网（通常是163骨干网），再经过DNS（Domain Name Service)，DNS会把这个网址解析成真实服务器地址(IP地址)，再把数据请求发送到真实地址。服务器经过处理，就会返回一个数据包。<br>以上的过程，便是没有“墙”的情况下所有的数据通讯的大概过程。    </p>
+<h3 id="最开始的时候"><a href="#最开始的时候" class="headerlink" title="最开始的时候"></a>最开始的时候</h3><p>根据GFW的工作原理，只要GFW判断出有敏感词汇的数据包便会拦截或者污染DNS，所以只要GFW不探测到数据包的真实内容，就不会拦截。所以只需要伪装加密数据包，使GFW无法识别便可达到目的。或者，发送数据到一台允许访问的服务器上，再由被允许的服务器转发便也可以达到目的。<br>当然，以上这种方法可以完美规避审查，因为1.数据不是明文，没有关键字无法检测。2.DNS在解析的时候发现访问对象是可以连接的服务器，那么DNS解析也正常。<br>这就是最开始流行的VPN与http代理，VPN这个名称便从此成为一种翻墙软件的代称。</p>
+<h3 id="后来"><a href="#后来" class="headerlink" title="后来"></a>后来</h3><p>GFW的人也不是傻子，当GFW发现越来越多的流量都是这种模式，有这种明显的特征（先发送一个数据包请求与一个服务器建立加密连接，然后紧跟着一个代理请求）于是GFW推出了两个政策：1.封锁VPN方式所用的端口，只有申请报备才可使用。2.封锁提供VPN服务的服务器IP地址段。</p>
+<h3 id="现在"><a href="#现在" class="headerlink" title="现在"></a>现在</h3><p>Shadowsocks（SS)的出现改变了这个状况，它把代理服务器分成远端与本地两个概念。它的出现是GFW即检测不到http明文又没有明显特征，使经过GFW的流量被放行。后来衍生出来的ShadowsocksR（SSR),V2ray，Trojan基本都是这种原理。这几种的区别就在于数据过墙时使用的伪装和消除特征的方法不同。那为什么不封锁所有的国际加密流量？超过99%的国际加密流量都是正常流量需求。如果都封锁了，中国就成了局域网了。  </p>
+<h1 id="翻墙是否违法？"><a href="#翻墙是否违法？" class="headerlink" title="翻墙是否违法？"></a>翻墙是否违法？</h1><hr>
+<p>从严格意义上来讲，翻墙访问被禁止的网页或者服务，涉嫌违法。但如何处罚，要根据具体情节与危害程度来定。对于大部分来叔，翻墙过后只是浏览信息，没有散布行为，一般不予处罚。但如果进行散播或者传递，便理论上构成犯罪。如果提供翻墙服务，则一定是违法且犯罪的，并一定要承担法律后果。更人话一点，低调，就没人管。不能涉及到国家利益与安全。<br>那奇怪了，为什么国家继续在允许翻墙的存在呢？这里不多展开，放一个国内看不到的视频。 </p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eLJ4Wyuk-ug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><pre><code>1.上hexo的官网。
-2.根据流程安装（在下载node.js与git的时候，建议科学上网）。
-3.本地部署，注册GitHub账号，建立仓库。
-4.修改安装config.yml文件中的GitHub仓库地址。
-</code></pre>
-<h1 id="自己踩过的一些坑"><a href="#自己踩过的一些坑" class="headerlink" title="自己踩过的一些坑"></a>自己踩过的一些坑</h1><h2 id="安装方面"><a href="#安装方面" class="headerlink" title="安装方面"></a>安装方面</h2><p>我查的教程让我用power shell，结果有如下提醒，没去搜为啥。<br>我直接右键文件夹用git bash,就没有报错了。<br><img src="https://cdn.jsdelivr.net/gh/jwj1342/web-file@2021.7.10/1.png" srcset="/img/loading.gif" lazyload><br>当时用完官方安装命令之后出现了如下的提醒，有一说一，吓到了但其实是安装成功了（我看到内两个WARN，吓得不轻，急忙stackoverflow搜了一下）<br><img src="https://cdn.jsdelivr.net/gh/jwj1342/web-file@2021.7.10/3.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="部署方面"><a href="#部署方面" class="headerlink" title="部署方面"></a>部署方面</h2><p>我是用GitHub page 来部署的，当然挺有意思的，中间有一个需要申请SSH公钥，百度上竟然没有解决办法，把错误信息复制google了一下就搞好了。<br><img src="https://cdn.jsdelivr.net/gh/jwj1342/web-file@2021.7.10/4.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="主题方面"><a href="#主题方面" class="headerlink" title="主题方面"></a>主题方面</h2><p>当时看了好多主题，最终还是用了fluid（因为他们的帮助文档写的很详细）。我强烈建议用第二种方式安装（npm方式），覆盖安装不知道为什么找不到主题配置文件，害。<br><img src="https://cdn.jsdelivr.net/gh/jwj1342/web-file@2021.7.10/5.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="图床方面"><a href="#图床方面" class="headerlink" title="图床方面"></a>图床方面</h2><p>看了好多解决办法，最开始想用洛谷的图床，发现他们不让外部使用，所以还是决定用GitHub再建一个Repositories，用来存放写文章用到的图片，然后用jsDelivr的CDN加速国内对GitHub的访问速度。当时也看了用腾讯云的对象储存，不过只有免费的六个月，还没研究透彻，到时候再说吧。<br><img src="https://cdn.jsdelivr.net/gh/jwj1342/web-file@2021.7.10/2.png" srcset="/img/loading.gif" lazyload>   </p>
-<h1 id="教程的一些推荐"><a href="#教程的一些推荐" class="headerlink" title="教程的一些推荐"></a>教程的一些推荐</h1><p>1.YouTube上的hexo官方视频教程</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PsXWbI2Mqu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
 
 
-<p>2.哔哩哔哩上的官方视频教程</p>
-<iframe src="//player.bilibili.com/player.html?aid=39807850&bvid=BV1Vt411z7Nt&cid=69927212&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>    
 
-<p>3.hexo官方帮助文档<br><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a> </p>
-<p>4.fluid主题官方帮助文档<br><a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/">https://hexo.fluid-dev.com/docs/</a>    </p>
+
 <!--PC和WAP自适应版-->
 <div id="SOHUCS" ></div> 
 <script type="text/javascript"> 
@@ -266,6 +289,9 @@ script.src = 'https://cy-cdn.kuaizhan.com/upload/mobile/wap-js/changyan_mobile.j
 head.appendChild(script);
 } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://cy-cdn.kuaizhan.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
 
+
+
+
             </div>
             <hr>
             <div>
@@ -275,7 +301,7 @@ head.appendChild(script);
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E5%BB%BA%E7%AB%99/">建站</a>
+                      <a class="hover-with-bg" href="/tags/%E7%BF%BB%E5%A2%99/">翻墙</a>
                     
                   </div>
                 
@@ -292,15 +318,15 @@ head.appendChild(script);
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/07/20/%E4%B8%8E%E7%BF%BB%E5%A2%99%E6%9C%89%E5%85%B3%E7%9A%84%E4%B8%80%E5%88%87/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">与翻墙有关的一切</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2021/07/05/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE%E7%AC%94%E8%AE%B0/">
+                        <span class="hidden-mobile">建站的一些心得</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
@@ -314,7 +340,7 @@ head.appendChild(script);
                   
                 
                 
-  <div id="SOHUCS" sid='http://example.com/2021/07/05/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE%E7%AC%94%E8%AE%B0/'></div>
+  <div id="SOHUCS" sid='http://example.com/2021/07/20/%E4%B8%8E%E7%BF%BB%E5%A2%99%E6%9C%89%E5%85%B3%E7%9A%84%E4%B8%80%E5%88%87/'></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#SOHUCS', function() {
       var appid = 'cyvzP0DSx';
