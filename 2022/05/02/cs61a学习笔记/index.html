@@ -18,7 +18,7 @@
   <meta name="author" content="John Wen">
   <meta name="keywords" content="">
   
-  <title>层次分析法 - JWJ &#39;S Blog</title>
+  <title>cs61a学习笔记 - JWJ &#39;S Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -158,7 +158,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="层次分析法">
+            <span class="h2" id="subtitle" title="cs61a学习笔记">
               
             </span>
 
@@ -168,8 +168,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-09-23 09:47" pubdate>
-        2021年9月23日 上午
+      <time datetime="2022-05-02 21:47" pubdate>
+        2022年5月2日 晚上
       </time>
     </span>
   
@@ -180,7 +180,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      304 字
+      398 字
     </span>
   
 
@@ -190,7 +190,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3
+      7
        分钟
     </span>
   
@@ -220,27 +220,61 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">层次分析法</h1>
+            <h1 style="display: none">cs61a学习笔记</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：7 个月前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
             <div class="markdown-body">
-              <h1 id="什么是层次分析法"><a href="#什么是层次分析法" class="headerlink" title="什么是层次分析法"></a>什么是层次分析法</h1><p>(The analytic hierarchy process, 简称AHP)，一种最基础的模型，用于解决方案评价类问题。  </p>
+              <p>[toc]</p>
+<h1>WEEK 1</h1>
+<p>The first  half week is mainly about how to use bash and how to use the OK system in website.</p>
+<p>In the next half week, mostly it’s about python basic knowledge.</p>
+<h3 id="How-to-use-git-bash">How to use git bash</h3>
 <ul>
-<li>个人理解：对于一个问题有几个决策因子，由决策因子的权重决定了最后的决策。  </li>
-<li>定义：把人类的判断转化到若干因素两两之间重要度的比较上，从而把难于量化的定性判断转化为可操作的重要度的比较上面。<h1 id="模型适用的问题"><a href="#模型适用的问题" class="headerlink" title="模型适用的问题"></a>模型适用的问题</h1></li>
-<li>给出若干影响因子，例如高考志愿填报的最终决策，影响因子有学术氛围，校园生活环境，等等。通过这些影响因子的加权处理，最后得到几所大学的评分。</li>
-<li>所给出的数据决策层不能太多，及影响因子不能过多，因为平均随机一致性指标RI中的n最大是15.</li>
-<li>决策层中的数据不是已知，如果为具体数据则不适用。<h1 id="如何建立该模型"><a href="#如何建立该模型" class="headerlink" title="如何建立该模型"></a>如何建立该模型</h1>解决评价类问题首先要想到<blockquote>
-<p>1.评价的目标是什么<br>2.为了达到目标有几种可以选择的方案？<br>3.评价的准则是什么？</p>
-</blockquote>
-</li>
+<li><code>ls</code>: list all files</li>
+<li><code>cd &lt;path&gt;</code>: change the specified directory</li>
+<li><code>mkdir &lt;dir name&gt;</code>: to create a directory</li>
+<li><code>mv &lt;source file&gt;&lt;destination path&gt;</code>: move a file</li>
+<li><code>unzip &lt;source file&gt;</code> : to unzip a file</li>
+<li><code>winpyt python</code>: to open the python edit space</li>
 </ul>
-
+<h3 id="How-to-use-the-OK-system">How to use the OK system</h3>
+<ul>
+<li><code>python ok -q &lt;qustion&gt;</code>: to test a specific question</li>
+<li><code>python ok</code>: to test all the question</li>
+<li><code>python ok -v</code>: to see how you did on all tests</li>
+<li><code>python ok --local</code>: to test it locally</li>
+</ul>
+<h3 id="Python-arithmetic-expressions">Python arithmetic expressions</h3>
+<ul>
+<li>Floating point division (<code>/</code>): divides the first number number by the second, evaluating to a number with a decimal point <em>even if the numbers divide evenly</em>.</li>
+<li>Floor division (<code>//</code>): divides the first number by the second and then rounds down, evaluating to an integer.</li>
+<li>Modulo (<code>%</code>): evaluates to the positive remainder left over from division.</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">7</span> / <span class="hljs-number">4</span><br><span class="hljs-number">1.75</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>(<span class="hljs-number">2</span> + <span class="hljs-number">6</span>) / <span class="hljs-number">4</span><br><span class="hljs-number">2.0</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">7</span> // <span class="hljs-number">4</span>        <span class="hljs-comment"># Floor division (rounding down)</span><br><span class="hljs-number">1</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">7</span> % <span class="hljs-number">4</span>         <span class="hljs-comment"># Modulus (remainder of 7 // 4)</span><br><span class="hljs-number">3</span><br></code></pre></td></tr></table></figure>
+<hr>
+<h3 id="The-difference-between-Python-and-C">The difference between Python and C++</h3>
+<p>when I learn C++, the <code>if</code> are like:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">if</span>(expression)&#123;<br>    &lt;suite&gt;;<br>    &lt;suite&gt;;<br>&#125;<span class="hljs-keyword">else</span>&#123;<br>    &lt;suite&gt;;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>But in Python it’s more like:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">if</span> &lt;expression&gt;:<br>    &lt;suite&gt;<br><span class="hljs-keyword">elif</span> &lt;expression&gt;:<br>    &lt;suite&gt;<br><span class="hljs-keyword">else</span>:<br>    &lt;suite&gt;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>Pay attention to the  <code>elif</code> .It’s different to the C++.And the expression part don’t need to have a <code>( )</code> But need have a<code>:</code></p>
+</blockquote>
+<p>The next it’s the <code>while</code> difference:</p>
+<p>C++:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">while</span>(expression)&#123;<br>    &lt;suite&gt;;<br>    &lt;suite&gt;;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>In Python it’s more like :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">while</span> &lt;expression&gt;:<br>    &lt;suite&gt;<br>    &lt;suite&gt;<br></code></pre></td></tr></table></figure>
+<h3 id="About-the-function">About the function</h3>
+<p>It’s pretty familiar with C++ about the function. In Python it’s like this one:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> &lt;<span class="hljs-title">name</span>&gt;(<span class="hljs-params">&lt;formal parameters&gt;</span>):</span><br>    <br>    <span class="hljs-keyword">return</span> &lt;<span class="hljs-keyword">return</span> expression&gt;<br></code></pre></td></tr></table></figure>
+<p>Here is a good example:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> operator <span class="hljs-keyword">import</span> add, mul<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">square</span>(<span class="hljs-params">x</span>):</span><br>	    <span class="hljs-keyword">return</span> mul(x, x)	<br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum_squares</span>(<span class="hljs-params">x, y</span>):</span><br>		<span class="hljs-keyword">return</span> add(square(x), square(y))<br>	<br>result = sum_squares(<span class="hljs-number">5</span>, <span class="hljs-number">12</span>)<br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>
@@ -250,7 +284,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+                      <a class="hover-with-bg" href="/tags/Pyth/">Pyth</a>
                     
                   </div>
                 
@@ -289,7 +323,7 @@
                   
                 
                 
-  <div id="SOHUCS" sid='http://example.com/2021/09/23/%E5%B1%82%E6%AC%A1%E5%88%86%E6%9E%90%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/'></div>
+  <div id="SOHUCS" sid='http://example.com/2022/05/02/cs61a%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/'></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#SOHUCS', function() {
       var appid = 'cyvzP0DSx';
