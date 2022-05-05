@@ -2,7 +2,7 @@
 
 ![](https://s2.loli.net/2022/05/05/bhtQHR75CrVAfqy.jpg)
 
-Welcome, and the website is **[www.jwj1342.github.io].**
+Welcome, and the website is **[https://jwj1342.github.io/].**
 
 ------
 
