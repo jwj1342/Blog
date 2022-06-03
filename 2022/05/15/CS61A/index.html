@@ -26,8 +26,9 @@
 <meta property="og:image" content="https://s2.loli.net/2022/05/07/2IZEUhOszglTqcP.png">
 <meta property="og:image" content="https://s2.loli.net/2022/05/07/3RnEKyYTFjiDSH1.png">
 <meta property="og:image" content="https://s2.loli.net/2022/05/07/RsSkIx8toDC3Tbq.png">
+<meta property="og:image" content="https://s2.loli.net/2022/06/03/jpKNyQAb7YBcEVq.png">
 <meta property="article:published_time" content="2022-05-15T07:48:01.800Z">
-<meta property="article:modified_time" content="2022-05-15T07:47:51.248Z">
+<meta property="article:modified_time" content="2022-06-03T14:36:33.684Z">
 <meta property="article:author" content="John Wen">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -81,7 +82,7 @@
   <script  src="/js/color-schema.js" ></script>
 
   
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.2"></head>
 
 
 <body>
@@ -183,7 +184,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          3.5k 字
+          5.2k 字
         
       </span>
     
@@ -195,7 +196,7 @@
         
         
           <!-- compatible with older versions-->
-          29 分钟
+          44 分钟
         
       </span>
     
@@ -239,7 +240,7 @@
                 
                   
                     <!-- compatible with older versions-->
-                    本文最后更新于：几秒前
+                    本文最后更新于：31 分钟前
                   
                 
               </p>
@@ -334,6 +335,35 @@
 </tbody></table>
 <p>So the very first question can be see like this:</p>
 <p><img src="https://s2.loli.net/2022/05/07/RsSkIx8toDC3Tbq.png" alt="image-20220506161612929"></p>
+<h4 id="Miscellaneous-Python-Features"><a href="#Miscellaneous-Python-Features" class="headerlink" title="Miscellaneous Python Features"></a>Miscellaneous Python Features</h4><h5 id="Division"><a href="#Division" class="headerlink" title="Division:"></a>Division:</h5><p>When it comes to division, Python provides two infix operators: <code>/</code> and <code>//</code>. The former is normal division, so that it results in a <em>floating point</em>, or decimal value, even if the divisor evenly divides the dividend:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> / <span class="hljs-number">4</span><br><span class="hljs-number">1.25</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">8</span> / <span class="hljs-number">4</span><br><span class="hljs-number">2.0</span><br></code></pre></td></tr></table></figure>
+
+<p>The <code>//</code> operator, on the other hand, rounds the result down to an integer:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> // <span class="hljs-number">4</span><br><span class="hljs-number">1</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>-<span class="hljs-number">5</span> // <span class="hljs-number">4</span><br>-<span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
+
+<p>These two operators are shorthand for the <code>truediv</code> and <code>floordiv</code> functions.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> operator <span class="hljs-keyword">import</span> truediv, floordiv<br><span class="hljs-meta">&gt;&gt;&gt; </span>truediv(<span class="hljs-number">5</span>, <span class="hljs-number">4</span>)<br><span class="hljs-number">1.25</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>floordiv(<span class="hljs-number">5</span>, <span class="hljs-number">4</span>)<br><span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="Multiple-Return-Values"><a href="#Multiple-Return-Values" class="headerlink" title="Multiple Return Values:"></a>Multiple Return Values:</h5><p>It works like this:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">operate</span>(<span class="hljs-params">a, b</span>):</span><br>    suma = a + b<br>    diff = a - b<br>    mul = a * b<br>    div = a / b<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">sum</span>, diff, mul, div<br></code></pre></td></tr></table></figure>
+
+<p>And when we use it ,we do things like this:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">suma, diff, mul, div = operate(n1, n2)<br></code></pre></td></tr></table></figure>
+
+<h5 id="Doctests"><a href="#Doctests" class="headerlink" title="Doctests:"></a>Doctests:</h5><p>When we wrote a function ,we should leave a text about this function to let us know how this function worked.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#The file name is 01.py</span><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">absolute_value</span>(<span class="hljs-params">x</span>):</span><br>    <span class="hljs-string">&quot;&quot;&quot;Return the absolute value of X.</span><br><span class="hljs-string"></span><br><span class="hljs-string">    &gt;&gt;&gt; absolute_value(-3)</span><br><span class="hljs-string">    3</span><br><span class="hljs-string">    &gt;&gt;&gt; absolute_value(0)</span><br><span class="hljs-string">    0</span><br><span class="hljs-string">    &gt;&gt;&gt; absolute_value(3)</span><br><span class="hljs-string">    3</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br>    <span class="hljs-keyword">if</span> x &lt; <span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span> -x<br>    <span class="hljs-keyword">elif</span> x == <span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">return</span> x<br></code></pre></td></tr></table></figure>
+
+<p>when we run the command like this:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">winpty python -m doctest 01.py<br></code></pre></td></tr></table></figure>
+
+<p>There is nothing come out, that’s good. It means we passed all test. If we want to see more details, we use commands like this:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">winpty python -m doctest -v 01.py<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/06/03/jpKNyQAb7YBcEVq.png" alt="image-20220603222442691"></p>
+<h5 id="Default-Arguments"><a href="#Default-Arguments" class="headerlink" title="Default Arguments:"></a>Default Arguments:</h5><p>When we called a function ,the value we give might not be exactly the function needs.We can the function a default values. This is not an assignment statement. This is a place holder for a value.  Like this pieces below:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">divide_exact</span>(<span class="hljs-params">n, d=<span class="hljs-number">10</span></span>):</span><br>    <span class="hljs-string">&quot;&quot;&quot;Return the quotient and remainder of dividing N by D.</span><br><span class="hljs-string"></span><br><span class="hljs-string">    &gt;&gt;&gt; quotient, remainder = divide_exact(618, 10)</span><br><span class="hljs-string">    &gt;&gt;&gt; quotient</span><br><span class="hljs-string">    61</span><br><span class="hljs-string">    &gt;&gt;&gt; remainder</span><br><span class="hljs-string">    8</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br>    <span class="hljs-keyword">return</span> floordiv(n, d), mod(n, d)<br></code></pre></td></tr></table></figure>
+
+<p>It says if there’s no argument passed in to be bound to d then I’ll bind ten to d.</p>
 
               
             </div>

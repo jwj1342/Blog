@@ -19,7 +19,7 @@
     <meta name="description" content="数据库_实验5_笔记三个表如下：    表名称 表内容    B图书信息表    OD(读者订购图书表)    r(读者相关信息表)     三个表的创建代码为： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455USE &#96;rbod2&#96;;DROP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Database_lab5">
-<meta property="og:url" content="http://example.com/2022/05/15/Database/index.html">
+<meta property="og:url" content="http://example.com/2022/06/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B01/index.html">
 <meta property="og:site_name" content="JWJ &#39;S Blog">
 <meta property="og:description" content="数据库_实验5_笔记三个表如下：    表名称 表内容    B图书信息表    OD(读者订购图书表)    r(读者相关信息表)     三个表的创建代码为： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455USE &#96;rbod2&#96;;DROP">
 <meta property="og:locale" content="zh_CN">
@@ -27,8 +27,8 @@
 <meta property="og:image" content="https://s2.loli.net/2022/05/04/IkEMJf3QAyaVUtj.png">
 <meta property="og:image" content="https://s2.loli.net/2022/05/04/oq6MhCr4HAciflz.png">
 <meta property="og:image" content="https://s2.loli.net/2022/05/15/nreWgC9fKIJ7ySi.png">
-<meta property="article:published_time" content="2022-05-15T07:48:01.802Z">
-<meta property="article:modified_time" content="2022-05-15T07:46:44.702Z">
+<meta property="article:published_time" content="2022-06-03T14:45:26.083Z">
+<meta property="article:modified_time" content="2022-05-16T15:49:08.824Z">
 <meta property="article:author" content="John Wen">
 <meta property="article:tag" content="Database">
 <meta name="twitter:card" content="summary_large_image">
@@ -171,8 +171,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-05-15 15:48" pubdate>
-          2022年5月15日 下午
+        <time datetime="2022-06-03 22:45" pubdate>
+          2022年6月3日 晚上
         </time>
       </span>
     
@@ -184,7 +184,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          7.2k 字
+          7.3k 字
         
       </span>
     
@@ -240,7 +240,7 @@
                 
                   
                     <!-- compatible with older versions-->
-                    本文最后更新于：19 天前
+                    本文最后更新于：18 天前
                   
                 
               </p>
@@ -361,7 +361,7 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Rno 读者号,Rname 姓名<br><span class="hljs-keyword">FROM</span> r<br><span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">EXISTS</span> (<br>	<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span><br>	<span class="hljs-keyword">FROM</span> od<br>	<span class="hljs-keyword">WHERE</span> Bno <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">AND</span> od.Rno<span class="hljs-operator">=</span>r.Rno<br>);<br></code></pre></td></tr></table></figure>
 
 <blockquote>
-<p>先对r表中每个人进行遍历，对于每个r中的人，进入内层循环。将od表与r进行连接，并对其中Bno的值</p>
+<p>先对r表中每个人进行遍历，对于每个r中的人，进入内层循环。将od表与r进行连接，并对其中Bno的值判断NULL</p>
 </blockquote>
 </li>
 <li><p>查询单价小于等于10的所有图书被读者订购的数量，输出书名和订购总数量</p>
@@ -456,10 +456,11 @@
 </blockquote>
 </li>
 <li><p>查出每个出版社的图书的平均价格,保存到数据库中(<em>不会</em>)</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> bp(<br>Pub <span class="hljs-type">CHAR</span>(<span class="hljs-number">10</span>),<br>avg_price <span class="hljs-type">FLOAT</span><br>)<br><br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> bp<br><span class="hljs-keyword">SELECT</span> pub <span class="hljs-built_in">AVG</span>(price)<br><span class="hljs-keyword">FROM</span> b<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> pub;<br></code></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> bp(<br>Pub <span class="hljs-type">CHAR</span>(<span class="hljs-number">10</span>),<br>avg_price <span class="hljs-type">FLOAT</span>);<br><br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> bp(Pub,avg_price)<br><span class="hljs-keyword">SELECT</span> pub,<span class="hljs-built_in">AVG</span>(price)<br><span class="hljs-keyword">FROM</span> b<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> pub;<br></code></pre></td></tr></table></figure>
 
 <blockquote>
-<p>不会写，答案也错了，等和室友讨论</p>
+<p>这题很综合，先是题目中<em>保存到数据库中</em>的意思，我们应该先建立一个新的数据库，再使用<code>INSERT INTO</code>将b表中的两列处理后插入。</p>
+<p>PS.需要注意的是在插入的时候，要指定插入的列，同时记得<strong>打括号。</strong></p>
 </blockquote>
 </li>
 <li><p>将所有Beijing读者订购的图书数量改为一本</p>
@@ -501,7 +502,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Database_lab5</div>
-      <div>http://example.com/2022/05/15/Database/</div>
+      <div>http://example.com/2022/06/03/数据库实验笔记1/</div>
     </div>
     <div class="license-meta">
       
@@ -513,7 +514,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年5月15日</div>
+          <div>2022年6月3日</div>
         </div>
       
       
@@ -543,9 +544,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/06/03/Git&amp;&amp;GIthub%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Git &amp; Github 相关">
+                      <a href="/2022/06/03/%E9%99%A2%E6%A0%A1%E6%95%B4%E7%90%86/" title="SCHOOL GOAL">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Git &amp; Github 相关</span>
+                        <span class="hidden-mobile">SCHOOL GOAL</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -553,8 +554,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/05/15/CS61A/" title="CS61A_Learning">
-                        <span class="hidden-mobile">CS61A_Learning</span>
+                      <a href="/2022/06/03/Git&amp;&amp;GIthub%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Git &amp; Github 相关">
+                        <span class="hidden-mobile">Git &amp; Github 相关</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
