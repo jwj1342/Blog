@@ -16,12 +16,12 @@
   <meta name="author" content="John Wen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="CS61A-Learning Notes[TOC] WEEK 1The first  half week is mainly about how to use bash and how to use the OK system in website. In the next half week, mostly it’s about python basic knowledge. How to us">
+    <meta name="description" content="CS61A-Learning Notes [TOC] WEEK 1 The first  half week is mainly about how to use bash and how to use the OK system in website. In the next half week, mostly it’s about python basic knowledge. How to">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CS61A_Learning">
 <meta property="og:url" content="http://example.com/2022/05/15/CS61A/index.html">
 <meta property="og:site_name" content="JWJ &#39;S Blog">
-<meta property="og:description" content="CS61A-Learning Notes[TOC] WEEK 1The first  half week is mainly about how to use bash and how to use the OK system in website. In the next half week, mostly it’s about python basic knowledge. How to us">
+<meta property="og:description" content="CS61A-Learning Notes [TOC] WEEK 1 The first  half week is mainly about how to use bash and how to use the OK system in website. In the next half week, mostly it’s about python basic knowledge. How to">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s2.loli.net/2022/05/05/JRfjsecDUwEmgoS.png">
 <meta property="article:published_time" content="2022-05-15T07:48:01.800Z">
@@ -79,7 +79,11 @@
   <script  src="/js/color-schema.js" ></script>
 
   
-<meta name="generator" content="Hexo 5.4.2"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head>
 
 
 <body>
@@ -244,154 +248,156 @@
             
             <div class="markdown-body">
               
-              <h1 id="CS61A-Learning-Notes"><a href="#CS61A-Learning-Notes" class="headerlink" title="CS61A-Learning Notes"></a>CS61A-Learning Notes</h1><p>[TOC]</p>
-<h2 id="WEEK-1"><a href="#WEEK-1" class="headerlink" title="WEEK 1"></a>WEEK 1</h2><p>The first  half week is mainly about how to use bash and how to use the OK system in website.</p>
+              <h1>CS61A-Learning Notes</h1>
+<p>[TOC]</p>
+<h2 id="WEEK-1">WEEK 1</h2>
+<p>The first  half week is mainly about how to use bash and how to use the OK system in website.</p>
 <p>In the next half week, mostly it’s about python basic knowledge.</p>
-<h3 id="How-to-use-git-bash"><a href="#How-to-use-git-bash" class="headerlink" title="How to use git bash"></a>How to use git bash</h3><ul>
+<h3 id="How-to-use-git-bash">How to use git bash</h3>
+<ul>
 <li><code>ls</code>: list all files</li>
 <li><code>cd &lt;path&gt;</code>: change the specified directory</li>
 <li><code>mkdir &lt;dir name&gt;</code>: to create a directory</li>
 <li><code>mv &lt;source file&gt;&lt;destination path&gt;</code>: move a file</li>
 <li><code>unzip &lt;source file&gt;</code> : to unzip a file</li>
-<li><code>winpyt python</code>: to open the python edit space<h3 id="How-to-use-the-OK-system"><a href="#How-to-use-the-OK-system" class="headerlink" title="How to use the OK system"></a>How to use the OK system</h3></li>
+<li><code>winpyt python</code>: to open the python edit space</li>
+</ul>
+<h3 id="How-to-use-the-OK-system">How to use the OK system</h3>
+<ul>
 <li><code>python ok -q &lt;qustion&gt;</code>: to test a specific question</li>
 <li><code>python ok</code>: to test all the question</li>
 <li><code>python ok -v</code>: to see how you did on all tests</li>
 <li><code>python ok --local</code>: to test it locally</li>
 </ul>
-<h3 id="How-to-use-Python-in-bash"><a href="#How-to-use-Python-in-bash" class="headerlink" title="How to use Python in bash"></a>How to use Python in bash</h3><ul>
+<h3 id="How-to-use-Python-in-bash">How to use Python in bash</h3>
+<ul>
 <li><code>python3 example.py</code>: it will run the code in the file you provide and return you to the command line.</li>
-<li><code>python3 -i foo.py</code>:The <code>-i</code> option runs your Python script, then opens an interactive session. In an interactive session, you run Python code line by line and get immediate feedback instead of running an entire file all at once. </li>
+<li><code>python3 -i foo.py</code>:The <code>-i</code> option runs your Python script, then opens an interactive session. In an interactive session, you run Python code line by line and get immediate feedback instead of running an entire file all at once.</li>
 <li><code>python3 -m doctest foo.py</code>: Runs doctests in a particular file. Doctests are surrounded by triple quotes (<code>&quot;&quot;&quot;</code>) within functions.Each test in the file consists of <code>&gt;&gt;&gt;</code> followed by some Python code and the expected output。</li>
 </ul>
-<h3 id="Python-arithmetic-expressions"><a href="#Python-arithmetic-expressions" class="headerlink" title="Python arithmetic expressions"></a>Python arithmetic expressions</h3><ul>
+<h3 id="Python-arithmetic-expressions">Python arithmetic expressions</h3>
+<ul>
 <li>Floating point division (<code>/</code>): divides the first number number by the second, evaluating to a number with a decimal point <em>even if the numbers divide evenly</em>.</li>
 <li>Floor division (<code>//</code>): divides the first number by the second and then rounds down, evaluating to an integer.</li>
 <li>Modulo (<code>%</code>): evaluates to the positive remainder left over from division.</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">7</span> / <span class="hljs-number">4</span><br><span class="hljs-number">1.75</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>(<span class="hljs-number">2</span> + <span class="hljs-number">6</span>) / <span class="hljs-number">4</span><br><span class="hljs-number">2.0</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">7</span> // <span class="hljs-number">4</span>        <span class="hljs-comment"># Floor division (rounding down)</span><br><span class="hljs-number">1</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">7</span> % <span class="hljs-number">4</span>         <span class="hljs-comment"># Modulus (remainder of 7 // 4)</span><br><span class="hljs-number">3</span><br></code></pre></td></tr></table></figure>
-
-
-
 <hr>
-<h3 id="The-difference-between-Python-and-C"><a href="#The-difference-between-Python-and-C" class="headerlink" title="The difference between Python and C++"></a>The difference between Python and C++</h3><p>when I learn C++, the <code>if</code> are like:</p>
+<h3 id="The-difference-between-Python-and-C">The difference between Python and C++</h3>
+<p>when I learn C++, the <code>if</code> are like:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">if</span>(expression)&#123;<br>    &lt;suite&gt;;<br>    &lt;suite&gt;;<br>&#125;<span class="hljs-keyword">else</span>&#123;<br>    &lt;suite&gt;;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 <p>But in Python it’s more like:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">if</span> &lt;expression&gt;:<br>    &lt;suite&gt;<br><span class="hljs-keyword">elif</span> &lt;expression&gt;:<br>    &lt;suite&gt;<br><span class="hljs-keyword">else</span>:<br>    &lt;suite&gt;<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>Pay attention to the  <code>elif</code> .It’s different to the C++.And the expression part don’t need to have a <code>( )</code> But need have a<code>:</code></p>
 </blockquote>
 <p>The next it’s the <code>while</code> difference:</p>
 <p>C++:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">while</span>(expression)&#123;<br>    &lt;suite&gt;;<br>    &lt;suite&gt;;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 <p>In Python it’s more like :</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">while</span> &lt;expression&gt;:<br>    &lt;suite&gt;<br>    &lt;suite&gt;<br></code></pre></td></tr></table></figure>
-
-<h3 id="About-the-function"><a href="#About-the-function" class="headerlink" title="About the function"></a>About the function</h3><p>It’s pretty familiar with C++ about the function. In Python it’s like this one:</p>
+<h3 id="About-the-function">About the function</h3>
+<p>It’s pretty familiar with C++ about the function. In Python it’s like this one:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> &lt;<span class="hljs-title">name</span>&gt;(<span class="hljs-params">&lt;formal parameters&gt;</span>):</span><br>    <br>    <span class="hljs-keyword">return</span> &lt;<span class="hljs-keyword">return</span> expression&gt;<br></code></pre></td></tr></table></figure>
-
 <p>Here is a good example:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> operator <span class="hljs-keyword">import</span> add, mul<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">square</span>(<span class="hljs-params">x</span>):</span><br>	    <span class="hljs-keyword">return</span> mul(x, x)	<br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum_squares</span>(<span class="hljs-params">x, y</span>):</span><br>		<span class="hljs-keyword">return</span> add(square(x), square(y))<br>	<br>result = sum_squares(<span class="hljs-number">5</span>, <span class="hljs-number">12</span>)<br></code></pre></td></tr></table></figure>
-
 <hr>
 <p>In C++, we execute every codes by main function. It’s easy to define any variables. But in Python , things become  a little bit unfamiliar.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">x=<span class="hljs-number">12</span><br>z=<span class="hljs-number">7</span><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">f</span>(<span class="hljs-params">y</span>):</span><br>    x=<span class="hljs-number">3</span><br>    <span class="hljs-built_in">print</span>(x,y,z)<br>f(<span class="hljs-number">7</span>)<br><span class="hljs-built_in">print</span>(x)<br></code></pre></td></tr></table></figure>
-
 <p>The code above is equal to C++ code below:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">int</span> x=<span class="hljs-number">12</span>,z=<span class="hljs-number">7</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">f</span><span class="hljs-params">(<span class="hljs-keyword">int</span> y)</span></span>&#123;<br>	<span class="hljs-keyword">int</span> x=<span class="hljs-number">3</span>;<br>	cout&lt;&lt;x&lt;&lt;<span class="hljs-string">&quot; &quot;</span>&lt;&lt;y&lt;&lt;<span class="hljs-string">&quot; &quot;</span>&lt;&lt;z&lt;&lt;endl;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>	<span class="hljs-built_in">f</span>(<span class="hljs-number">7</span>);<br>	cout&lt;&lt;x;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 <p>In Python we introduce a new concept: <strong>frame</strong>. There are two kind of frame: local frame and global frame. Every variables shows in a function called : this variables is in a local frame. And every variables shows right in Python we call it was in global frame.</p>
 <p>The most important things is : <strong>when we try to find variables values we should follow the frame its in OR its up frame.</strong>    :red_circle:</p>
-<h2 id="week-2"><a href="#week-2" class="headerlink" title="week 2"></a>week 2</h2><h3 id="Print-and-None"><a href="#Print-and-None" class="headerlink" title="Print and None"></a>Print and None</h3><p>In the week Q&amp;A video , some student ask one question about this topic.</p>
+<h2 id="week-2">week 2</h2>
+<h3 id="Print-and-None">Print and None</h3>
+<p>In the week Q&amp;A video , some student ask one question about this topic.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">print</span> (<span class="hljs-number">1</span>),<span class="hljs-built_in">print</span>(<span class="hljs-number">2</span>))<br><span class="hljs-number">1</span><br><span class="hljs-number">2</span><br><span class="hljs-literal">None</span> <span class="hljs-literal">None</span><br></code></pre></td></tr></table></figure>
-
 <p>None Indicates that <strong>Nothing is Returned</strong>: The special value None represents nothing in Python . A function that does not explicitly return a value will return None.</p>
  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">does_not_return_square</span>(<span class="hljs-params">x</span>):</span><br>    	x * x<br>        <br><span class="hljs-meta">&gt;&gt;&gt; </span>does_not_return_square(<span class="hljs-number">4</span>)    <br></code></pre></td></tr></table></figure>
-
 <p>when we run the code above, nothing displayed. Because <strong>None is not displayed by the interpreter as the value of an expression.</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>sixteen = does_not_return_square(<span class="hljs-number">4</span>)<br><span class="hljs-meta">&gt;&gt;&gt; </span>sixteen + <span class="hljs-number">4</span><br></code></pre></td></tr></table></figure>
-
 <p>If we run the code like above. The python will say:</p>
 <blockquote>
-<p>File “<stdin>“, line 1, in <module><br>TypeError :  unsupported operand type(s) for +: ‘NoneType’ and ‘int’</p>
+<p>File “<stdin>”, line 1, in <module><br>
+TypeError :  unsupported operand type(s) for +: ‘NoneType’ and ‘int’</p>
 </blockquote>
 <p>The reason why the Python can’t add 4 to the sixteen because the None it’s not means 0,but it means another Type.</p>
-<h3 id="Pure-Functions-amp-Non-Pure-Functions"><a href="#Pure-Functions-amp-Non-Pure-Functions" class="headerlink" title="Pure Functions &amp; Non-Pure Functions"></a>Pure Functions &amp; Non-Pure Functions</h3><p>This part is easy, so I just copy the picture in class:</p>
+<h3 id="Pure-Functions-Non-Pure-Functions">Pure Functions &amp; Non-Pure Functions</h3>
+<p>This part is easy, so I just copy the picture in class:</p>
 <table>
 <thead>
 <tr>
-<th align="center">Type</th>
-<th align="center">Img</th>
+<th style="text-align:center">Type</th>
+<th style="text-align:center">Img</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center"><strong>Pure Functions</strong>: just return values</td>
-<td align="center"><img src="https://s2.loli.net/2022/05/07/2IZEUhOszglTqcP.png" alt="image-20220506161307060"></td>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Pure Functions</strong>: just return values</td>
+<td style="text-align:center"><img src="https://s2.loli.net/2022/05/07/2IZEUhOszglTqcP.png" alt="image-20220506161307060"></td>
 </tr>
 <tr>
-<td align="center"><strong>Non-Pure Functions</strong>: have side effects</td>
-<td align="center"><img src="https://s2.loli.net/2022/05/07/3RnEKyYTFjiDSH1.png" alt="image-20220506161320811"></td>
+<td style="text-align:center"><strong>Non-Pure Functions</strong>: have side effects</td>
+<td style="text-align:center"><img src="https://s2.loli.net/2022/05/07/3RnEKyYTFjiDSH1.png" alt="image-20220506161320811"></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>So the very first question can be see like this:</p>
 <p><img src="https://s2.loli.net/2022/05/07/RsSkIx8toDC3Tbq.png" alt="image-20220506161612929"></p>
-<h3 id="Miscellaneous-Python-Features"><a href="#Miscellaneous-Python-Features" class="headerlink" title="Miscellaneous Python Features"></a>Miscellaneous Python Features</h3><h4 id="Division"><a href="#Division" class="headerlink" title="Division:"></a>Division:</h4><p>When it comes to division, Python provides two infix operators: <code>/</code> and <code>//</code>. The former is normal division, so that it results in a <em>floating point</em>, or decimal value, even if the divisor evenly divides the dividend:</p>
+<h3 id="Miscellaneous-Python-Features">Miscellaneous Python Features</h3>
+<h4 id="Division">Division:</h4>
+<p>When it comes to division, Python provides two infix operators: <code>/</code> and <code>//</code>. The former is normal division, so that it results in a <em>floating point</em>, or decimal value, even if the divisor evenly divides the dividend:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> / <span class="hljs-number">4</span><br><span class="hljs-number">1.25</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">8</span> / <span class="hljs-number">4</span><br><span class="hljs-number">2.0</span><br></code></pre></td></tr></table></figure>
-
 <p>The <code>//</code> operator, on the other hand, rounds the result down to an integer:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> // <span class="hljs-number">4</span><br><span class="hljs-number">1</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>-<span class="hljs-number">5</span> // <span class="hljs-number">4</span><br>-<span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
-
 <p>These two operators are shorthand for the <code>truediv</code> and <code>floordiv</code> functions.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> operator <span class="hljs-keyword">import</span> truediv, floordiv<br><span class="hljs-meta">&gt;&gt;&gt; </span>truediv(<span class="hljs-number">5</span>, <span class="hljs-number">4</span>)<br><span class="hljs-number">1.25</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>floordiv(<span class="hljs-number">5</span>, <span class="hljs-number">4</span>)<br><span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
-
-<h4 id="Multiple-Return-Values"><a href="#Multiple-Return-Values" class="headerlink" title="Multiple Return Values:"></a>Multiple Return Values:</h4><p>It works like this:</p>
+<h4 id="Multiple-Return-Values">Multiple Return Values:</h4>
+<p>It works like this:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">operate</span>(<span class="hljs-params">a, b</span>):</span><br>    suma = a + b<br>    diff = a - b<br>    mul = a * b<br>    div = a / b<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">sum</span>, diff, mul, div<br></code></pre></td></tr></table></figure>
-
 <p>And when we use it ,we do things like this:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">suma, diff, mul, div = operate(n1, n2)<br></code></pre></td></tr></table></figure>
-
-<h4 id="Doctests"><a href="#Doctests" class="headerlink" title="Doctests:"></a>Doctests:</h4><p>When we wrote a function ,we should leave a text about this function to let us know how this function worked.</p>
+<h4 id="Doctests">Doctests:</h4>
+<p>When we wrote a function ,we should leave a text about this function to let us know how this function worked.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#The file name is 01.py</span><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">absolute_value</span>(<span class="hljs-params">x</span>):</span><br>    <span class="hljs-string">&quot;&quot;&quot;Return the absolute value of X.</span><br><span class="hljs-string"></span><br><span class="hljs-string">    &gt;&gt;&gt; absolute_value(-3)</span><br><span class="hljs-string">    3</span><br><span class="hljs-string">    &gt;&gt;&gt; absolute_value(0)</span><br><span class="hljs-string">    0</span><br><span class="hljs-string">    &gt;&gt;&gt; absolute_value(3)</span><br><span class="hljs-string">    3</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br>    <span class="hljs-keyword">if</span> x &lt; <span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span> -x<br>    <span class="hljs-keyword">elif</span> x == <span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">return</span> x<br></code></pre></td></tr></table></figure>
-
 <p>when we run the command like this:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">winpty python -m doctest 01.py<br></code></pre></td></tr></table></figure>
-
 <p>There is nothing come out, that’s good. It means we passed all test. If we want to see more details, we use commands like this:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">winpty python -m doctest -v 01.py<br></code></pre></td></tr></table></figure>
-
 <p><img src="https://s2.loli.net/2022/06/03/jpKNyQAb7YBcEVq.png" alt="image-20220603222442691"></p>
-<h4 id="Default-Arguments"><a href="#Default-Arguments" class="headerlink" title="Default Arguments:"></a>Default Arguments:</h4><p>When we called a function ,the value we give might not be exactly the function needs.We can the function a default values. This is not an assignment statement. This is a place holder for a value.  Like this pieces below:</p>
+<h4 id="Default-Arguments">Default Arguments:</h4>
+<p>When we called a function ,the value we give might not be exactly the function needs.We can the function a default values. This is not an assignment statement. This is a place holder for a value.  Like this pieces below:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">divide_exact</span>(<span class="hljs-params">n, d=<span class="hljs-number">10</span></span>):</span><br>    <span class="hljs-string">&quot;&quot;&quot;Return the quotient and remainder of dividing N by D.</span><br><span class="hljs-string"></span><br><span class="hljs-string">    &gt;&gt;&gt; quotient, remainder = divide_exact(618, 10)</span><br><span class="hljs-string">    &gt;&gt;&gt; quotient</span><br><span class="hljs-string">    61</span><br><span class="hljs-string">    &gt;&gt;&gt; remainder</span><br><span class="hljs-string">    8</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br>    <span class="hljs-keyword">return</span> floordiv(n, d), mod(n, d)<br></code></pre></td></tr></table></figure>
-
 <p>It says if there’s no argument passed in to be bound to d then I’ll bind ten to d.</p>
-<h4 id="Error-Messages"><a href="#Error-Messages" class="headerlink" title="Error Messages:"></a>Error Messages:</h4><table>
+<h4 id="Error-Messages">Error Messages:</h4>
+<table>
 <thead>
 <tr>
-<th align="center">Error Types</th>
-<th align="center">Descriptions</th>
+<th style="text-align:center">Error Types</th>
+<th style="text-align:center">Descriptions</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">SyntaxError</td>
-<td align="center">Contained improper syntax (e.g. missing a colon after an <code>if</code> statement or forgetting to close parentheses&#x2F;quotes)</td>
+<tbody>
+<tr>
+<td style="text-align:center">SyntaxError</td>
+<td style="text-align:center">Contained improper syntax (e.g. missing a colon after an <code>if</code> statement or forgetting to close parentheses/quotes)</td>
 </tr>
 <tr>
-<td align="center">IndentationError</td>
-<td align="center">Contained improper indentation (e.g. inconsistent indentation of a function body)</td>
+<td style="text-align:center">IndentationError</td>
+<td style="text-align:center">Contained improper indentation (e.g. inconsistent indentation of a function body)</td>
 </tr>
 <tr>
-<td align="center">TypeError</td>
-<td align="center">Attempted operation on incompatible types (e.g. trying to add a function and a number) or called function with the wrong number of arguments</td>
+<td style="text-align:center">TypeError</td>
+<td style="text-align:center">Attempted operation on incompatible types (e.g. trying to add a function and a number) or called function with the wrong number of arguments</td>
 </tr>
 <tr>
-<td align="center">ZeroDivisionError</td>
-<td align="center">Attempted division by zero</td>
+<td style="text-align:center">ZeroDivisionError</td>
+<td style="text-align:center">Attempted division by zero</td>
 </tr>
-</tbody></table>
-<h3 id="Designing-Functions"><a href="#Designing-Functions" class="headerlink" title="Designing Functions"></a>Designing Functions</h3><p>There are three principles to design a function:</p>
+</tbody>
+</table>
+<h3 id="Designing-Functions">Designing Functions</h3>
+<p>There are three principles to design a function:</p>
 <ol>
 <li>Give each function exactly one job, but make it apply to many related situations.</li>
 <li>Don’t repeat yourself (DRY): Implement a process just once, but execute it many times.</li>
@@ -401,17 +407,14 @@
 <p>One useful skills:</p>
 <p>We can use <code>assert</code>statement to alert poeple that we inputs the worong values.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">assert</span> <span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span> , <span class="hljs-string">&#x27;Math is bad&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">assert</span> <span class="hljs-number">3</span>&lt;<span class="hljs-number">2</span>, <span class="hljs-string">&#x27;Math is bad&#x27;</span><br>Traceback (most recent call last):<br>  File <span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;module&gt;<br>AssertionError: Math <span class="hljs-keyword">is</span> bad<br></code></pre></td></tr></table></figure>
-
 <p>As we can see ,this python feather allows me to avoid the users inputs which I don’t want.</p>
 </blockquote>
-<h3 id="Functions-as-Arguments"><a href="#Functions-as-Arguments" class="headerlink" title="Functions as Arguments"></a>Functions as Arguments</h3><p>The only things to understnd this part is to run this code in my mind:</p>
+<h3 id="Functions-as-Arguments">Functions as Arguments</h3>
+<p>The only things to understnd this part is to run this code in my mind:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">summation</span>(<span class="hljs-params">n, term</span>):</span><br>    total, k = <span class="hljs-number">0</span>, <span class="hljs-number">1</span><br>    <span class="hljs-keyword">while</span> k &lt;= n:<br>        total, k = total + term(k), k + <span class="hljs-number">1</span><br>    <span class="hljs-keyword">return</span> total<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">cube</span>(<span class="hljs-params">x</span>):</span><br>    <span class="hljs-keyword">return</span> x*x*x<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum_cubes</span>(<span class="hljs-params">n</span>):</span><br>    <span class="hljs-keyword">return</span> summation(n, cube)<br><br>result = sum_cubes(<span class="hljs-number">3</span>)<br></code></pre></td></tr></table></figure>
-
-
-
-<h3 id="Functions-as-Return-Values"><a href="#Functions-as-Return-Values" class="headerlink" title="Functions as Return Values"></a>Functions as Return Values</h3><p>In python we can defined function in the others functions body:</p>
+<h3 id="Functions-as-Return-Values">Functions as Return Values</h3>
+<p>In python we can defined function in the others functions body:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">make_adder</span>(<span class="hljs-params">n</span>):</span><br><span class="hljs-string">&quot;&quot;&quot;Return a function that takes one argument k and returns k + n.</span><br><span class="hljs-string"><span class="hljs-meta">&gt;&gt;&gt; </span>add_three = make_adder(3)</span><br><span class="hljs-string"><span class="hljs-meta">&gt;&gt;&gt; </span>add_three(4)</span><br><span class="hljs-string">7</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">adder</span>(<span class="hljs-params">k</span>):</span><br>	<span class="hljs-keyword">return</span> k + n<br><span class="hljs-keyword">return</span> adder<br></code></pre></td></tr></table></figure>
-
 <p>When we run the codes above we know that the function return a <strong>function</strong> called adder. Let’s try to call this function like <code>make adder(1) (2)</code>,It goes like that:</p>
 <p>When we do Operator parts, we go like this:</p>
 <p><img src="https://s2.loli.net/2022/06/22/l16GFgPtx8kXMRJ.png" alt="image-20220622160345778"></p>
@@ -419,26 +422,23 @@
 <p>One things that need to pay attention is that when the computer execute the make_adder function,then execute.</p>
 <p>In the next lecture this kind of function that return a function is called <strong>Self-Reference</strong>. Let’s see the code below:</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_all</span>(<span class="hljs-params">k</span>):</span><br>    <span class="hljs-built_in">print</span>(k)<br>    <span class="hljs-keyword">return</span> print_all<br>    <br>print_all(<span class="hljs-number">1</span>)(<span class="hljs-number">3</span>)(<span class="hljs-number">5</span>)<br></code></pre></td></tr></table></figure>
-
 <p>At each times, the print_all function return itself but it won’t be execute forever,it just return and rebind. The execute steps are like:</p>
 <p><img src="https://s2.loli.net/2022/06/28/MmR8fIrHP53VwkG.png" alt="image-20220628141744467"></p>
 <p>Another things need to pay attention is that : this feature is good way to memorize things like :</p>
 <p>There are another very good example for that:</p>
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=a%20%3D%20lambda%20x%3A%20x%20*%202%20%2B%201%0Adef%20b%28b,%20x%29%3A%0A%20%20%20%20return%20b%28x%20%2B%20a%28x%29%29%0Ax%20%3D%203%0Ab%28a,%20x%29&codeDivHeight=400&codeDivWidth=350&cumulative=true&curInstr=0&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D"> </iframe>
-
-<h3 id="Lambda-Expressions"><a href="#Lambda-Expressions" class="headerlink" title="Lambda Expressions"></a>Lambda Expressions</h3><p>The Lambda function called 匿名函数，of course it’s different from def statement.</p>
+<h3 id="Lambda-Expressions">Lambda Expressions</h3>
+<p>The Lambda function called 匿名函数，of course it’s different from def statement.</p>
 <p>It goes like that:</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-keyword">lambda</span> &lt;parameters&gt;: &lt;<span class="hljs-keyword">return</span> expression&gt;<br></code></pre></td></tr></table></figure>
-
 <p>eg::arrow_down:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>square = <span class="hljs-keyword">lambda</span> x: x*x<br><span class="hljs-meta">&gt;&gt;&gt; </span>square<br>&lt;function &lt;<span class="hljs-keyword">lambda</span>&gt; at <span class="hljs-number">0x00000257213E1DC0</span>&gt;<br><br><span class="hljs-meta">&gt;&gt;&gt; </span>square(<span class="hljs-number">4</span>)<br><span class="hljs-number">16</span><br></code></pre></td></tr></table></figure>
-
 <p>When we go <code>square = lambda x: x*x</code>and then call the square we can know that the square function in not square function ,its not like the def statement. Here are the different between these two:</p>
 <p><img src="https://s2.loli.net/2022/06/22/VdcnHPiQC1RN3uG.png" alt="image-20220622161601483"></p>
 <p>One example code as below:</p>
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=y%20%3D%20%22y%22%0Ah%20%3D%20y%0Adef%20y%28y%29%3A%0A%20%20%20%20h%20%3D%20%22h%22%0A%20%20%20%20if%20y%20%3D%3D%20h%3A%0A%20%20%20%20%20%20%20%20return%20y%20%2B%20%22i%22%0A%20%20%20%20y%20%3D%20lambda%20y%3A%20y%28h%29%0A%20%20%20%20return%20lambda%20h%3A%20y%28h%29%0A%0Ay%20%3D%20y%28y%29%28y%29%0A&codeDivHeight=400&codeDivWidth=350&cumulative=true&curInstr=21&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D"> </iframe>
-
-<h3 id="Logical-Operators"><a href="#Logical-Operators" class="headerlink" title="Logical Operators"></a>Logical Operators</h3><p>To evaluate the expression <strong>&lt;left&gt;</strong> and <strong>&lt;right&gt;</strong>:</p>
+<h3 id="Logical-Operators">Logical Operators</h3>
+<p>To evaluate the expression <strong>&lt;left&gt;</strong> and <strong>&lt;right&gt;</strong>:</p>
 <ol>
 <li>Evaluate the subexpression <strong>&lt;left&gt;</strong>.</li>
 <li>If the result is a false value v, then the expression evaluates to v.</li>
@@ -452,7 +452,6 @@
 </ol>
 <p>A conditional expression has the form:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">&lt;consequent&gt;  <span class="hljs-keyword">if</span>  &lt;predicate&gt;  <span class="hljs-keyword">else</span>  &lt;alternative&gt;<br></code></pre></td></tr></table></figure>
-
 <p>Evaluation rule:</p>
 <ol>
 <li>Evaluate the <strong>&lt;predicate&gt;</strong> expression.</li>
@@ -460,17 +459,18 @@
 <li>Otherwise, the value of the whole expression is the value of the <strong>&lt;alternative&gt;</strong>.</li>
 </ol>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-meta">&gt;&gt;&gt; </span>x = <span class="hljs-number">0</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">abs</span>(<span class="hljs-number">1</span>/x <span class="hljs-keyword">if</span> x != <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> <span class="hljs-number">0</span>)<br><span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="Some-Resources"><a href="#Some-Resources" class="headerlink" title="Some Resources"></a><strong>Some Resources</strong></h3><h4 id="Environment-Diagram-Cheat-Sheet"><a href="#Environment-Diagram-Cheat-Sheet" class="headerlink" title="Environment Diagram Cheat Sheet"></a>Environment Diagram Cheat Sheet</h4><p><img src="https://s2.loli.net/2022/06/28/cvQ93n6StFDEN5U.png" alt="img"></p>
-<h2 id="week-3-amp-4"><a href="#week-3-amp-4" class="headerlink" title="week 3&amp;4"></a>week 3&amp;4</h2><h3 id="Decorators"><a href="#Decorators" class="headerlink" title="Decorators"></a>Decorators</h3><p>Python provides special syntax to apply higher-order functions as part of executing a <code>def</code> statement, called a decorator. Perhaps the most common example is a trace.</p>
+<h3 id="Some-Resources"><strong>Some Resources</strong></h3>
+<h4 id="Environment-Diagram-Cheat-Sheet">Environment Diagram Cheat Sheet</h4>
+<p><img src="https://s2.loli.net/2022/06/28/cvQ93n6StFDEN5U.png" alt="img"></p>
+<h2 id="week-3-4">week 3&amp;4</h2>
+<h3 id="Decorators">Decorators</h3>
+<p>Python provides special syntax to apply higher-order functions as part of executing a <code>def</code> statement, called a decorator. Perhaps the most common example is a trace.</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">trace</span>(<span class="hljs-params">fn</span>):</span><br>        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wrapped</span>(<span class="hljs-params">x</span>):</span><br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;-&gt; &#x27;</span>, fn, <span class="hljs-string">&#x27;(&#x27;</span>, x, <span class="hljs-string">&#x27;)&#x27;</span>)<br>            <span class="hljs-keyword">return</span> fn(x)<br>        <span class="hljs-keyword">return</span> wrapped<br><span class="hljs-meta">&gt;&gt;&gt; </span>@trace<br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">triple</span>(<span class="hljs-params">x</span>):</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-number">3</span> * x<br>    <br><span class="hljs-meta">&gt;&gt;&gt; </span>triple(<span class="hljs-number">12</span>)<br>-&gt;  &lt;function triple at <span class="hljs-number">0x102a39848</span>&gt; ( <span class="hljs-number">12</span> )<br><span class="hljs-number">36</span><br></code></pre></td></tr></table></figure>
-
 <p>In this example, A higher-order function <code>trace</code> is defined, which returns a function that precedes a call to its argument with a <code>print</code> statement that outputs the argument. The <code>def</code> statement for <code>triple</code> has an annotation, <code>@trace</code>, which affects the execution rule for <code>def</code>. As usual, the function <code>triple</code> is created. However, the name <code>triple</code> is not bound to this function. Instead, the name <code>triple</code> is bound to the returned function value of calling <code>trace</code> on the newly defined <code>triple</code> function. In code, this decorator is equivalent to:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">triple</span>(<span class="hljs-params">x</span>):</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-number">3</span> * x<br><span class="hljs-meta">&gt;&gt;&gt; </span>triple = trace(triple)<br></code></pre></td></tr></table></figure>
-
-<h3 id="Recursive-Function"><a href="#Recursive-Function" class="headerlink" title="Recursive Function"></a>Recursive Function</h3><p>Actually it’s nothing new to the<code>c++</code>, so I just be simple, see the code below:</p>
+<h3 id="Recursive-Function">Recursive Function</h3>
+<p>Actually it’s nothing new to the<code>c++</code>, so I just be simple, see the code below:</p>
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20fact%28n%29%3A%0A%20%20%20%20if%20n%3D%3D0%3A%0A%20%20%20%20%20%20%20%20return%201%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20n*fact%28n-1%29%0A%0Afact%283%29&codeDivHeight=400&codeDivWidth=350&cumulative=true&curInstr=0&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D"> </iframe>
-
 <p>:star: How to check the <strong><code>fact</code></strong> function is correct:</p>
 <ol>
 <li>Verify the base case.</li>
@@ -480,79 +480,71 @@
 </ol>
 <p>One interesting staff about recursive is: <strong>Tree Recursion</strong>, one good example is Fibonacci numbers:</p>
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20fib%28n%29%3A%0A%20%20%20%20if%20n%20%3D%3D%201%3A%0A%20%20%20%20%20%20%20%20return%200%0A%20%20%20%20if%20n%20%3D%3D%202%3A%0A%20%20%20%20%20%20%20%20return%201%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20fib%28n-2%29%20%2B%20fib%28n-1%29%0A%0Aresult%20%3D%20fib%286%29&codeDivHeight=400&codeDivWidth=350&cumulative=true&curInstr=0&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D"> </iframe>
-
 <p>The process is like the picture below:</p>
 <p><img src="https://s2.loli.net/2022/06/30/Gfj8bWkuNhvYI2s.png" alt="image-20220630173631058"></p>
 <p><strong>This way to compute the fib number is so inefficiency because if we let the computer to compute the <code>fib(100)</code>.It takes so so long. <code>fib</code> is called on the same argument multiple times</strong>.</p>
-<h2 id="week-5"><a href="#week-5" class="headerlink" title="week 5"></a>week 5</h2><h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><p>Finally，we got the list. Likes this:</p>
+<h2 id="week-5">week 5</h2>
+<h3 id="List">List</h3>
+<p>Finally，we got the list. Likes this:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>digits = [<span class="hljs-number">1</span>, <span class="hljs-number">8</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>digits = [<span class="hljs-number">2</span>//<span class="hljs-number">2</span>, <span class="hljs-number">2</span>+<span class="hljs-number">2</span>+<span class="hljs-number">2</span>+<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>*<span class="hljs-number">2</span>*<span class="hljs-number">2</span>]<br><br><span class="hljs-comment"># To get the number of elements</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(digits)<br><span class="hljs-number">4</span><br><br><span class="hljs-comment">#An element selected by its index:</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>digits[<span class="hljs-number">3</span>]<br><span class="hljs-number">8</span><br><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> operator <span class="hljs-keyword">import</span> getitem<br><span class="hljs-meta">&gt;&gt;&gt; </span>getitem(digits, <span class="hljs-number">3</span>)<br><span class="hljs-number">8</span><br><br><span class="hljs-comment"># Concatenation and repetition:</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>[<span class="hljs-number">2</span>, <span class="hljs-number">7</span>] + digits * <span class="hljs-number">2</span><br>[<span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">1</span>, <span class="hljs-number">8</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">1</span>, <span class="hljs-number">8</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>add([<span class="hljs-number">2</span>, <span class="hljs-number">7</span>], mul(digits, <span class="hljs-number">2</span>))<br>[<span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">1</span>, <span class="hljs-number">8</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">1</span>, <span class="hljs-number">8</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>]<br><br><span class="hljs-comment"># Nested lists</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>pairs = [[<span class="hljs-number">10</span>, <span class="hljs-number">20</span>], [<span class="hljs-number">30</span>, <span class="hljs-number">40</span>]]<br><span class="hljs-meta">&gt;&gt;&gt; </span>pairs[<span class="hljs-number">1</span>]<br>[<span class="hljs-number">30</span>, <span class="hljs-number">40</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>pairs[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>]<br><span class="hljs-number">30</span><br></code></pre></td></tr></table></figure>
-
 <p>The basic roles for the list, is quite like the c++,so I will talk more about the new things in python.</p>
-<h3 id="Containers"><a href="#Containers" class="headerlink" title="Containers"></a>Containers</h3><p>The definition of the containers is <strong>Built-in operators for testing whether an element appears in a compound value.</strong></p>
+<h3 id="Containers">Containers</h3>
+<p>The definition of the containers is <strong>Built-in operators for testing whether an element appears in a compound value.</strong></p>
 <p>SEE THE EMAMPLE:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>digits = [<span class="hljs-number">1</span>, <span class="hljs-number">8</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">1</span> <span class="hljs-keyword">in</span> digits<br><span class="hljs-literal">True</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">8</span> <span class="hljs-keyword">in</span> digits<br><span class="hljs-literal">True</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> digits<br><span class="hljs-literal">True</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">not</span>(<span class="hljs-number">5</span> <span class="hljs-keyword">in</span> digits)<br><span class="hljs-literal">True</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="For-Statement"><a href="#For-Statement" class="headerlink" title="For Statement"></a>For Statement</h3><p>Finally , we come to the <code>for</code>statement.It’s quite different from the c++.A <code>for</code> statement consists of a single clause with the form:</p>
+<h3 id="For-Statement">For Statement</h3>
+<p>Finally , we come to the <code>for</code><a target="_blank" rel="noopener" href="http://statement.It">statement.It</a>’s quite different from the c++.A <code>for</code> statement consists of a single clause with the form:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">for</span> &lt;name&gt; <span class="hljs-keyword">in</span> &lt;expression&gt;:<br>    &lt;suite&gt;<br></code></pre></td></tr></table></figure>
-
 <p>A <code>for</code> statement is executed by the following procedure:</p>
 <ol>
 <li>Evaluate the header <code>&lt;expression&gt;</code>, which must yield an <strong>iterable value</strong>.</li>
-<li>For each element value in that iterable value, in order:<ol>
+<li>For each element value in that iterable value, in order:
+<ol>
 <li>Bind <code>&lt;name&gt;</code> to that value in the current frame.</li>
 <li>Execute the <code>&lt;suite&gt;</code>.</li>
 </ol>
 </li>
 </ol>
-<p>This execution procedure refers to <em>iterable values</em>. Lists are a type of sequence, and sequences are iterable values. Their elements are considered in their sequential order. </p>
+<p>This execution procedure refers to <em>iterable values</em>. Lists are a type of sequence, and sequences are iterable values. Their elements are considered in their sequential order.</p>
 <p>A good example for this statement:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>pairs = [[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">4</span>]]<br><span class="hljs-meta">&gt;&gt;&gt; </span>same_count = <span class="hljs-number">0</span><br><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> x, y <span class="hljs-keyword">in</span> pairs:<br>        <span class="hljs-keyword">if</span> x == y:<br>            same_count = same_count + <span class="hljs-number">1</span><br><br><span class="hljs-meta">&gt;&gt;&gt; </span>same_count<br><span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
-
 <p>:star: The way to <strong>use a list to create a list</strong> is like this:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>letters = [<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>, <span class="hljs-string">&#x27;c&#x27;</span>, <span class="hljs-string">&#x27;d&#x27;</span>, <span class="hljs-string">&#x27;e&#x27;</span>, <span class="hljs-string">&#x27;f&#x27;</span>, <span class="hljs-string">&#x27;m&#x27;</span>, <span class="hljs-string">&#x27;n&#x27;</span>, <span class="hljs-string">&#x27;o&#x27;</span>, <span class="hljs-string">&#x27;p&#x27;</span>]<br><br><span class="hljs-meta">&gt;&gt;&gt; </span>[letters[i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>]]<br>[<span class="hljs-string">&#x27;d&#x27;</span>, <span class="hljs-string">&#x27;e&#x27;</span>, <span class="hljs-string">&#x27;m&#x27;</span>, <span class="hljs-string">&#x27;o&#x27;</span>]<br></code></pre></td></tr></table></figure>
-
 <p>More complex is add <code>if</code>, so we get full version of this:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">[&lt;<span class="hljs-built_in">map</span> exp&gt; <span class="hljs-keyword">for</span> &lt;name&gt; <span class="hljs-keyword">in</span> &lt;<span class="hljs-built_in">iter</span> exp&gt; <span class="hljs-keyword">if</span> &lt;<span class="hljs-built_in">filter</span> exp&gt;]<br><br><span class="hljs-comment"># Short version: </span><br>[&lt;<span class="hljs-built_in">map</span> exp&gt; <span class="hljs-keyword">for</span> &lt;name&gt; <span class="hljs-keyword">in</span> &lt;<span class="hljs-built_in">iter</span> exp&gt;]<br></code></pre></td></tr></table></figure>
-
-<h3 id="Range"><a href="#Range" class="headerlink" title="Range"></a>Range</h3><p>A <code>range</code> is another built-in type of sequence in Python, which represents a range of integers. Ranges are created with <code>range</code>, which takes two integer arguments: the first number and one beyond the last number in the desired range.</p>
+<h3 id="Range">Range</h3>
+<p>A <code>range</code> is another built-in type of sequence in Python, which represents a range of integers. Ranges are created with <code>range</code>, which takes two integer arguments: the first number and one beyond the last number in the desired range.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>)  <span class="hljs-comment"># Includes 1, but not 10</span><br><span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>)<br></code></pre></td></tr></table></figure>
-
 <p>Calling the <code>list</code> constructor on a range evaluates to a list with the same elements as the range, so that the elements can be easily inspected.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">5</span>, <span class="hljs-number">8</span>))<br>[<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>]<br></code></pre></td></tr></table></figure>
-
 <p><strong>If only one argument is given, it is interpreted as one beyond the last value for a range that starts at 0.</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">4</span>))<br>[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure>
-
 <p>Ranges commonly appear as the expression in a <code>for</code> header to specify the number of times that the suite should be executed: A common convention is to use a single underscore character for the name in the <code>for</code> header if the name is unused in the suite:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">3</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Go Bears!&#x27;</span>)<br><br>Go Bears!<br>Go Bears!<br>Go Bears!<br></code></pre></td></tr></table></figure>
-
 <p><strong>This underscore is just another name</strong> in the environment as far as the interpreter is concerned, but has a conventional meaning among programmers that indicates the name will not appear in any future expressions.</p>
-<h3 id="Slicing"><a href="#Slicing" class="headerlink" title="Slicing"></a>Slicing</h3><p>Sequences contain smaller sequences within them. A <em>slice</em> of a sequence is any contiguous span of the original sequence, designated by a pair of integers. As with the <code>range</code> constructor, the first integer indicates the starting index of the slice and the second indicates one beyond the ending index.</p>
+<h3 id="Slicing">Slicing</h3>
+<p>Sequences contain smaller sequences within them. A <em>slice</em> of a sequence is any contiguous span of the original sequence, designated by a pair of integers. As with the <code>range</code> constructor, the first integer indicates the starting index of the slice and the second indicates one beyond the ending index.</p>
 <p>In Python, sequence slicing is expressed similarly to element selection, using square brackets. A colon separates the starting and ending indices. Any bound that is omitted is assumed to be an extreme value: 0 for the starting index, and the length of the sequence for the ending index.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>odds = [<span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>, <span class="hljs-number">11</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>))<br>[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>[odds[i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>)]<br>[<span class="hljs-number">5</span>, <span class="hljs-number">7</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>odds[<span class="hljs-number">1</span>:<span class="hljs-number">3</span>]<br>[<span class="hljs-number">5</span>, <span class="hljs-number">7</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>odds[<span class="hljs-number">1</span>:]<br>[<span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>, <span class="hljs-number">11</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>odds[:<span class="hljs-number">3</span>]<br>[<span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>odds[:]<br>[<span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>, <span class="hljs-number">11</span>]<br></code></pre></td></tr></table></figure>
-
-<h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><p>String  can be anything, just like c++. Of course, in the video there are some brand new features. See the code below:</p>
+<h3 id="String">String</h3>
+<p>String  can be anything, just like c++. Of course, in the video there are some brand new features. See the code below:</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;curry = lambda f: lambda x: lambda y: f(x, y)&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">exec</span><span class="hljs-string">&#x27;curry = lambda f: lambda x: lambda y: f(x, y)&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>curry<br>&lt;function &lt;<span class="hljs-keyword">lambda</span>&gt; at XXXXX&gt;<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>In that case even thought we we use a string but still we can <code>exec</code> it to make it executable.</p>
 </blockquote>
 <p>However , the <code>in</code> and <code>not in</code> operators match substrings:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;here&#x27;</span> <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;where&#x27;s Waldo?&quot;</span><br><span class="hljs-literal">True</span><br>&gt;&gt;&gt;<span class="hljs-number">234</span> <span class="hljs-keyword">in</span> [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]<br><span class="hljs-literal">False</span><br>&gt;&gt;&gt;[<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>] <span class="hljs-keyword">in</span> [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]<br><span class="hljs-literal">False</span><br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>We can see that the List and the string are quite different when we use the <code>in</code></p>
-<p>Another thing that need to pay a lot attention is that  we should use <code>&quot;xxx&quot;</code> in a sentences when there exists <code>&#39;</code> in a sentence.</p>
+<p>Another thing that need to pay a lot attention is that  we should use <code>&quot;xxx&quot;</code> in a sentences when there exists <code>'</code> in a sentence.</p>
 </blockquote>
-<h3 id="Dictionaries"><a href="#Dictionaries" class="headerlink" title="Dictionaries"></a>Dictionaries</h3><p>Dictionaries are Python’s built-in data type for storing and manipulating correspondence relationships. A dictionary contains key-value pairs, where both the keys and values are objects. The purpose of a dictionary is to provide an abstraction for storing and retrieving values that are indexed not by consecutive integers, but by descriptive keys.</p>
+<h3 id="Dictionaries">Dictionaries</h3>
+<p>Dictionaries are Python’s built-in data type for storing and manipulating correspondence relationships. A dictionary contains key-value pairs, where both the keys and values are objects. The purpose of a dictionary is to provide an abstraction for storing and retrieving values that are indexed not by consecutive integers, but by descriptive keys.</p>
 <iframe width="800" height="300" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=numerals%20%3D%20%7B'I'%3A%201,%20'V'%3A%205,%20'X'%3A%2010%7D%0Anumerals%5B'L'%5D%20%3D%2050&codeDivHeight=400&codeDivWidth=350&cumulative=true&curInstr=0&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D"> </iframe>
-
 <p>The dictionary type also supports various methods of iterating over the contents of the dictionary as a whole. The methods <code>keys</code>, <code>values</code>, and <code>items</code> all return iterable values.</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">sum</span>(numerals.values())<br><span class="hljs-number">66</span><br></code></pre></td></tr></table></figure>
-
 <p>A list of key-value pairs can be converted into a dictionary by calling the <code>dict</code> constructor function.</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">dict</span>([(<span class="hljs-number">3</span>, <span class="hljs-number">9</span>), (<span class="hljs-number">4</span>, <span class="hljs-number">16</span>), (<span class="hljs-number">5</span>, <span class="hljs-number">25</span>)])<br>&#123;<span class="hljs-number">3</span>: <span class="hljs-number">9</span>, <span class="hljs-number">4</span>: <span class="hljs-number">16</span>, <span class="hljs-number">5</span>: <span class="hljs-number">25</span>&#125;<br></code></pre></td></tr></table></figure>
-
 <p>Dictionaries do have some restrictions:</p>
 <ul>
 <li>A key of a dictionary cannot be or contain a mutable value.</li>
@@ -560,10 +552,8 @@
 </ul>
 <p>A useful method implemented by dictionaries is <code>get</code>, which returns either the value for a key, if the key is present, or a default value. The arguments to <code>get</code> are the key and the default value.</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-meta">&gt;&gt;&gt; </span>numerals.get(<span class="hljs-string">&#x27;A&#x27;</span>, <span class="hljs-number">0</span>)<br><span class="hljs-number">0</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>numerals.get(<span class="hljs-string">&#x27;V&#x27;</span>, <span class="hljs-number">0</span>)<br><span class="hljs-number">5</span><br></code></pre></td></tr></table></figure>
-
 <p>Dictionaries also have a comprehension syntax analogous to those of lists. A key expression and a value expression are separated by a colon. Evaluating a dictionary comprehension creates a new dictionary object.</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-meta">&gt;&gt;&gt; </span>&#123;x: x*x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">3</span>,<span class="hljs-number">6</span>)&#125;<br>&#123;<span class="hljs-number">3</span>: <span class="hljs-number">9</span>, <span class="hljs-number">4</span>: <span class="hljs-number">16</span>, <span class="hljs-number">5</span>: <span class="hljs-number">25</span>&#125;<br></code></pre></td></tr></table></figure>
-
 
               
             </div>
@@ -884,5 +874,20 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>

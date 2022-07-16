@@ -16,12 +16,12 @@
   <meta name="author" content="John Wen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="数据库_实验5_笔记三个表如下：    表名称 表内容    B图书信息表    OD(读者订购图书表)    r(读者相关信息表)     三个表的创建代码为： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455USE &#96;rbod2&#96;;DROP">
+    <meta name="description" content="数据库_实验5_笔记 三个表如下：    表名称 表内容     B图书信息表    OD(读者订购图书表)    r(读者相关信息表)      三个表的创建代码为： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455USE &#96;rbod2&#96;;DR">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Database_lab5">
 <meta property="og:url" content="http://example.com/2022/06/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B01/index.html">
 <meta property="og:site_name" content="JWJ &#39;S Blog">
-<meta property="og:description" content="数据库_实验5_笔记三个表如下：    表名称 表内容    B图书信息表    OD(读者订购图书表)    r(读者相关信息表)     三个表的创建代码为： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455USE &#96;rbod2&#96;;DROP">
+<meta property="og:description" content="数据库_实验5_笔记 三个表如下：    表名称 表内容     B图书信息表    OD(读者订购图书表)    r(读者相关信息表)      三个表的创建代码为： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455USE &#96;rbod2&#96;;DR">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s2.loli.net/2022/05/04/I8lYGWnFjA3kSN2.png">
 <meta property="og:image" content="https://s2.loli.net/2022/05/04/IkEMJf3QAyaVUtj.png">
@@ -82,7 +82,11 @@
   <script  src="/js/color-schema.js" ></script>
 
   
-<meta name="generator" content="Hexo 5.4.2"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head>
 
 
 <body>
@@ -247,54 +251,58 @@
             
             <div class="markdown-body">
               
-              <h1 id="数据库-实验5-笔记"><a href="#数据库-实验5-笔记" class="headerlink" title="数据库_实验5_笔记"></a>数据库_实验5_笔记</h1><p>三个表如下：</p>
+              <h1>数据库_实验5_笔记</h1>
+<p>三个表如下：</p>
 <table>
 <thead>
 <tr>
-<th align="center">表名称</th>
-<th align="center">表内容</th>
+<th style="text-align:center">表名称</th>
+<th style="text-align:center">表内容</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center"><strong>B</strong>图书信息表</td>
-<td align="center"><img src="https://s2.loli.net/2022/05/04/I8lYGWnFjA3kSN2.png" alt="image-20220504211025640"></td>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>B</strong>图书信息表</td>
+<td style="text-align:center"><img src="https://s2.loli.net/2022/05/04/I8lYGWnFjA3kSN2.png" alt="image-20220504211025640"></td>
 </tr>
 <tr>
-<td align="center"><strong>OD</strong>(读者订购图书表)</td>
-<td align="center"><img src="https://s2.loli.net/2022/05/04/IkEMJf3QAyaVUtj.png" alt="image-20220504211139907"></td>
+<td style="text-align:center"><strong>OD</strong>(读者订购图书表)</td>
+<td style="text-align:center"><img src="https://s2.loli.net/2022/05/04/IkEMJf3QAyaVUtj.png" alt="image-20220504211139907"></td>
 </tr>
 <tr>
-<td align="center"><strong>r</strong>(读者相关信息表)</td>
-<td align="center"><img src="https://s2.loli.net/2022/05/04/oq6MhCr4HAciflz.png" alt="image-20220504211205623"></td>
+<td style="text-align:center"><strong>r</strong>(读者相关信息表)</td>
+<td style="text-align:center"><img src="https://s2.loli.net/2022/05/04/oq6MhCr4HAciflz.png" alt="image-20220504211205623"></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <blockquote>
 <p>三个表的创建代码为：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs sql">USE `rbod2`;<br><span class="hljs-keyword">DROP</span> DATABASE `rbod2`;<br><span class="hljs-keyword">CREATE</span> DATABASE RBOD2;<br><br>USE RBOD2;<br><br><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> R<br>(<br>Rno <span class="hljs-type">CHAR</span>(<span class="hljs-number">4</span>)   <span class="hljs-keyword">PRIMARY</span> KEY,<br>Rname <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">20</span>),<br>STATUS <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">20</span>),<br>CITY <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">20</span>)<br>);<br><br><br><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> B<br>(<br>Bno <span class="hljs-type">CHAR</span>(<span class="hljs-number">4</span>)   <span class="hljs-keyword">PRIMARY</span> KEY,<br>Bname <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">20</span>),<br>Price <span class="hljs-type">numeric</span>(<span class="hljs-number">5</span>,<span class="hljs-number">2</span>),<br>Pub <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">20</span>)<br>);<br><br><br><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> OD<br>(<br>Rno <span class="hljs-type">CHAR</span>(<span class="hljs-number">4</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,<br>Bno <span class="hljs-type">CHAR</span>(<span class="hljs-number">4</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,<br>Qty <span class="hljs-type">SMALLINT</span>,<br><span class="hljs-keyword">PRIMARY</span> KEY(Rno,Bno),<br><span class="hljs-keyword">FOREIGN</span> KEY (Rno) <span class="hljs-keyword">REFERENCES</span> R(Rno),<br><span class="hljs-keyword">FOREIGN</span> KEY (Bno) <span class="hljs-keyword">REFERENCES</span> B(Bno)<br>);<br><br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> R <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;R1&#x27;</span>,<span class="hljs-string">&#x27;CHenBing&#x27;</span>,<span class="hljs-string">&#x27;Student&#x27;</span>,<span class="hljs-string">&#x27;Beijing&#x27;</span>);<br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> R <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;R2&#x27;</span>,<span class="hljs-string">&#x27;ZhouYucai&#x27;</span>,<span class="hljs-string">&#x27;Professor&#x27;</span>,<span class="hljs-string">&#x27;Shanghai&#x27;</span>);<br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> R <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;R3&#x27;</span>,<span class="hljs-string">&#x27;WangLiping&#x27;</span>,<span class="hljs-string">&#x27;Doctor&#x27;</span>,<span class="hljs-string">&#x27;Nanjing&#x27;</span>);<br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> R <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;R4&#x27;</span>,<span class="hljs-string">&#x27;LiYong&#x27;</span>,<span class="hljs-string">&#x27;Student&#x27;</span>,<span class="hljs-string">&#x27;Shanghai&#x27;</span>);<br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> R <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;R5&#x27;</span>,<span class="hljs-string">&#x27;DingWei&#x27;</span>,<span class="hljs-string">&#x27;Assistant&#x27;</span>,<span class="hljs-string">&#x27;Beijing&#x27;</span>);<br><br><br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> B <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;B1&#x27;</span>,<span class="hljs-string">&#x27;Modern&#x27;</span>,<span class="hljs-number">15</span>,<span class="hljs-string">&#x27;Education&#x27;</span>);<br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> B <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;B2&#x27;</span>,<span class="hljs-string">&#x27;Pascal&#x27;</span>,<span class="hljs-number">17</span>,<span class="hljs-string">&#x27;Qinghua&#x27;</span>);<br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> B <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;B3&#x27;</span>,<span class="hljs-string">&#x27;Scentific&#x27;</span>,<span class="hljs-number">10</span>,<span class="hljs-string">&#x27;Commerce&#x27;</span>);<br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> B <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;B4&#x27;</span>,<span class="hljs-string">&#x27;PenHuai&#x27;</span>,<span class="hljs-number">9.8</span>,<span class="hljs-string">&#x27;People&#x27;</span>);<br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> B <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;B5&#x27;</span>,<span class="hljs-string">&#x27;Date Stru&#x27;</span>,<span class="hljs-number">12.6</span>,<span class="hljs-string">&#x27;Commerce&#x27;</span>);<br><br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> OD <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;R1&#x27;</span>,<span class="hljs-string">&#x27;B1&#x27;</span>,<span class="hljs-number">2</span>);<br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> OD <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;R1&#x27;</span>,<span class="hljs-string">&#x27;B2&#x27;</span>,<span class="hljs-number">1</span>);<br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> OD <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;R2&#x27;</span>,<span class="hljs-string">&#x27;B1&#x27;</span>,<span class="hljs-number">3</span>);<br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> OD <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;R2&#x27;</span>,<span class="hljs-string">&#x27;B2&#x27;</span>,<span class="hljs-number">3</span>);<br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> OD <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;R2&#x27;</span>,<span class="hljs-string">&#x27;B4&#x27;</span>,<span class="hljs-number">4</span>);<br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> OD <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;R3&#x27;</span>,<span class="hljs-string">&#x27;B3&#x27;</span>,<span class="hljs-number">1</span>);<br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> OD <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;R4&#x27;</span>,<span class="hljs-string">&#x27;B2&#x27;</span>,<span class="hljs-number">2</span>);<br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> OD <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;R4&#x27;</span>,<span class="hljs-string">&#x27;B5&#x27;</span>,<span class="hljs-number">1</span>);<br></code></pre></td></tr></table></figure>
 </blockquote>
 <p>做出如下查询：</p>
 <ol>
-<li><p>找出读者所在城市是“shanghai”的身份是“professor”的读者，或所在城市名包含“jing”的身份为“student”的读者的读者号及身份，按读者号的降序排列。</p>
+<li>
+<p>找出读者所在城市是“shanghai”的身份是“professor”的读者，或所在城市名包含“jing”的身份为“student”的读者的读者号及身份，按读者号的降序排列。</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Rno,STATUS <br><span class="hljs-keyword">FROM</span> r <br><span class="hljs-keyword">WHERE</span> (CITY <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;shanghai&#x27;</span> <span class="hljs-keyword">AND</span> STATUS <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;Professor&#x27;</span>) <span class="hljs-keyword">OR</span> (city <span class="hljs-keyword">LIKE</span> <span class="hljs-string">&#x27;%jing%&#x27;</span> <span class="hljs-keyword">AND</span> STATUS <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;Student&#x27;</span>)<br><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> Rno <span class="hljs-keyword">DESC</span> ;<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>对每一种有读者订购的图书，找出书号及有读者订购该书读者所在的所有城市，输出结果包括：书号和城市（输出的列取别名）</p>
+<li>
+<p>对每一种有读者订购的图书，找出书号及有读者订购该书读者所在的所有城市，输出结果包括：书号和城市（输出的列取别名）</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Bno <span class="hljs-string">&#x27;书号&#x27;</span>,CITY <span class="hljs-string">&#x27;城市&#x27;</span><br><span class="hljs-keyword">FROM</span> od,r<br><span class="hljs-keyword">WHERE</span> od.Rno<span class="hljs-operator">=</span>r.Rno<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>找出订购了书号为B2的图书的读者姓名及所在城市(用两种方法做：连接、嵌套)</p>
+<li>
+<p>找出订购了书号为B2的图书的读者姓名及所在城市(用两种方法做：连接、嵌套)</p>
 <p>​	连接：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Rname,CITY<br><span class="hljs-keyword">FROM</span> od,r<br><span class="hljs-keyword">WHERE</span> od.Bno<span class="hljs-operator">=</span><span class="hljs-string">&#x27;B2&#x27;</span> <span class="hljs-keyword">AND</span> od.Rno<span class="hljs-operator">=</span>r.Rno<br></code></pre></td></tr></table></figure>
-
 <p>​	嵌套：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Rname,CITY<br><span class="hljs-keyword">FROM</span> r<br><span class="hljs-keyword">WHERE</span> rno <span class="hljs-keyword">IN</span> (<br>	<span class="hljs-keyword">SELECT</span> rno <br>	<span class="hljs-keyword">FROM</span> od<br>	<span class="hljs-keyword">WHERE</span> Bno<span class="hljs-operator">=</span><span class="hljs-string">&#x27;B2&#x27;</span><br>);<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>本题中，最外层的是找到从r表里找，满足rno条件的（rno条件为:在od表中存在且Bno为‘B2’）。我们可以看到两层嵌套的传递，是其中相关联的列。而且题目所要求条件所在的表在越外层。</p>
 </blockquote>
 </li>
-<li><p>找出有一个以上读者订购的图书书号和图书名</p>
+<li>
+<p>找出有一个以上读者订购的图书书号和图书名</p>
 <p>嵌套：（错了！！！！！）</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Bno,Bname<br><span class="hljs-keyword">FROM</span> b<br><span class="hljs-keyword">WHERE</span> Bno <span class="hljs-keyword">IN</span>(<br>	<span class="hljs-keyword">SELECT</span> Bno<br>	<span class="hljs-keyword">FROM</span> od<br>	<span class="hljs-comment">/*WHERE Rno IN (</span><br><span class="hljs-comment">		SELECT Rno</span><br><span class="hljs-comment">		FROM r*/</span><br>	)<br>);<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>上面的代码从最开始要找的bno与bname，找到存在这两个量的表在b。其中考虑到约束条件：一个以上读者订阅，我们经过观察发现在od表内的所有bno都是有读者订阅的。因此我们考虑嵌套查询od表内的bno。</p>
 <p>ps.在一开始并没有发现od表内的Bno是都有读者订阅的，所以注释掉一部分依然对。</p>
@@ -302,180 +310,179 @@
 <p>聚集函数：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> b.Bno,bname<br><span class="hljs-keyword">FROM</span> od,b<br><span class="hljs-keyword">WHERE</span> od.Bno<span class="hljs-operator">=</span>b.Bno<br><span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> bno <br><span class="hljs-keyword">having</span> <span class="hljs-built_in">COUNT</span>(<span class="hljs-operator">*</span>)<span class="hljs-operator">&gt;</span><span class="hljs-number">1</span>;<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>求<strong>至少</strong>订购了<strong>一本</strong>《Pascal》的<strong>读者姓名</strong></p>
+<li>
+<p>求<strong>至少</strong>订购了<strong>一本</strong>《Pascal》的<strong>读者姓名</strong></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Rname<br><span class="hljs-keyword">FROM</span> r<br><span class="hljs-keyword">WHERE</span> Rno <span class="hljs-keyword">IN</span> (<br>	<span class="hljs-keyword">SELECT</span> Rno<br>	<span class="hljs-keyword">FROM</span> od<br>	<span class="hljs-keyword">WHERE</span> Bno<span class="hljs-operator">=</span><span class="hljs-string">&#x27;B2&#x27;</span><br>);<br></code></pre></td></tr></table></figure>
-
 <blockquote>
-<p>题目要求找出读者姓名，我们观察发现读者姓名常出现在r表内有读者姓名。题目约束条件是至少订购一本Pascal。我们发现这本书的书号是B2，我们只要嵌套查询od表内，哪些rno与bno&#x3D;B2有关系，便可。如果再详细一点便是：</p>
+<p>题目要求找出读者姓名，我们观察发现读者姓名常出现在r表内有读者姓名。题目约束条件是至少订购一本Pascal。我们发现这本书的书号是B2，我们只要嵌套查询od表内，哪些rno与bno=B2有关系，便可。如果再详细一点便是：</p>
 </blockquote>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Rname<br><span class="hljs-keyword">FROM</span> r<br><span class="hljs-keyword">WHERE</span> Rno <span class="hljs-keyword">IN</span> (<br>	<span class="hljs-keyword">SELECT</span> Rno<br>	<span class="hljs-keyword">FROM</span> od<br>	<span class="hljs-keyword">WHERE</span> Bno <span class="hljs-keyword">IN</span> (<br>		<span class="hljs-keyword">SELECT</span> Bno<br>		<span class="hljs-keyword">FROM</span> b<br>		<span class="hljs-keyword">WHERE</span> Bname<span class="hljs-operator">=</span><span class="hljs-string">&#x27;Pascal&#x27;</span><br>	)<br>);<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>上述代码把od表内的Bno与b表中的Bno进行连接</p>
 </blockquote>
 </li>
-<li><p>找出<strong>没有订购</strong>B1号图书的读者号</p>
+<li>
+<p>找出<strong>没有订购</strong>B1号图书的读者号</p>
 <p>方法1：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> rno<br><span class="hljs-keyword">FROM</span> r<br><span class="hljs-keyword">WHERE</span> rno <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">IN</span> (<br>	<span class="hljs-keyword">SELECT</span> rno <br>	<span class="hljs-keyword">FROM</span> od<br>	<span class="hljs-keyword">WHERE</span> bno<span class="hljs-operator">=</span><span class="hljs-string">&#x27;B1&#x27;</span><br>);<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>上面的是标准答案，第一遍并没有想出来，原因是没有搞清楚嵌套查询的逻辑。通过上面的我们可以看出：先遍历r表中的每个元素即从R1~R5,每次遍历的同时检测这个rno是否符合条件。条件：将rno传到内层查询，如果不在内层查询（NOT IN）即返回真。</p>
 <p>在以后查询不符合某种条件时，可以求与之相对的对立面，即符合该种条件，再使用嵌套非语句排除在外。</p>
 </blockquote>
 <p>方法2:</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> rno<br><span class="hljs-keyword">FROM</span> r<br><span class="hljs-keyword">WHERE</span>  <span class="hljs-keyword">NOT</span>  <span class="hljs-keyword">EXISTS</span> (<br>	<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span><br>	<span class="hljs-keyword">FROM</span> od<br>	<span class="hljs-keyword">WHERE</span> bno<span class="hljs-operator">=</span><span class="hljs-string">&#x27;B1&#x27;</span> <span class="hljs-keyword">AND</span> od.Rno<span class="hljs-operator">=</span>r.Rno<br>);<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>我们看到，<code>NOT IN</code>与<code>NOT EXISTS</code>的区别在于，<code>NOT IN</code> 是rno与内层选出来进行比较，而<code>NOT EXISTS</code>在于内层循环是否有满足条件。可以理解为一个是<code>==</code>，一个是<code>bool</code>。</p>
 </blockquote>
 </li>
-<li><p>找出价格大于等于15.00或者读者R2最近订购的图书的书号及书名</p>
+<li>
+<p>找出价格大于等于15.00或者读者R2最近订购的图书的书号及书名</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Bno 书号,Bname 书名<br><span class="hljs-keyword">FROM</span> b<br><span class="hljs-keyword">WHERE</span> (Price<span class="hljs-operator">&gt;=</span><span class="hljs-number">15</span>) <span class="hljs-keyword">OR</span> <span class="hljs-keyword">EXISTS</span>(<br>	<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span><br>	<span class="hljs-keyword">FROM</span> od<br>	<span class="hljs-keyword">WHERE</span> Rno<span class="hljs-operator">=</span><span class="hljs-string">&#x27;R2&#x27;</span><span class="hljs-keyword">AND</span> od.Bno<span class="hljs-operator">=</span>b.Bno<br>);<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>where里面可以有两个条件，类比C++里面的<code>if( )</code>括号里面的。</p>
 </blockquote>
 </li>
-<li><p>求图书B2的订购数</p>
+<li>
+<p>求图书B2的订购数</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Bno 书号,<span class="hljs-built_in">COUNT</span>(Bno)<br><span class="hljs-keyword">FROM</span> od<br><span class="hljs-keyword">WHERE</span> Bno<span class="hljs-operator">=</span><span class="hljs-string">&#x27;B2&#x27;</span>;<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>COUNT为计数作用，在SELECT里面写。</p>
 </blockquote>
 </li>
-<li><p>查询订购的书的数量不确定的(qty是空值)，读者编号和书号</p>
+<li>
+<p>查询订购的书的数量不确定的(qty是空值)，读者编号和书号</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> rno 读者编号,bno 书号<br><span class="hljs-keyword">FROM</span> od<br><span class="hljs-keyword">WHERE</span> Qty <span class="hljs-keyword">IS</span>  <span class="hljs-keyword">NULL</span>;<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>在判断某一个值是否为空的时候要注意用谓词<code>is</code>。</p>
 </blockquote>
 </li>
-<li><p>查询图书单价不是15,17,10的图书的图书号和图书名及价格</p>
+<li>
+<p>查询图书单价不是15,17,10的图书的图书号和图书名及价格</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Bname 图书名,Bno 图书号,Price 价格<br><span class="hljs-keyword">FROM</span> b<br><span class="hljs-keyword">WHERE</span> Price<span class="hljs-operator">!=</span><span class="hljs-number">15</span> <span class="hljs-keyword">AND</span> Price<span class="hljs-operator">!=</span><span class="hljs-number">17</span> <span class="hljs-keyword">AND</span> Price<span class="hljs-operator">!=</span><span class="hljs-number">10</span><br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>这题简单！过</p>
 </blockquote>
 </li>
-<li><p>查询所有订购了图书的读者的读者号和姓名</p>
+<li>
+<p>查询所有订购了图书的读者的读者号和姓名</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Rno 读者号,Rname 姓名<br><span class="hljs-keyword">FROM</span> r<br><span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">EXISTS</span> (<br>	<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span><br>	<span class="hljs-keyword">FROM</span> od<br>	<span class="hljs-keyword">WHERE</span> Bno <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">AND</span> od.Rno<span class="hljs-operator">=</span>r.Rno<br>);<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>先对r表中每个人进行遍历，对于每个r中的人，进入内层循环。将od表与r进行连接，并对其中Bno的值判断NULL</p>
 </blockquote>
 </li>
-<li><p>查询单价小于等于10的所有图书被读者订购的数量，输出书名和订购总数量</p>
+<li>
+<p>查询单价小于等于10的所有图书被读者订购的数量，输出书名和订购总数量</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> b.Bname 书名,<span class="hljs-built_in">SUM</span>(od.Qty) 订购总数量<br><span class="hljs-keyword">FROM</span> b,od<br><span class="hljs-keyword">WHERE</span> od.Bno<span class="hljs-operator">=</span>b.Bno <span class="hljs-keyword">AND</span> b.Price<span class="hljs-operator">&lt;=</span><span class="hljs-number">10</span><br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> od.Bno;<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p><code>sum</code>对属性列求和，但有<code>group by</code> 子句，所以会按照<code>group by</code>的结果进行对属性列求和。</p>
 </blockquote>
 </li>
-<li><p>查询订购了至少两<strong>种</strong>书的读者姓名和书的种类数</p>
+<li>
+<p>查询订购了至少两<strong>种</strong>书的读者姓名和书的种类数</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> rname,<span class="hljs-built_in">COUNT</span>(<span class="hljs-operator">*</span>)<br><span class="hljs-keyword">FROM</span> r,od<br><span class="hljs-keyword">WHERE</span> r.rno<span class="hljs-operator">=</span>od.rno<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> r.rno<br><span class="hljs-keyword">HAVING</span> <span class="hljs-built_in">COUNT</span>(<span class="hljs-operator">*</span>)<span class="hljs-operator">&gt;=</span><span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>这题没做出来，因为不知道如何表示种类数。根据所给答案我们可以看出来，先将od表与r表进行了等值连接，再用<code>group by</code> 子句对结果使用rno进行进行聚集，即同一个人的归为一类。同时加入条件<code>HAVING COUNT(*)</code>找到至少订购两本书的读者。</p>
 <p>这题妙就在于没有直接对rname列进行操作，而是对rno进行操作，使其分类。同时我还学到，<code>COUNT（*）</code>与group by连用在处理计数问题上很好用。</p>
 </blockquote>
 </li>
-<li><p>查询书价比同一出版社的平均书价高的图书的书号和书名</p>
+<li>
+<p>查询书价比同一出版社的平均书价高的图书的书号和书名</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Bno 书号,Bname 书名<br><span class="hljs-keyword">FROM</span> b<br><span class="hljs-keyword">WHERE</span> Price<span class="hljs-operator">&gt;</span>(<br>	<span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">AVG</span>(Price)<br>	<span class="hljs-keyword">FROM</span> b bo<br>	<span class="hljs-keyword">WHERE</span> bo.Pub<span class="hljs-operator">=</span>b.Pub<br>	<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> (Pub)<br>);<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>吼吼，这题自己写出来的。大致思路：自身连接，当外层查询每次查询时向内层询问：是否大于平均价格。内层将价格的均值按照Pub分类求均值，如果不加自身连接<code>WHERE bo.Pub=b.Pub</code>就会向外层循环返回很多列，所以需要将内外层进行等值连接。</p>
 </blockquote>
 </li>
-<li><p>查询每个出版社书价最高的图书是哪些, 输出出版社,书号,书名</p>
+<li>
+<p>查询每个出版社书价最高的图书是哪些, 输出出版社,书号,书名</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Pub 出版社, Bno 书号,Bname 书名<br><span class="hljs-keyword">FROM</span> b<br><span class="hljs-keyword">WHERE</span> Price<span class="hljs-operator">&gt;=</span><span class="hljs-keyword">ALL</span> (<br>	<span class="hljs-keyword">SELECT</span> Price<br>	<span class="hljs-keyword">FROM</span> b bo<br>	<span class="hljs-keyword">WHERE</span> bo.Pub<span class="hljs-operator">=</span>b.Pub <br>);<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>同上题一个思路，多了“带有ANY（SOME）或ALL谓词的子查询 ”：</p>
 </blockquote>
 <ul>
-<li>&gt;&#x3D; ANY 大于等于子查询结果中的某个值  </li>
-<li>&gt;&#x3D; ALL 大于等于子查询结果中的所有值</li>
-<li>&#x3D; ANY 等于子查询结果中的某个值    </li>
-<li>!&#x3D;（或&lt;&gt;）ANY 不等于子查询结果中的某个值</li>
-<li>!&#x3D;（或&lt;&gt;）ALL 不等于子查询结果中的任何一个值</li>
+<li>&gt;= ANY 大于等于子查询结果中的某个值</li>
+<li>&gt;= ALL 大于等于子查询结果中的所有值</li>
+<li>= ANY 等于子查询结果中的某个值</li>
+<li>!=（或&lt;&gt;）ANY 不等于子查询结果中的某个值</li>
+<li>!=（或&lt;&gt;）ALL 不等于子查询结果中的任何一个值</li>
 </ul>
 </li>
-<li><p>找出没有订购B2号图书的读者号，读者的姓名（<strong>用存在谓词查询</strong>）</p>
+<li>
+<p>找出没有订购B2号图书的读者号，读者的姓名（<strong>用存在谓词查询</strong>）</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> r.Rname 读者姓名<br><span class="hljs-keyword">FROM</span> r<br><span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> (<br>	<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span><br>	<span class="hljs-keyword">FROM</span> od<br>	<span class="hljs-keyword">WHERE</span> r.Rno<span class="hljs-operator">=</span>od.Rno <span class="hljs-keyword">AND</span> Bno<span class="hljs-operator">=</span><span class="hljs-string">&#x27;B2&#x27;</span><br>);<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>在这题当中，我发现在<code>where</code>语句后面使用<code>not exists</code>与在内层嵌套中使用<code>Bno！=‘B2’</code>有所不同。不同之处在于，如果是<code>Bno！=‘B2’</code>在内层只要存在Bno不为该值的数都返回为真，但会发现<strong>一个读者会订购许多本书</strong>，如果只检测Bno不为该数值，结果就会出错。</p>
 <p>在查询时，多考虑完全对立面，例如本题：内层循环为完全对立面，即订购了B2中的读者。</p>
 </blockquote>
 </li>
-<li><p>查询读者R4订购的图书的书号和书名（用存在谓词查询）</p>
+<li>
+<p>查询读者R4订购的图书的书号和书名（用存在谓词查询）</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Bno 书号,Bname 书名<br><span class="hljs-keyword">FROM</span> b<br><span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">EXISTS</span> (<br>	<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span><br>	<span class="hljs-keyword">FROM</span> od<br>	<span class="hljs-keyword">WHERE</span> od.Bno<span class="hljs-operator">=</span>b.Bno <span class="hljs-keyword">AND</span> od.Rno<span class="hljs-operator">=</span><span class="hljs-string">&#x27;R4&#x27;</span><br>);<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>同上题，无额外知识点</p>
 </blockquote>
 </li>
-<li><p>查询订购了全部书籍的读者的姓名</p>
+<li>
+<p>查询订购了全部书籍的读者的姓名</p>
 <p>由于原题目里没有订购所有书籍的读者，我擅自将od表改成如下样式（Qty属性列为NULL的为我增加的属性列）：</p>
 <p><img src="https://s2.loli.net/2022/05/15/nreWgC9fKIJ7ySi.png" alt="image-20220515130533601"></p>
 <p>在一开始，我考虑的是三层嵌套,先查r再查od最后查b。发现行不通，原因是：没有把b中的所有进行比较。下方为修改过的答案：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Rname<br><span class="hljs-keyword">FROM</span> r<br><span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">NOT</span>  <span class="hljs-keyword">EXISTS</span> (<br>	<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span><br>	<span class="hljs-keyword">FROM</span> b<br>	<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">NOT</span>  <span class="hljs-keyword">EXISTS</span>(<br>		<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span><br>		<span class="hljs-keyword">FROM</span> od<br>		<span class="hljs-keyword">WHERE</span>  r.Rno<span class="hljs-operator">=</span>od.Rno <span class="hljs-keyword">AND</span> od.Bno<span class="hljs-operator">=</span>b.Bno<br>	)<br>);<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>先遍历r表中的每个人，在每次遍历到一个人的时候，进入内层查询，检查b表中的所有书是不是都订购了，便进入下一层循环，用od表进行三个表的连接，如果连接有结果，即返回为真，回到第二重查询，查询下一本书。</p>
 </blockquote>
 </li>
-<li><p>查询至少订购了R1所订购的书籍的读者的编号（<em>不会</em>）</p>
+<li>
+<p>查询至少订购了R1所订购的书籍的读者的编号（<em>不会</em>）</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span> rno<br><span class="hljs-keyword">FROM</span> od od1<br><span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span>(<br>	<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span><br>	<span class="hljs-keyword">FROM</span> od od2<br>	<span class="hljs-keyword">WHERE</span> od2.rno<span class="hljs-operator">=</span><span class="hljs-string">&#x27;r1&#x27;</span> <span class="hljs-keyword">AND</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span>(<br>		<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span><br>		<span class="hljs-keyword">FROM</span> od od3<br>		<span class="hljs-keyword">WHERE</span> od3.rno<span class="hljs-operator">=</span>od1.rno <span class="hljs-keyword">AND</span> od3.bno<span class="hljs-operator">=</span>od2.bno<br>		)<br>);<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>这题完全没写出来，简单分析一下：从头到尾只用到了od表，也就是说用了三次自身链接，每次都用的NOT EXISTS，说明每次查询都是找的完全对立面。</p>
 </blockquote>
 </li>
-<li><p>把所有Commerce出版社的图书的价格都增加1</p>
+<li>
+<p>把所有Commerce出版社的图书的价格都增加1</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql">UPDATE b<br><span class="hljs-keyword">SET</span> b.Price<span class="hljs-operator">=</span>b.Price<span class="hljs-operator">+</span><span class="hljs-number">1</span><br><span class="hljs-keyword">WHERE</span> b.Pub<span class="hljs-operator">=</span><span class="hljs-string">&#x27;Commerce&#x27;</span>;<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>修改数据：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql">UPDATE  <span class="hljs-operator">&lt;</span>表名<span class="hljs-operator">&gt;</span><br><span class="hljs-keyword">SET</span>  <span class="hljs-operator">&lt;</span>列名<span class="hljs-operator">&gt;=</span><span class="hljs-operator">&lt;</span>表达式<span class="hljs-operator">&gt;</span>[，<span class="hljs-operator">&lt;</span>列名<span class="hljs-operator">&gt;=</span><span class="hljs-operator">&lt;</span>表达式<span class="hljs-operator">&gt;</span>]<br>[<span class="hljs-keyword">WHERE</span> <span class="hljs-operator">&lt;</span>条件<span class="hljs-operator">&gt;</span>];<br></code></pre></td></tr></table></figure>
 </blockquote>
 </li>
-<li><p>把B2读者订购的所有图书的数量改为0</p>
+<li>
+<p>把B2读者订购的所有图书的数量改为0</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql">UPDATE od<br><span class="hljs-keyword">SET</span> Qty<span class="hljs-operator">=</span><span class="hljs-number">0</span><br><span class="hljs-keyword">WHERE</span> od.Bno<span class="hljs-operator">=</span><span class="hljs-string">&#x27;B2&#x27;</span>;<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>简简单单:smirk:</p>
 </blockquote>
 </li>
-<li><p>查询读者表中是否有一个Beijing的读者WangWei,如果有,把他删除</p>
+<li>
+<p>查询读者表中是否有一个Beijing的读者WangWei,如果有,把他删除</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">DELETE</span> <br><span class="hljs-keyword">FROM</span> r<br><span class="hljs-keyword">WHERE</span> r.CITY<span class="hljs-operator">=</span><span class="hljs-string">&#x27;Beijing&#x27;</span> <span class="hljs-keyword">AND</span> r.Rname<span class="hljs-operator">=</span><span class="hljs-string">&#x27;WangWei&#x27;</span>;<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>删除数据：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">DELETE</span><br><span class="hljs-keyword">FROM</span> <span class="hljs-operator">&lt;</span>表名<span class="hljs-operator">&gt;</span><br>[<span class="hljs-keyword">WHERE</span> <span class="hljs-operator">&lt;</span>条件<span class="hljs-operator">&gt;</span>]；<br></code></pre></td></tr></table></figure>
 </blockquote>
 </li>
-<li><p>查出每个出版社的图书的平均价格,保存到数据库中(<em>不会</em>)</p>
+<li>
+<p>查出每个出版社的图书的平均价格,保存到数据库中(<em>不会</em>)</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> bp(<br>Pub <span class="hljs-type">CHAR</span>(<span class="hljs-number">10</span>),<br>avg_price <span class="hljs-type">FLOAT</span>);<br><br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> bp(Pub,avg_price)<br><span class="hljs-keyword">SELECT</span> pub,<span class="hljs-built_in">AVG</span>(price)<br><span class="hljs-keyword">FROM</span> b<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> pub;<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>这题很综合，先是题目中<em>保存到数据库中</em>的意思，我们应该先建立一个新的数据库，再使用<code>INSERT INTO</code>将b表中的两列处理后插入。</p>
 <p>PS.需要注意的是在插入的时候，要指定插入的列，同时记得<strong>打括号。</strong></p>
 </blockquote>
 </li>
-<li><p>将所有Beijing读者订购的图书数量改为一本</p>
+<li>
+<p>将所有Beijing读者订购的图书数量改为一本</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql">UPDATE od<br><span class="hljs-keyword">SET</span> od.Qty<span class="hljs-operator">=</span><span class="hljs-number">1</span><br><span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">EXISTS</span>(<br>	<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span><br>	<span class="hljs-keyword">FROM</span> r<br>	<span class="hljs-keyword">WHERE</span> od.Rno<span class="hljs-operator">=</span>r.Rno <span class="hljs-keyword">AND</span> r.CITY<span class="hljs-operator">=</span><span class="hljs-string">&#x27;Beijing&#x27;</span><br>);<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>简简单单:grinning:</p>
 </blockquote>
 </li>
-<li><p>删去Shanghai的所有读者的订书单</p>
+<li>
+<p>删去Shanghai的所有读者的订书单</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">DELETE</span><br><span class="hljs-keyword">FROM</span> od<br><span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">EXISTS</span>(<br>	<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span><br>	<span class="hljs-keyword">FROM</span> r<br>	<span class="hljs-keyword">WHERE</span> od.Rno<span class="hljs-operator">=</span>r.Rno <span class="hljs-keyword">AND</span> r.CITY<span class="hljs-operator">=</span><span class="hljs-string">&#x27;Shanghai&#x27;</span><br>);<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>上面是我拿<code>EXISTS</code>写的，答案中也可以使用<code>IN</code>来写：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">DELETE</span><br><span class="hljs-keyword">FROM</span> OD<br><span class="hljs-keyword">WHERE</span> rno <span class="hljs-keyword">in</span> (<br>	<span class="hljs-keyword">SELECT</span> rno<br>	<span class="hljs-keyword">FROM</span> R<br>	<span class="hljs-keyword">WHERE</span> city<span class="hljs-operator">=</span><span class="hljs-string">&#x27;上海&#x27;</span><br>);<br></code></pre></td></tr></table></figure></blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">DELETE</span><br><span class="hljs-keyword">FROM</span> OD<br><span class="hljs-keyword">WHERE</span> rno <span class="hljs-keyword">in</span> (<br>	<span class="hljs-keyword">SELECT</span> rno<br>	<span class="hljs-keyword">FROM</span> R<br>	<span class="hljs-keyword">WHERE</span> city<span class="hljs-operator">=</span><span class="hljs-string">&#x27;上海&#x27;</span><br>);<br></code></pre></td></tr></table></figure>
+</blockquote>
 </li>
 </ol>
 
@@ -804,5 +811,20 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>

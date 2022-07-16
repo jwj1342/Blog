@@ -16,12 +16,12 @@
   <meta name="author" content="John Wen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Git &amp; Github学习笔记什么是Git？分布式版本控制工具，代码版本控制。目前世界上最先进的分布式版本控制系统。 理论基础：Git本地有三个工作区域：工作目录（Working Directory）、暂存区(Stage&#x2F;Index)、资源库(Repository或Git Directory)。如果在加上远程的git仓库(Remote Directory)就可以分为四个工作区域">
+    <meta name="description" content="Git &amp; Github学习笔记 什么是Git？ 分布式版本控制工具，代码版本控制。目前世界上最先进的分布式版本控制系统。 理论基础： Git本地有三个工作区域：工作目录（Working Directory）、暂存区(Stage&#x2F;Index)、资源库(Repository或Git Directory)。如果在加上远程的git仓库(Remote Directory)就可以分为四个工作区域。文">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git &amp; Github 相关">
 <meta property="og:url" content="http://example.com/2022/06/03/Git&&GIthub%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="JWJ &#39;S Blog">
-<meta property="og:description" content="Git &amp; Github学习笔记什么是Git？分布式版本控制工具，代码版本控制。目前世界上最先进的分布式版本控制系统。 理论基础：Git本地有三个工作区域：工作目录（Working Directory）、暂存区(Stage&#x2F;Index)、资源库(Repository或Git Directory)。如果在加上远程的git仓库(Remote Directory)就可以分为四个工作区域">
+<meta property="og:description" content="Git &amp; Github学习笔记 什么是Git？ 分布式版本控制工具，代码版本控制。目前世界上最先进的分布式版本控制系统。 理论基础： Git本地有三个工作区域：工作目录（Working Directory）、暂存区(Stage&#x2F;Index)、资源库(Repository或Git Directory)。如果在加上远程的git仓库(Remote Directory)就可以分为四个工作区域。文">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s2.loli.net/2022/06/03/db4AVkoZl2wLQ8O.png">
 <meta property="og:image" content="https://s2.loli.net/2022/06/03/kUfoABm6JFRWXjp.png">
@@ -87,7 +87,11 @@
   <script  src="/js/color-schema.js" ></script>
 
   
-<meta name="generator" content="Hexo 5.4.2"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head>
 
 
 <body>
@@ -189,7 +193,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          2.3k 字
+          2.4k 字
         
       </span>
     
@@ -252,8 +256,11 @@
             
             <div class="markdown-body">
               
-              <h2 id="Git-amp-Github学习笔记"><a href="#Git-amp-Github学习笔记" class="headerlink" title="Git &amp; Github学习笔记"></a>Git &amp; Github学习笔记</h2><h3 id="什么是Git？"><a href="#什么是Git？" class="headerlink" title="什么是Git？"></a>什么是Git？</h3><p>分布式版本控制工具，代码版本控制。<strong>目前世界上最先进的分布式版本控制系统。</strong></p>
-<h3 id="理论基础："><a href="#理论基础：" class="headerlink" title="理论基础："></a>理论基础：</h3><p>Git本地有三个工作区域：工作目录（Working Directory）、暂存区(Stage&#x2F;Index)、资源库(Repository或Git Directory)。如果在加上远程的git仓库(Remote Directory)就可以分为四个工作区域。文件在这四个区域之间的转换关系如下：</p>
+              <h2 id="Git-Github学习笔记">Git &amp; Github学习笔记</h2>
+<h3 id="什么是Git？">什么是Git？</h3>
+<p>分布式版本控制工具，代码版本控制。<strong>目前世界上最先进的分布式版本控制系统。</strong></p>
+<h3 id="理论基础：">理论基础：</h3>
+<p>Git本地有三个工作区域：工作目录（Working Directory）、暂存区(Stage/Index)、资源库(Repository或Git Directory)。如果在加上远程的git仓库(Remote Directory)就可以分为四个工作区域。文件在这四个区域之间的转换关系如下：</p>
 <p><img src="https://s2.loli.net/2022/06/03/db4AVkoZl2wLQ8O.png" alt="图片"></p>
 <p>从下到上依次是：</p>
 <ul>
@@ -264,13 +271,15 @@
 </ul>
 <p>更清楚的图示：</p>
 <p><img src="https://s2.loli.net/2022/06/03/kUfoABm6JFRWXjp.png" alt="img"></p>
-<h5 id="常用的工作步骤："><a href="#常用的工作步骤：" class="headerlink" title="常用的工作步骤："></a>常用的工作步骤：</h5><ol>
+<h5 id="常用的工作步骤：">常用的工作步骤：</h5>
+<ol>
 <li>在工作目录中添加、修改文件；</li>
 <li>将需要进行版本管理的文件放入暂存区域；</li>
 <li>将暂存区域的文件提交到git仓库。</li>
 </ol>
 <p>git管理的文件有三种状态：已修改（modified）,已暂存（staged）,已提交(committed)。</p>
-<h5 id="分支："><a href="#分支：" class="headerlink" title="分支："></a>分支：</h5><p><strong>Git的分支</strong>就是科幻电影里面的平行宇宙，如果两个平行宇宙互不干扰，那对现在的你也没啥影响。不过，在某个时间点，两个平行宇宙合并了，我们就需要处理一些问题了！</p>
+<h5 id="分支：">分支：</h5>
+<p><strong>Git的分支</strong>就是科幻电影里面的平行宇宙，如果两个平行宇宙互不干扰，那对现在的你也没啥影响。不过，在某个时间点，两个平行宇宙合并了，我们就需要处理一些问题了！</p>
 <p>有两种产生冲突的原因：</p>
 <ul>
 <li>合并分支时，两个分支在同一个文件的同一个位置有两套完全不同的修改。</li>
@@ -279,7 +288,6 @@
 <p>解决的办法是我们可以修改冲突文件后重新提交！选择要保留他的代码还是你的代码！如下图：</p>
 <p>:one:正常合并不冲突：</p>
 <img src="https://img-blog.csdnimg.cn/b4f384f593fd4f1bb8f8166cf7c3788a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA55Sf5ZG95piv5pyJ5YWJ55qE,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="img"  />
-
 <p>:two:合并产生冲突：</p>
 <p>例如，我们首先在 master 分支的倒数第二行进行修改，并将其添加到暂存区，再提交到本地库。</p>
 <p><img src="https://img-blog.csdnimg.cn/4821244a17a44193a41238f39b3bff2e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA55Sf5ZG95piv5pyJ5YWJ55qE,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="img"></p>
@@ -290,9 +298,13 @@
 <p>解决冲突的办法：编辑有冲突的文件，删除特殊符号（<code>&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> 当前分支的代码 <code>=======</code> 合并过来的代码 <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;hot-fix</code>），决定要使用的内容。接着保存，再次添加到暂存区，并再次提交到本地库(注意：此时使用 git commit 命令时候不能带文件名)</p>
 <p><img src="https://img-blog.csdnimg.cn/7ba8e844ff5f4062abe9a8c61763378a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA55Sf5ZG95piv5pyJ5YWJ55qE,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
 <p>master主分支应该非常稳定，用来发布新版本，一般情况下不允许在上面工作，工作一般情况下在新建的dev分支上工作，工作完后，比如上要发布，或者说dev分支代码稳定后可以合并到主分支master上来。</p>
-<h5 id="签名："><a href="#签名：" class="headerlink" title="签名："></a>签名：</h5><p>签名的作用是区分不同操作者身份。用户的签名信息在每一个版本的提交信息中能够看<br>到，以此确认本次提交是谁做的。 Git安装必须设置用户签名。这里设置用户签名和将来登录 GitHub（或其他代码托管中心）的账号没有任何关系。</p>
-<h5 id="初始化本地库："><a href="#初始化本地库：" class="headerlink" title="初始化本地库："></a>初始化本地库：</h5><p>在本地的需要管理的目录下，新建了一个.git隐藏文件夹，将该同级文件或者文件夹都添加入版本库（这个概念下面聊）。</p>
-<h5 id="查看本地库状态："><a href="#查看本地库状态：" class="headerlink" title="查看本地库状态："></a>查看本地库状态：</h5><p>查看当前工作区的git状态，如下图，我的小小计算器项目下使用<code>git status</code>：</p>
+<h5 id="签名：">签名：</h5>
+<p>签名的作用是区分不同操作者身份。用户的签名信息在每一个版本的提交信息中能够看<br>
+到，以此确认本次提交是谁做的。 Git安装必须设置用户签名。这里设置用户签名和将来登录 GitHub（或其他代码托管中心）的账号没有任何关系。</p>
+<h5 id="初始化本地库：">初始化本地库：</h5>
+<p>在本地的需要管理的目录下，新建了一个.git隐藏文件夹，将该同级文件或者文件夹都添加入版本库（这个概念下面聊）。</p>
+<h5 id="查看本地库状态：">查看本地库状态：</h5>
+<p>查看当前工作区的git状态，如下图，我的小小计算器项目下使用<code>git status</code>：</p>
 <p><img src="https://s2.loli.net/2022/06/03/gnR95WOItJejXZS.png" alt="image-20220603145203556"></p>
 <p>在文件发生更改的时候，会有四种状态：</p>
 <ul>
@@ -301,109 +313,119 @@
 <li>Modified: 文件已修改, 仅仅是修改, 并没有进行其他的操作. 这个文件也有两个去处, 通过git add可进入暂存staged状态, 使用<code>git checkout </code>则丢弃修改过, 返回到unmodify状态, 这个<code>git checkout</code>即从库中取出文件, 覆盖当前修改 !</li>
 <li>Staged: 暂存状态. 执行git commit则将修改同步到库中, 这时库中的文件和本地文件又变为一致, 文件为Unmodify状态. 执行<code>git reset HEAD filename</code>取消暂存, 文件状态为Modified</li>
 </ul>
-<h5 id="版本穿梭："><a href="#版本穿梭：" class="headerlink" title="版本穿梭："></a>版本穿梭：</h5><p>在git本地库中，软件会迭代很多版本，在不同版本之间切换便是版本穿梭。版本穿梭最重要的是知道想更换的版本的版本号，然后再使用上述命令。</p>
+<h5 id="版本穿梭：">版本穿梭：</h5>
+<p>在git本地库中，软件会迭代很多版本，在不同版本之间切换便是版本穿梭。版本穿梭最重要的是知道想更换的版本的版本号，然后再使用上述命令。</p>
 <hr>
-<h3 id="Git版本控制常用命令"><a href="#Git版本控制常用命令" class="headerlink" title="Git版本控制常用命令"></a>Git版本控制常用命令</h3><table>
+<h3 id="Git版本控制常用命令">Git版本控制常用命令</h3>
+<table>
 <thead>
 <tr>
-<th align="center">命令</th>
-<th align="center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">作用</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">git config –global user.name</td>
-<td align="center">设置全局用户签名</td>
+<tbody>
+<tr>
+<td style="text-align:center">git config --global <a target="_blank" rel="noopener" href="http://user.name">user.name</a></td>
+<td style="text-align:center">设置全局用户签名</td>
 </tr>
 <tr>
-<td align="center">git config –global user.email</td>
-<td align="center">同上</td>
+<td style="text-align:center">git config --global user.email</td>
+<td style="text-align:center">同上</td>
 </tr>
 <tr>
-<td align="center"><strong>git init</strong></td>
-<td align="center"><strong>初始化本地库</strong></td>
+<td style="text-align:center"><strong>git init</strong></td>
+<td style="text-align:center"><strong>初始化本地库</strong></td>
 </tr>
 <tr>
-<td align="center"><strong>git status</strong></td>
-<td align="center"><strong>查看本地库状态</strong></td>
+<td style="text-align:center"><strong>git status</strong></td>
+<td style="text-align:center"><strong>查看本地库状态</strong></td>
 </tr>
 <tr>
-<td align="center"><strong>git add 文件名</strong></td>
-<td align="center"><strong>添加到暂存区</strong></td>
+<td style="text-align:center"><strong>git add 文件名</strong></td>
+<td style="text-align:center"><strong>添加到暂存区</strong></td>
 </tr>
 <tr>
-<td align="center"><strong>git commit -m “ 日志信息 “ 文件名</strong></td>
-<td align="center"><strong>提交到本地库</strong></td>
+<td style="text-align:center"><strong>git commit -m &quot; 日志信息 &quot; 文件名</strong></td>
+<td style="text-align:center"><strong>提交到本地库</strong></td>
 </tr>
 <tr>
-<td align="center"><strong>git reflog</strong></td>
-<td align="center"><strong>查看历史记录</strong></td>
+<td style="text-align:center"><strong>git reflog</strong></td>
+<td style="text-align:center"><strong>查看历史记录</strong></td>
 </tr>
 <tr>
-<td align="center"><strong>git reset –hard 版本号</strong></td>
-<td align="center"><strong>版本穿梭</strong></td>
+<td style="text-align:center"><strong>git reset --hard 版本号</strong></td>
+<td style="text-align:center"><strong>版本穿梭</strong></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p><img src="https://s2.loli.net/2022/06/03/pwLfDJ41ehsTxkb.png" alt="img"></p>
-<h3 id="Git分支控制常用命令"><a href="#Git分支控制常用命令" class="headerlink" title="Git分支控制常用命令"></a>Git分支控制常用命令</h3><table>
+<h3 id="Git分支控制常用命令">Git分支控制常用命令</h3>
+<table>
 <thead>
 <tr>
-<th align="center">命令</th>
-<th align="center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">作用</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">git branch 分支名</td>
-<td align="center">创建分支，但依然停留在当前分支</td>
+<tbody>
+<tr>
+<td style="text-align:center">git branch 分支名</td>
+<td style="text-align:center">创建分支，但依然停留在当前分支</td>
 </tr>
 <tr>
-<td align="center">git checkout -b 分支名</td>
-<td align="center">新建一个分支，并切换到该分支</td>
+<td style="text-align:center">git checkout -b 分支名</td>
+<td style="text-align:center">新建一个分支，并切换到该分支</td>
 </tr>
 <tr>
-<td align="center">git branch -v</td>
-<td align="center">查看分支</td>
+<td style="text-align:center">git branch -v</td>
+<td style="text-align:center">查看分支</td>
 </tr>
 <tr>
-<td align="center">git checkout 分支名</td>
-<td align="center">切换分支</td>
+<td style="text-align:center">git checkout 分支名</td>
+<td style="text-align:center">切换分支</td>
 </tr>
 <tr>
-<td align="center">git branch -d 分支名</td>
-<td align="center">删除分支</td>
+<td style="text-align:center">git branch -d 分支名</td>
+<td style="text-align:center">删除分支</td>
 </tr>
 <tr>
-<td align="center">git merge 分支名</td>
-<td align="center">把指定的分支合并到当前分支上</td>
+<td style="text-align:center">git merge 分支名</td>
+<td style="text-align:center">把指定的分支合并到当前分支上</td>
 </tr>
-</tbody></table>
-<h3 id="Git远程仓库操作命令"><a href="#Git远程仓库操作命令" class="headerlink" title="Git远程仓库操作命令"></a>Git远程仓库操作命令</h3><table>
+</tbody>
+</table>
+<h3 id="Git远程仓库操作命令">Git远程仓库操作命令</h3>
+<table>
 <thead>
 <tr>
-<th align="center">命令</th>
-<th align="center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">作用</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">git remote -v</td>
-<td align="center">查看当前所有远程地址别名</td>
+<tbody>
+<tr>
+<td style="text-align:center">git remote -v</td>
+<td style="text-align:center">查看当前所有远程地址别名</td>
 </tr>
 <tr>
-<td align="center">git remote add 别名 远程地址</td>
-<td align="center">起别名</td>
+<td style="text-align:center">git remote add 别名 远程地址</td>
+<td style="text-align:center">起别名</td>
 </tr>
 <tr>
-<td align="center"><strong>git push 别名 分支</strong></td>
-<td align="center"><strong>推送本地分支上的内容到远程仓库</strong></td>
+<td style="text-align:center"><strong>git push 别名 分支</strong></td>
+<td style="text-align:center"><strong>推送本地分支上的内容到远程仓库</strong></td>
 </tr>
 <tr>
-<td align="center"><strong>git clone 远程地址</strong></td>
-<td align="center"><strong>将远程仓库的内容克隆到本地</strong></td>
+<td style="text-align:center"><strong>git clone 远程地址</strong></td>
+<td style="text-align:center"><strong>将远程仓库的内容克隆到本地</strong></td>
 </tr>
 <tr>
-<td align="center"><strong>git pull 远程库地址别名 远程分支名</strong></td>
-<td align="center"><strong>将远程仓库对于分支最新内容拉下来<br>后与当前本地分支直接合并</strong></td>
+<td style="text-align:center"><strong>git pull 远程库地址别名 远程分支名</strong></td>
+<td style="text-align:center"><strong>将远程仓库对于分支最新内容拉下来<br>后与当前本地分支直接合并</strong></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 
               
             </div>
@@ -730,5 +752,20 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
