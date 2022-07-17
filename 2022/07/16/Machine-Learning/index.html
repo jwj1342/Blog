@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://speech.ee.ntu.edu.tw/~hylee/images/ml-title-2022.png">
 <meta property="article:published_time" content="2022-07-16T03:24:37.735Z">
-<meta property="article:modified_time" content="2022-07-16T04:17:41.326Z">
+<meta property="article:modified_time" content="2022-07-17T15:07:29.829Z">
 <meta property="article:author" content="John Wen">
 <meta property="article:tag" content="ML">
 <meta name="twitter:card" content="summary_large_image">
@@ -185,7 +185,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          4.6k 字
+          7.7k 字
         
       </span>
     
@@ -197,7 +197,7 @@
         
         
           <!-- compatible with older versions-->
-          38 分钟
+          65 分钟
         
       </span>
     
@@ -241,7 +241,7 @@
                 
                   
                     <!-- compatible with older versions-->
-                    本文最后更新于：1 小时前
+                    本文最后更新于：几秒前
                   
                 
               </p>
@@ -317,7 +317,7 @@ $$<br>
 $$<br>
 e=\left| y-\overline{y} \right|,,OR,,e=\left( y-\widehat{y} \right) ^2<br>
 \<br>
-L=\frac{1}{N}\sum_n^{}{ e_n }<br>
+L=\frac{1}{N}\sum_n^{}{e_n}<br>
 $$<br>
 在上述方程中上面的两个e分别为：</p>
 <ol>
@@ -364,7 +364,7 @@ $$<br>
 <p>我们模型的无论如何调参，都无法“弯曲“，所以我们需要一个可以分段的函数进行建模。</p>
 <p>现在问题就变成了如何将红色简化成蓝色线段的形式，观察到每一个小分段都是由一次函数组成，我们猜想许多个函数：只在某一个区间内有变化，其余全部为0,得到如下图所示：</p>
 <p><img src="https://s2.loli.net/2022/07/15/qnczNP3pGBAhY6J.png" alt="image-20220715214548076"></p>
-<p>我们发现红色线段可以由许多蓝色线段进行替代，我们将蓝色线段抽象出来，得到蓝色线段的特征，<img src="https://s2.loli.net/2022/07/15/wQcn83RTPV5GkgU.png" alt="image-20220715214749229" style="zoom:25%;" /></p>
+<p>我们发现红色线段可以由许多蓝色线段进行替代，我们将蓝色线段抽象出来，得到蓝色线段的特征，<img src="https://s2.loli.net/2022/07/15/wDpkJrcQOmUftzK.png" style="zoom: 25%;" /></p>
 <p>在数学上我们有<strong>Sigmoid</strong>函数可以近似该函数，同样这个带有棱角的分段蓝色函数就被叫做<strong>Hard</strong> <strong>Sigmoid</strong>我们观察<strong>Sigmoid</strong>函数的特征：</p>
 <iframe src="https://www.desmos.com/calculator/zwluff5jpb?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 <p>我们对于该函数简写成：<br>
@@ -443,7 +443,7 @@ $$<br>
 <img src="https://s2.loli.net/2022/07/16/FhWIiZNKH7nw1qa.png" alt="image-20220716105744859" style="zoom:67%;" />
 <p>当我们进行这种转换： Sigmoid :arrow_right: ReLU (Rectified Linear Unit)。我们公式会变成：<br>
 $$<br>
-y=b+\sum_i{ {\color[RGB]{240, 0, 0} c_i} }sigmoid\left( {\color[RGB]{240, 0, 0} b_i}+\sum_j{ {\color[RGB]{0, 0, 240} w_{ij} }x_j} \right)<br>
+y=b+\sum_i{ {\color[RGB]{240, 0, 0} c_i}}sigmoid\left( {\color[RGB]{240, 0, 0} b_i}+\sum_j{ {\color[RGB]{0, 0, 240} w_{ij} }x_j} \right)<br>
 \<br>
 \downarrow<br>
 \<br>
@@ -451,7 +451,7 @@ Activation,,function(激活函数)<br>
 \<br>
 \uparrow<br>
 \<br>
-y=b+\sum_{ {\color[RGB]{240, 0, 0} 2}i}{ {\color[RGB]{240, 0, 0} c_i} }\max \left( 0,b_i+\sum_j{ {\color[RGB]{0, 0, 240} w_{ij} }x_j} \right)<br>
+y=b+\sum_{ {\color[RGB]{240, 0, 0} 2}i}{ {\color[RGB]{240, 0, 0} c_i}}\max \left( 0,b_i+\sum_j{ {\color[RGB]{0, 0, 240} w_{ij} }x_j} \right)<br>
 \<br>
 $$</p>
 <h3 id="多层的神经网络">多层的神经网络</h3>
@@ -462,6 +462,134 @@ $$</p>
 <hr>
 <p>最后只得一提的是：<strong>Hyper Parameter</strong>（超参数）。</p>
 <p>机器学习模型中一般有两类参数：一类需要从数据中学习和估计得到，称为模型参数（Parameter）—即模型本身的参数。比如，线性回归直线的加权系数（斜率）及其偏差项（截距）都是模型参数。还有一类则是机器学习算法中的调优参数（tuning parameters），需要人为设定，称为超参数（Hyperparameter）。比如说神经网络的层数，Learning Rate（学习率），几个sigmoid，Batch size。</p>
+<h2 id="Lecture-2">Lecture 2</h2>
+<h3 id="调优模型的思路">调优模型的思路</h3>
+<p>第二节课一开始，便是教会我们如何调优，在老师的PPT上有这个图：</p>
+<img src="https://s2.loli.net/2022/07/17/Evfih2oCBUnV5Ou.png" alt="image-20220717141818386" style="zoom:67%;" />
+<p>我们知道，在验证一个模型的时候，要先进行对训练集数据的检验，不能一味的对测试集进行检验。</p>
+<h4 id="训练数据Loss过大">训练数据Loss过大</h4>
+<p>在我们发现对训练数据Loss过大的时候，我们有两种猜测：</p>
+<ol>
+<li>
+<p>模型过于简单（model bias）</p>
+<p>例如，当我们的数据分布是二次函数的时候，我们始终用线性模型进行拟合的化，无论怎么调参都不会达到一个期望的Loss</p>
+<p>解决方法是，重新设计模型，使得模型具有跟具有弹性，接上面的例子，如果我们改用二次函数或者三次函数进行拟合。</p>
+</li>
+<li>
+<p>模型的调参程序无法达到最优解（optimization）</p>
+<p>昨天提过，我们使用的方法也许会陷入局部最优解，所以会导致Loss增大。</p>
+<img src="https://s2.loli.net/2022/07/17/wTPcZDj4g6dyJtb.png" alt="image-20220717142636702" style="zoom:50%;" />
+</li>
+</ol>
+<p>那我们接下来就要判断到底是哪一种方法使得Loss增大到底是模型简单还是收敛方法有误。老师上课举了一个例子:当我们使用56层的神经网络与26层的神经网络分别检测他们的Loss，我们可以发现，56的Loss更加的高。在几年前，人们认为这是过拟合的问题，其实不是。我们假设在56层的神经网络中，有30层都是直接输出，不处理输入输出，其实是可以达到26层的Loss的，所以其实不是过拟合的问题(over-fitting)。</p>
+<p>在检测中，我们我们需要检测Loss的时候，可以减少神经网络的层数，或者简化模型，对比简化后的模型的Loss是不是减少了。如果减少了就说明我们的模型的调优程序没有找到最优解。</p>
+<h4 id="训练数据Loss过小">训练数据Loss过小</h4>
+<p>当我们的训练数据的Loss小的时候我们不能就此认为这个模型就是完美的，要对测试数据进一步进行检验。如果这个时候我们发现对于测试集的数据Loss过大，我们就可以说这个时候发生了<strong>过拟合</strong>。过拟合的图示如下：</p>
+<img src="https://s2.loli.net/2022/07/17/QcSUbReGVWJ9PTE.png" alt="image-20220717145237741" style="zoom: 67%;" />
+<p>那么我们对于过拟合的数据如何处理呢？同样也是有两种办法：</p>
+<ol>
+<li>增加更多的数据</li>
+<li>数据增强（Data augmentation，使用原数据进行变换增加更多的数据）</li>
+<li>限制模型</li>
+</ol>
+<p>其实前两个方法是殊途同归的，都是增加机器的学习样本，使得拟合的点位增多，减小过拟合现象。第三个方法其实就相当于我们限制好该模型只能用二次函数进行调参或者指数函数。这样就可以避免上图右下角的过拟合模样。那如何固定这个函数或者模型就取决于我们每个人对于模型的理解。比如说CNN神经网络就是更具图像的特点固定模型的部分参数。</p>
+<p>我们根据感觉可以得到一个训练集上的Loss与测试集上的Loss随着时间变化的图像：</p>
+<img src="https://s2.loli.net/2022/07/17/fOZE36nNY8zL1lk.png" alt="image-20220717150551810" style="zoom:50%;" />
+<p>而当我们无法增加原始数据量的时候，我们可以使用交叉验证（Cross Validation）：</p>
+<img src="https://s2.loli.net/2022/07/17/rWRtBleDjZJGNAT.png" alt="image-20220717152008204" style="zoom: 80%;" />
+<p>我们将训练集中的数据拿出一部分来进行验证，从而保证最大限度的利用的原始数据集。但是，这就又有一个问题，我们如何进行分组呢？</p>
+<p>这就是我曾经在Matlab中的K折交叉验证（N fold Cross Validation），我们从下图中可以看到，我们取不同的验证集，不同的模型，可以得到不同的MSE，我们将MSE取平均就可以的到可行性之内的最佳模型，这个模型可以说是很“中庸”，因为它既不会因为Loss太大而失去作用，也不会因为对原始数据的过拟合，导致在测试集上的表现很差。</p>
+<img src="https://s2.loli.net/2022/07/17/BhxLbzIwqKm9WJ7.png" alt="image-20220717152439105" style="zoom: 67%;" />
+<h3 id="局部最小值与鞍点">局部最小值与鞍点</h3>
+<p>我们在迭代模型的时候，使用的方法为梯度下降，而当我们使用梯度下降时的两个所谓的局限性便是：局部最小值与鞍点。</p>
+<p>根据高等数学的知识，我们知道鞍点其实不是最小值，他只有两个方向比它高，两个方向比它小。</p>
+<img src="https://s2.loli.net/2022/07/17/P7AS6MCxUXkHW3G.png" alt="image-20220717165345748" style="zoom:80%;" />
+<h4 id="鞍点">鞍点</h4>
+<p>我们先看鞍点，在这个点，我们梯度求解为0，所以我们的计算机不知道像哪边走？但是我们知道其实这不是最小的点。我们如何判断这个点是鞍点还是最小值点呢？</p>
+<p>我们只要知道这个点附近的值与他自己的值的比较。是全部都大于它还是有大有小。其实我们只要知道Loss函数是什么样子就能求出来这个点附近的情况。但是Loss函数过于复杂，我们一般不太可能把它写出来，于是我们就是用泰勒逼近，考察一下这个点附近的取值如何。<br>
+$$<br>
+L\left( \theta \right) \approx L\left( \theta ’ \right) +\left( \theta -\theta ’ \right) ^Tg+\frac{1}{2}\left( \theta -\theta ’ \right) ^TH\left( \theta -\theta ’ \right)<br>
+$$<br>
+上图中的g是是梯度向量，我们知道在这个点的梯度是0，所以我们的公式便是：<br>
+$$<br>
+L\left( \theta \right) \approx L\left( \theta ’ \right) +\frac{1}{2}\left( \theta -\theta ’ \right) ^TH\left( \theta -\theta ’ \right)<br>
+$$<br>
+上图中的H为海瑟<strong>矩阵</strong>：<br>
+$$<br>
+H_{i j}=\frac{\partial^{2}}{\partial \boldsymbol{\theta}<em>{i} \partial \boldsymbol{\theta}</em>{j}} L\left(\boldsymbol{\theta}^{\prime}\right)<br>
+$$<br>
+到现在我们最关注的应该是最右边的这个含有海瑟矩阵的部分，我们进行如下替换，便可得到：<br>
+$$<br>
+\left( \theta -\theta ’ \right) \rightarrow v<br>
+\<br>
+\left( \theta -\theta ’ \right) ^TH\left( \theta -\theta ’ \right)\rightarrow v^THv<br>
+$$<br>
+这个时候我们有:</p>
+<img src="https://s2.loli.net/2022/07/17/Iw6MNotmRY7eC45.png" alt="image-20220717171843672" style="zoom: 67%;" />
+<blockquote>
+<p>eigen values：特征值</p>
+<p>eigen vector：特征向量</p>
+</blockquote>
+<hr>
+<p>到此为止，我们会判断一个梯度为0的点，到底是鞍点还是最小值点。如果是鞍点的话，我们下一步那是继续下降，不过不能是梯度下降了，那应该用什么办法呢？</p>
+<p>其实海瑟矩阵就能完成这个任务，我们需要利用特征向量完成梯度的作用，如下:</p>
+<p><img src="https://s2.loli.net/2022/07/17/GeEjrPLtschWCvX.png" alt="image-20220717173148643"></p>
+<p>在这堂课的最后，老师说了，其实利用这个方法来代替梯度其实不是最优解，因为计算时间很长。</p>
+<h4 id="局部最小值">局部最小值</h4>
+<p>我们在真实的训练情况中，大多数情况下都不会遇到局部最小值，[大部分情况还是鞍点的情况多一点。](Source:https<br>
+://docs.google.com/presentation/d/1siUFXARYRpNiMeSRwgFbt7mZVjkMPhR5od09w0Z8xaU/edit#slide=id.g3<br>
+1470fd33a_0_33)</p>
+<p>下面会说如何对局部最小值进行处理。</p>
+<h3 id="训练技巧（Batch-Momentum）">训练技巧（Batch &amp; Momentum）</h3>
+<p>老师上课又重新回顾了一下Batch的概念，然后提出了用每一个Batch中的训练数据与用一整个数据集进行训练的差别，具体如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">Small</th>
+<th style="text-align:center">Large</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Speed for one update<br/>(no parallel)</td>
+<td style="text-align:center">Faster</td>
+<td style="text-align:center">Slower</td>
+</tr>
+<tr>
+<td style="text-align:center">Speed for one update<br/>(with parallel)</td>
+<td style="text-align:center">Same</td>
+<td style="text-align:center">Same (not too large)</td>
+</tr>
+<tr>
+<td style="text-align:center">Time for one epoch</td>
+<td style="text-align:center">Slower</td>
+<td style="text-align:center">Faster:trophy:</td>
+</tr>
+<tr>
+<td style="text-align:center">Gradient</td>
+<td style="text-align:center">Noisy</td>
+<td style="text-align:center">Stable</td>
+</tr>
+<tr>
+<td style="text-align:center">Optimization</td>
+<td style="text-align:center">Better:trophy:</td>
+<td style="text-align:center">Worse</td>
+</tr>
+<tr>
+<td style="text-align:center">Generalization</td>
+<td style="text-align:center">Better:trophy:</td>
+<td style="text-align:center">Worse</td>
+</tr>
+</tbody>
+</table>
+<p>对了，每一个Batch的大小也是一个hyperparameter。</p>
+<p><strong>Momentum(动量)</strong>，这是物理中的一个描述量，通过这个方法，我们可以减小我们的模型进入局部最小值的概率，因为如果我们的模型梯度下降到最小的梯度的时候，我们还有动量可以进行调整。具象化的图示如下：</p>
+<p><img src="https://s2.loli.net/2022/07/17/6pLOWUXRdbScNPm.png" alt="image-20220717225459101"></p>
+<p>那么用数学的方式来表达是怎样的呢？其实也就是在梯度下降的方向上加上动量：</p>
+<img src="../../../../AppData/Roaming/Typora/typora-user-images/image-20220717225739831.png" alt="image-20220717225739831" style="zoom: 67%;" />
+<p>值得注意的是，我们当前进行下降的判断<strong>并不是</strong>来自上一步的动量加上梯度乘以学习率。我们通过上图可以看出来，其实是将所有之前的步的动量都累加在一起了。</p>
+<h3 id="自动调整学习速率">自动调整学习速率</h3>
 
               
             </div>
