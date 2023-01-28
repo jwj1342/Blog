@@ -16,12 +16,12 @@
   <meta name="author" content="John Wen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="机器学习笔记[toc] Lecture 1Colab的使用首先是Colab中的两种代码块的语法形式：  谷歌硬盘的使用： 12from google.colab import drivedrive.mount(&amp;#x27;&#x2F;content&#x2F;drive&amp;#x27;)  Linux命令(记得前面都要加!)： ls : 列出当前目录中的所有文件  ls -l : 列出当前目录中所有文件的详细信息  pw">
+    <meta name="description" content="机器学习笔记 [toc] Lecture 1 Colab的使用 首先是Colab中的两种代码块的语法形式：  谷歌硬盘的使用： 12from google.colab import drivedrive.mount(&amp;#x27;&#x2F;content&#x2F;drive&amp;#x27;)  Linux命令(记得前面都要加!)： ls : 列出当前目录中的所有文件 ls -l : 列出当前目录中所有文件的详细信息 p">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Machine Learning 2022SP HUNG-YI LEE">
 <meta property="og:url" content="http://example.com/2022/07/16/Machine-Learning/index.html">
 <meta property="og:site_name" content="JWJ &#39;S Blog">
-<meta property="og:description" content="机器学习笔记[toc] Lecture 1Colab的使用首先是Colab中的两种代码块的语法形式：  谷歌硬盘的使用： 12from google.colab import drivedrive.mount(&amp;#x27;&#x2F;content&#x2F;drive&amp;#x27;)  Linux命令(记得前面都要加!)： ls : 列出当前目录中的所有文件  ls -l : 列出当前目录中所有文件的详细信息  pw">
+<meta property="og:description" content="机器学习笔记 [toc] Lecture 1 Colab的使用 首先是Colab中的两种代码块的语法形式：  谷歌硬盘的使用： 12from google.colab import drivedrive.mount(&amp;#x27;&#x2F;content&#x2F;drive&amp;#x27;)  Linux命令(记得前面都要加!)： ls : 列出当前目录中的所有文件 ls -l : 列出当前目录中所有文件的详细信息 p">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://speech.ee.ntu.edu.tw/~hylee/images/ml-title-2022.png">
 <meta property="article:published_time" content="2022-07-16T03:24:37.735Z">
@@ -202,7 +202,7 @@
         
         
         
-          105 分钟
+          106 分钟
         
       </span>
     
@@ -244,67 +244,87 @@
             
             <div class="markdown-body">
               
-              <h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><p>[toc]</p>
-<h2 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h2><h3 id="Colab的使用"><a href="#Colab的使用" class="headerlink" title="Colab的使用"></a>Colab的使用</h3><p>首先是Colab中的两种代码块的语法形式：</p>
+              <h1>机器学习笔记</h1>
+<p>[toc]</p>
+<h2 id="Lecture-1">Lecture 1</h2>
+<h3 id="Colab的使用">Colab的使用</h3>
+<p>首先是Colab中的两种代码块的语法形式：</p>
 <p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003049.png" alt="image-20220715152905967"></p>
 <p>谷歌硬盘的使用：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> google.colab <span class="hljs-keyword">import</span> drive<br>drive.mount(<span class="hljs-string">&#x27;/content/drive&#x27;</span>)<br></code></pre></td></tr></table></figure>
 <blockquote>
 <p><strong>Linux命令</strong>(记得前面都要加!)：</p>
-<p><code>ls</code> : 列出当前目录中的所有文件 </p>
-<p><code>ls -l</code> : 列出当前目录中所有文件的详细信息 </p>
-<p><code>pwd</code> : 输出工作目录 </p>
-<p><code>mkdir &lt;dirname&gt;</code> : 创建一个目录 &lt;目录名&gt; </p>
-<p><code>cd &lt;dirname&gt;</code> : 移动到目录 &lt;目录名&gt; </p>
-<p><code>gdown</code>：从谷歌驱动器下载文件 </p>
-<p><code>wget</code>：从互联网下载文件 </p>
+<p><code>ls</code> : 列出当前目录中的所有文件</p>
+<p><code>ls -l</code> : 列出当前目录中所有文件的详细信息</p>
+<p><code>pwd</code> : 输出工作目录</p>
+<p><code>mkdir &lt;dirname&gt;</code> : 创建一个目录 &lt;目录名&gt;</p>
+<p><code>cd &lt;dirname&gt;</code> : 移动到目录 &lt;目录名&gt;</p>
+<p><code>gdown</code>：从谷歌驱动器下载文件</p>
+<p><code>wget</code>：从互联网下载文件</p>
 <p><code>python &lt;python_file&gt;</code>：执行 python 文件</p>
 <p><strong>该系统使用</strong>：</p>
 <ol>
-<li><p>如果空闲超时（90 分钟，有时会发生变化）或屏幕变黑，Colab 将自动断开连接。</p>
+<li>
+<p>如果空闲超时（90 分钟，有时会发生变化）或屏幕变黑，Colab 将自动断开连接。</p>
 </li>
-<li><p>如果您的 GPU 使用量达到 12 小时，您的帐户将被停止一段时间</p>
+<li>
+<p>如果您的 GPU 使用量达到 12 小时，您的帐户将被停止一段时间</p>
 </li>
 </ol>
 </blockquote>
-<h3 id="机器学习的基本概念"><a href="#机器学习的基本概念" class="headerlink" title="机器学习的基本概念"></a>机器学习的基本概念</h3><p>机器学习的本质其实是：<strong>寻找函数</strong>。我认为是给出一定的输入与输出，训练出一个所谓的“函数”，可以用于预测与判断。</p>
+<h3 id="机器学习的基本概念">机器学习的基本概念</h3>
+<p>机器学习的本质其实是：<strong>寻找函数</strong>。我认为是给出一定的输入与输出，训练出一个所谓的“函数”，可以用于预测与判断。</p>
 <p>而这种寻找的函数可以分为三大类：</p>
 <ol>
-<li><p>Regression（回归问题）</p>
+<li>
+<p>Regression（回归问题）</p>
 <blockquote>
 <p>回归问题多用来预测一个具体的数值，如预测房价、未来的天气情况等等。例如我们根据一个地区的若干年的PM2.5数值变化来估计某一天该地区的PM2.5值大小，预测值与当天实际数值大小越接近，回归分析算法的可信度越高。</p>
 </blockquote>
 </li>
-<li><p>Classification（分类问题）</p>
+<li>
+<p>Classification（分类问题）</p>
 <blockquote>
 <p>分类问题是我们日常生活中最常遇到的一类问题，比如垃圾邮件的分类，识别我们所看到的是汽车还是火车抑或是别的物体，再或者去医院医生诊断病人身体里的肿瘤是否是恶性的，这些问题全部都属于分类问题的范畴。</p>
 </blockquote>
 </li>
-<li><p>Structured Learning（结构化预测）</p>
+<li>
+<p>Structured Learning（结构化预测）</p>
 <blockquote>
 <p>会得到一个序列，一个句子，一个图，一颗树。经过训练所得到的函数得到的结果并非回归所得的预测或者分类中的类别。</p>
 </blockquote>
 </li>
 </ol>
-<h3 id="一个简单的例子"><a href="#一个简单的例子" class="headerlink" title="一个简单的例子"></a>一个简单的例子</h3><p>目标：给出前一天的播放量预测后一天的播放量。</p>
+<h3 id="一个简单的例子">一个简单的例子</h3>
+<p>目标：给出前一天的播放量预测后一天的播放量。</p>
 <p>分析：要完成这个任务我们首先要将现有的播放量作为输入，将后一天的播放量作为输出来构造一个函数。接下来便要决定的就是这个函数的模样和其中参数的取值。</p>
-<h4 id="1-方程的设立"><a href="#1-方程的设立" class="headerlink" title="1.方程的设立"></a>1.方程的设立</h4><p>我们首先根据自己的Domain Knowledge（领域知识）得出一个基本的函数方程：</p>
-<script type="math/tex; mode=display">
-y=b+wx_1</script><p>因为x1为今天的播放量，y为明天的播放量。他们之间的比例系数为w,再加上一个修正因子便可以得到y。w和b都是待定参数，我们称w为weight(权重),称b为bias(偏移量)。</p>
-<h4 id="2-定义损失函数"><a href="#2-定义损失函数" class="headerlink" title="2.定义损失函数"></a>2.定义损失函数</h4><p>损失函数的由来便是当我们的预测与真实值的偏差，而这些偏差的由来便是这些参数的改变。所以损失函数的输入为所有求解方程的参数。在这个例子中我们的损失函数为：</p>
-<script type="math/tex; mode=display">
-L(b,w)</script><p>所以在我们给出的模型中，对每一个样本点的损失函数的值求和便可以得到整个模型的损失。对于上述例子我们就可以得到整体模型的Loss为：</p>
-<script type="math/tex; mode=display">
-e=\left| y-\overline{y} \right|\,\,OR\,\,e=\left( y-\widehat{y} \right) ^2
-\\
-L=\frac{1}{N}\sum_n^{}{e_n}</script><p>在上述方程中上面的两个e分别为：</p>
+<h4 id="1-方程的设立">1.方程的设立</h4>
+<p>我们首先根据自己的Domain Knowledge（领域知识）得出一个基本的函数方程：<br>
+$$<br>
+y=b+wx_1<br>
+$$<br>
+因为x1为今天的播放量，y为明天的播放量。他们之间的比例系数为w,再加上一个修正因子便可以得到y。w和b都是待定参数，我们称w为weight(权重),称b为bias(偏移量)。</p>
+<h4 id="2-定义损失函数">2.定义损失函数</h4>
+<p>损失函数的由来便是当我们的预测与真实值的偏差，而这些偏差的由来便是这些参数的改变。所以损失函数的输入为所有求解方程的参数。在这个例子中我们的损失函数为：<br>
+$$<br>
+L(b,w)<br>
+$$<br>
+所以在我们给出的模型中，对每一个样本点的损失函数的值求和便可以得到整个模型的损失。对于上述例子我们就可以得到整体模型的Loss为：<br>
+$$<br>
+e=\left| y-\overline{y} \right|,,OR,,e=\left( y-\widehat{y} \right) ^2<br>
+\<br>
+L=\frac{1}{N}\sum_n^{}{e_n}<br>
+$$<br>
+在上述方程中上面的两个e分别为：</p>
 <ol>
-<li><p>mean absolute error (MAE)</p>
+<li>
+<p>mean absolute error (MAE)</p>
 <blockquote>
 <p>绝对误差</p>
 </blockquote>
 </li>
-<li><p>mean square error (MSE)</p>
+<li>
+<p>mean square error (MSE)</p>
 <blockquote>
 <p>均方误差</p>
 </blockquote>
@@ -314,22 +334,28 @@ L=\frac{1}{N}\sum_n^{}{e_n}</script><p>在上述方程中上面的两个e分别�
 <p>在我们得到了整个模型的Loss时候，就可以开始优化模型了。当然，我们优化的方向是向Loss更小的方向：</p>
 <p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003050.png" alt="image-20220715204233438"></p>
 <p>由上图所示，红色区域的Loss最大，蓝色区域的Loss最小。在该中状况下，我们按照向最小Loss的方向移动。</p>
-<h4 id="3-优化参数（Loss最小）"><a href="#3-优化参数（Loss最小）" class="headerlink" title="3.优化参数（Loss最小）"></a>3.优化参数（Loss最小）</h4><p>接上一个步骤的最后，我们利用<strong>梯度下降</strong>的方法求出Loss最小的地方。在一维图像中，我们可视化该步骤：</p>
+<h4 id="3-优化参数（Loss最小）">3.优化参数（Loss最小）</h4>
+<p>接上一个步骤的最后，我们利用<strong>梯度下降</strong>的方法求出Loss最小的地方。在一维图像中，我们可视化该步骤：</p>
 <p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003052.png" alt="image-20220715204714165"></p>
 <p>我们可以看到梯度下降的方法即是求解最小值的一个方法，在课堂上老师说到其实不用担心<strong>局部最优解</strong>的问题，会在后续的课程中进行解释。上图中还值得一提的是，每一次下降的步长即使学习率。</p>
-<p>扩大到两个参数，我们得到梯度下降的方程：</p>
-<script type="math/tex; mode=display">
-w^1\gets w^0-\eta \frac{\partial L}{\partial w}|_{w=w^0,b=b^0}
-\\
-b^1\gets b^0-\eta \frac{\partial L}{\partial b}|_{w=w^0,b=b^0}</script><p>不断地迭代这个方程最后得到的就是就是最小的Loss也是当前算法下的最优模型。</p>
+<p>扩大到两个参数，我们得到梯度下降的方程：<br>
+$$<br>
+w^1\gets w^0-\eta \frac{\partial L}{\partial w}|<em>{w=w^0,b=b^0}<br>
+\<br>
+b^1\gets b^0-\eta \frac{\partial L}{\partial b}|</em>{w=w^0,b=b^0}<br>
+$$<br>
+不断地迭代这个方程最后得到的就是就是最小的Loss也是当前算法下的最优模型。</p>
 <p>到此为止我们建立了一个机器学习的简易模型。</p>
-<h3 id="对上例的改进"><a href="#对上例的改进" class="headerlink" title="对上例的改进"></a>对上例的改进</h3><p>贴合实际情况想想，也许播放量的决定因素并不止前一天的播放量，或许是以一周为周期进行的变化，所以我们可以不仅仅考虑一天数据作为输入，我们多考虑几天：</p>
+<h3 id="对上例的改进">对上例的改进</h3>
+<p>贴合实际情况想想，也许播放量的决定因素并不止前一天的播放量，或许是以一周为周期进行的变化，所以我们可以不仅仅考虑一天数据作为输入，我们多考虑几天：</p>
 <p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003053.png" alt="image-20220715211955266"></p>
 <p>我们通过Loss可以看到，确实，通过增加输入数据的天数，我们改进模型可以使模型的误差减小。</p>
 <hr>
-<p>通过上面两个模型的建立与求解，我们注意到该模型只能进行线性预测，因为我们的模型一开始提出的函数时一个一次函数：</p>
-<script type="math/tex; mode=display">
-y=b+wx_1</script><p>在图像上表现为一条直线，联系实际我们知道这个模型太过于简单了，并且数据并不一定都是成这种简单的线性增长，如下图所示：</p>
+<p>通过上面两个模型的建立与求解，我们注意到该模型只能进行线性预测，因为我们的模型一开始提出的函数时一个一次函数：<br>
+$$<br>
+y=b+wx_1<br>
+$$<br>
+在图像上表现为一条直线，联系实际我们知道这个模型太过于简单了，并且数据并不一定都是成这种简单的线性增长，如下图所示：</p>
 <p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003054.png" alt="image-20220715212916138"></p>
 <p>我们模型的无论如何调参，都无法“弯曲“，所以我们需要一个可以分段的函数进行建模。</p>
 <p>现在问题就变成了如何将红色简化成蓝色线段的形式，观察到每一个小分段都是由一次函数组成，我们猜想许多个函数：只在某一个区间内有变化，其余全部为0,得到如下图所示：</p>
@@ -337,104 +363,125 @@ y=b+wx_1</script><p>在图像上表现为一条直线，联系实际我们知道
 <p>我们发现红色线段可以由许多蓝色线段进行替代，我们将蓝色线段抽象出来，得到蓝色线段的特征，<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003056.png" style="zoom: 25%;" /></p>
 <p>在数学上我们有<strong>Sigmoid</strong>函数可以近似该函数，同样这个带有棱角的分段蓝色函数就被叫做<strong>Hard</strong> <strong>Sigmoid</strong>我们观察<strong>Sigmoid</strong>函数的特征：</p>
 <iframe src="https://www.desmos.com/calculator/zwluff5jpb?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-
-<p>我们对于该函数简写成：</p>
-<script type="math/tex; mode=display">
-y=c\frac{1}{1+e^{-\left( b+wx_1 \right)}}
-\\
-=c\,\,sigmoid\left( b+wx_1 \right) 
-\\</script><p>所以我们便可将红色线段表示为：</p>
-<script type="math/tex; mode=display">
-y=b+\sum_i{c_i\,\,sigmoid\left( b_i+w_ix_1 \right)}
-\\</script><p>再考虑到不同线段由参数影响的变动，我们将x1不在固定，得：</p>
-<script type="math/tex; mode=display">
-y=b+\sum_i{c_i\,\,sigmoid\left( b_i+\sum_j{w_{ij}x_j} \right)}
-\\</script><p>在老师给的PPT上有更为详实的介绍：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003057.png" alt="image-20220715222719081" style="zoom:67%;" /></p>
+<p>我们对于该函数简写成：<br>
+$$<br>
+y=c\frac{1}{1+e^{-\left( b+wx_1 \right)}}<br>
+\<br>
+=c,,sigmoid\left( b+wx_1 \right)<br>
+\<br>
+$$<br>
+所以我们便可将红色线段表示为：<br>
+$$<br>
+y=b+\sum_i{c_i,,sigmoid\left( b_i+w_ix_1 \right)}<br>
+\<br>
+$$<br>
+再考虑到不同线段由参数影响的变动，我们将x1不在固定，得：<br>
+$$<br>
+y=b+\sum_i{c_i,,sigmoid\left( b_i+\sum_j{w_{ij}x_j} \right)}<br>
+\<br>
+$$<br>
+在老师给的PPT上有更为详实的介绍：</p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003057.png" alt="image-20220715222719081" style="zoom:67%;" />
 <p>在下面的这个图中，注意蓝色框中的元素，以及后面括号中的w与x所产生的原因。</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003058.png" alt="image-20220715223518267" style="zoom:67%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003058.png" alt="image-20220715223518267" style="zoom:67%;" />
 <p>通过线性代数中的矩阵知识，我们改写算式：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003059.png" alt="image-20220715224008227" style="zoom:67%;" /></p>
-<p>注意在该表达式中，那些量是需要计算机帮我们寻找的。仔细就会发现除了x和y都是需要计算机需要帮我们计算的。回顾我们上一次将那个线性模型进行建模之后，我们所需要进行的下一步便是计算损失函数。沿用上一次的方法我们将计算机所有需要帮我们确定的变量列成一个向量,所以损失函数即为如下：</p>
-<script type="math/tex; mode=display">
-\theta =\left[ \begin{array}{c}
-    \theta _1\\
-    \theta _2\\
-    \theta _3\\
-    ...\\
-\end{array} \right]
-\\
-L\left( \theta \right)</script><hr>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003059.png" alt="image-20220715224008227" style="zoom:67%;" />
+<p>注意在该表达式中，那些量是需要计算机帮我们寻找的。仔细就会发现除了x和y都是需要计算机需要帮我们计算的。回顾我们上一次将那个线性模型进行建模之后，我们所需要进行的下一步便是计算损失函数。沿用上一次的方法我们将计算机所有需要帮我们确定的变量列成一个向量,所以损失函数即为如下：<br>
+$$<br>
+\theta =\left[ \begin{array}{c}<br>
+\theta _1\<br>
+\theta _2\<br>
+\theta _3\<br>
+…\<br>
+\end{array} \right]<br>
+\<br>
+L\left( \theta \right)<br>
+$$</p>
+<hr>
 <p>在设计完损失函数后，我们便要对模型设计优化算法，经典的算法依旧是梯度下降：</p>
-<p>我们随意取上面公式的一个值，然后求梯度。接下来开始迭代，直到梯度下降到结束。下述公式中，g为梯度（gradient）。</p>
-<script type="math/tex; mode=display">
-g=\left[ \begin{array}{c}
-    \frac{\partial L}{\partial \theta _1}|_{\theta =\theta ^0}\\
-    \frac{\partial L}{\partial \theta _2}|_{\theta =\theta ^0}\\
-    \vdots\\
-\end{array} \right] 
-\\
-\left[ \begin{array}{c}
-    \theta _{1}^{1}\\
-    \theta _{2}^{1}\\
-    \vdots\\
-\end{array} \right] \gets \left[ \begin{array}{c}
-    \theta _{1}^{0}\\
-    \theta _{2}^{0}\\
-    \vdots\\
-\end{array} \right] -\left[ \begin{array}{c}
-    \begin{array}{c}
-    {\color{red} \eta }\frac{\partial L}{\partial \theta _1}|_{\theta =\theta ^0}\\
-    {\color{red} \eta }\frac{\partial L}{\partial \theta _2}|_{\theta =\theta ^0}\\
-\end{array}\\
-    \vdots\\
-\end{array} \right] 
-\\</script><p>实际上我们在做梯度下降的时候，我们会有一个很大的数据集。我们将这一大批资料分成batch（一捆，一组），batch是随机分成的。</p>
+<p>我们随意取上面公式的一个值，然后求梯度。接下来开始迭代，直到梯度下降到结束。下述公式中，g为梯度（gradient）。<br>
+$$<br>
+g=\left[ \begin{array}{c}<br>
+\frac{\partial L}{\partial \theta <em>1}|</em>{\theta =\theta ^0}\<br>
+\frac{\partial L}{\partial \theta <em>2}|</em>{\theta =\theta ^0}\<br>
+\vdots\<br>
+\end{array} \right]<br>
+\<br>
+\left[ \begin{array}{c}<br>
+\theta _{1}^{1}\<br>
+\theta _{2}^{1}\<br>
+\vdots\<br>
+\end{array} \right] \gets \left[ \begin{array}{c}<br>
+\theta _{1}^{0}\<br>
+\theta _{2}^{0}\<br>
+\vdots\<br>
+\end{array} \right] -\left[ \begin{array}{c}<br>
+\begin{array}{c}<br>
+{\color{red} \eta }\frac{\partial L}{\partial \theta <em>1}|</em>{\theta =\theta ^0}\<br>
+{\color{red} \eta }\frac{\partial L}{\partial \theta <em>2}|</em>{\theta =\theta ^0}\<br>
+\end{array}\<br>
+\vdots\<br>
+\end{array} \right]<br>
+\<br>
+$$<br>
+实际上我们在做梯度下降的时候，我们会有一个很大的数据集。我们将这一大批资料分成batch（一捆，一组），batch是随机分成的。</p>
 <p>在原先的情况下我们将所有的数据集拿去训练会得到一个Loss，在现在不同的batch可以得到不同的Loss。每一次更新参数就叫做一次update。我们把所有的batch都训练过一遍叫做一个Epoch（世纪）。</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003060.png" alt="image-20220715231841988" style="zoom:67%;" /></p>
-<h3 id="Hard-sigmoid"><a href="#Hard-sigmoid" class="headerlink" title="Hard sigmoid"></a>Hard sigmoid</h3><p>上一个问题中为什么我们要用平滑的sigmoid函数，拟合Hard sigmoid，我们能不能直接使用Hard sigmoid进行呢？</p>
-<p>我们仔细观察<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003056.png" style="zoom:33%;" />这个图像我们看到其实我们可以用两个分段函数进行组合：</p>
-<script type="math/tex; mode=display">
-\max \left( 0,b+wx_1 \right) 
-\\
-\max \left( 0,b'+w'x_1 \right)</script><p>便可以得到我们想要的蓝色线段：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003061.png" alt="image-20220716105744859" style="zoom:67%;" /></p>
-<p>当我们进行这种转换： Sigmoid :arrow_right: ReLU (Rectified Linear Unit)。我们公式会变成：</p>
-<script type="math/tex; mode=display">
-y=b+\sum_i{ {\color{red} c_i}}sigmoid\left( {\color{red} b_i}+\sum_j{ {\color{blue} w_{ij} }x_j} \right) 
-\\
-\downarrow 
-\\
-Activation\,\,function(激活函数)
-\\
-\uparrow 
-\\
-y=b+\sum_{ {\color{red} 2}i}{ {\color{red} c_i} }\max \left( 0,b_i+\sum_j{  {\color{blue} w_{ij} }x_j} \right) 
-\\</script><h3 id="多层的神经网络"><a href="#多层的神经网络" class="headerlink" title="多层的神经网络"></a>多层的神经网络</h3><p>回到我们上面的步骤，我们通过输入x得到了一个相对的a,如下图：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003059.png" alt="image-20220715224008227" style="zoom: 67%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003060.png" alt="image-20220715231841988" style="zoom:67%;" />
+<h3 id="Hard-sigmoid">Hard sigmoid</h3>
+<p>上一个问题中为什么我们要用平滑的sigmoid函数，拟合Hard sigmoid，我们能不能直接使用Hard sigmoid进行呢？</p>
+<p>我们仔细观察<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003056.png" style="zoom:33%;" />这个图像我们看到其实我们可以用两个分段函数进行组合：<br>
+$$<br>
+\max \left( 0,b+wx_1 \right)<br>
+\<br>
+\max \left( 0,b’+w’x_1 \right)<br>
+$$<br>
+便可以得到我们想要的蓝色线段：</p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003061.png" alt="image-20220716105744859" style="zoom:67%;" />
+<p>当我们进行这种转换： Sigmoid :arrow_right: ReLU (Rectified Linear Unit)。我们公式会变成：<br>
+$$<br>
+y=b+\sum_i{ {\color{red} c_i}}sigmoid\left( {\color{red} b_i}+\sum_j{ {\color{blue} w_{ij} }x_j} \right)<br>
+\<br>
+\downarrow<br>
+\<br>
+Activation,,function(激活函数)<br>
+\<br>
+\uparrow<br>
+\<br>
+y=b+\sum_{ {\color{red} 2}i}{ {\color{red} c_i} }\max \left( 0,b_i+\sum_j{  {\color{blue} w_{ij} }x_j} \right)<br>
+\<br>
+$$</p>
+<h3 id="多层的神经网络">多层的神经网络</h3>
+<p>回到我们上面的步骤，我们通过输入x得到了一个相对的a,如下图：</p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003059.png" alt="image-20220715224008227" style="zoom: 67%;" />
 <p>我们进一步思考将输出的a再叠加一层，重复同样的步骤，如下图所示：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003062.png" alt="image-20220716111057394" style="zoom:67%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003062.png" alt="image-20220716111057394" style="zoom:67%;" />
 <hr>
 <p>最后只得一提的是：<strong>Hyper Parameter</strong>（超参数）。</p>
-<p>机器学习模型中一般有两类参数：一类需要从数据中学习和估计得到，称为模型参数（Parameter）—-即模型本身的参数。比如，线性回归直线的加权系数（斜率）及其偏差项（截距）都是模型参数。还有一类则是机器学习算法中的调优参数（tuning parameters），需要人为设定，称为超参数（Hyperparameter）。比如说神经网络的层数，Learning Rate（学习率），几个sigmoid，Batch size。</p>
-<h2 id="Lecture-2"><a href="#Lecture-2" class="headerlink" title="Lecture 2"></a>Lecture 2</h2><h3 id="调优模型的思路"><a href="#调优模型的思路" class="headerlink" title="调优模型的思路"></a>调优模型的思路</h3><p>第二节课一开始，便是教会我们如何调优，在老师的PPT上有这个图：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003063.png" alt="image-20220717141818386" style="zoom:67%;" /></p>
+<p>机器学习模型中一般有两类参数：一类需要从数据中学习和估计得到，称为模型参数（Parameter）—即模型本身的参数。比如，线性回归直线的加权系数（斜率）及其偏差项（截距）都是模型参数。还有一类则是机器学习算法中的调优参数（tuning parameters），需要人为设定，称为超参数（Hyperparameter）。比如说神经网络的层数，Learning Rate（学习率），几个sigmoid，Batch size。</p>
+<h2 id="Lecture-2">Lecture 2</h2>
+<h3 id="调优模型的思路">调优模型的思路</h3>
+<p>第二节课一开始，便是教会我们如何调优，在老师的PPT上有这个图：</p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003063.png" alt="image-20220717141818386" style="zoom:67%;" />
 <p>我们知道，在验证一个模型的时候，要先进行对训练集数据的检验，不能一味的对测试集进行检验。</p>
-<h4 id="训练数据Loss过大"><a href="#训练数据Loss过大" class="headerlink" title="训练数据Loss过大"></a>训练数据Loss过大</h4><p>在我们发现对训练数据Loss过大的时候，我们有两种猜测：</p>
+<h4 id="训练数据Loss过大">训练数据Loss过大</h4>
+<p>在我们发现对训练数据Loss过大的时候，我们有两种猜测：</p>
 <ol>
-<li><p>模型过于简单（model bias）</p>
+<li>
+<p>模型过于简单（model bias）</p>
 <p>例如，当我们的数据分布是二次函数的时候，我们始终用线性模型进行拟合的化，无论怎么调参都不会达到一个期望的Loss</p>
 <p>解决方法是，重新设计模型，使得模型具有跟具有弹性，接上面的例子，如果我们改用二次函数或者三次函数进行拟合。</p>
 </li>
-<li><p>模型的调参程序无法达到最优解（optimization）</p>
+<li>
+<p>模型的调参程序无法达到最优解（optimization）</p>
 <p>昨天提过，我们使用的方法也许会陷入局部最优解，所以会导致Loss增大。</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003064.png" alt="image-20220717142636702" style="zoom:50%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003064.png" alt="image-20220717142636702" style="zoom:50%;" />
 </li>
 </ol>
 <p>那我们接下来就要判断到底是哪一种方法使得Loss增大到底是模型简单还是收敛方法有误。老师上课举了一个例子:当我们使用56层的神经网络与26层的神经网络分别检测他们的Loss，我们可以发现，56的Loss更加的高。在几年前，人们认为这是过拟合的问题，其实不是。我们假设在56层的神经网络中，有30层都是直接输出，不处理输入输出，其实是可以达到26层的Loss的，所以其实不是过拟合的问题(over-fitting)。</p>
 <p>在检测中，我们我们需要检测Loss的时候，可以减少神经网络的层数，或者简化模型，对比简化后的模型的Loss是不是减少了。如果减少了就说明我们的模型的调优程序没有找到最优解。</p>
-<h4 id="训练数据Loss过小"><a href="#训练数据Loss过小" class="headerlink" title="训练数据Loss过小"></a>训练数据Loss过小</h4><p>当我们的训练数据的Loss小的时候我们不能就此认为这个模型就是完美的，要对测试数据进一步进行检验。如果这个时候我们发现对于测试集的数据Loss过大，我们就可以说这个时候发生了<strong>过拟合</strong>。过拟合的图示如下：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003065.png" alt="image-20220717145237741" style="zoom: 67%;" /></p>
+<h4 id="训练数据Loss过小">训练数据Loss过小</h4>
+<p>当我们的训练数据的Loss小的时候我们不能就此认为这个模型就是完美的，要对测试数据进一步进行检验。如果这个时候我们发现对于测试集的数据Loss过大，我们就可以说这个时候发生了<strong>过拟合</strong>。过拟合的图示如下：</p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003065.png" alt="image-20220717145237741" style="zoom: 67%;" />
 <p>那么我们对于过拟合的数据如何处理呢？同样也是有两种办法：</p>
 <ol>
 <li>增加更多的数据</li>
@@ -443,28 +490,38 @@ y=b+\sum_{ {\color{red} 2}i}{ {\color{red} c_i} }\max \left( 0,b_i+\sum_j{  {\co
 </ol>
 <p>其实前两个方法是殊途同归的，都是增加机器的学习样本，使得拟合的点位增多，减小过拟合现象。第三个方法其实就相当于我们限制好该模型只能用二次函数进行调参或者指数函数。这样就可以避免上图右下角的过拟合模样。那如何固定这个函数或者模型就取决于我们每个人对于模型的理解。比如说CNN神经网络就是更具图像的特点固定模型的部分参数。</p>
 <p>我们根据感觉可以得到一个训练集上的Loss与测试集上的Loss随着时间变化的图像：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003066.png" alt="image-20220717150551810" style="zoom:50%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003066.png" alt="image-20220717150551810" style="zoom:50%;" />
 <p>而当我们无法增加原始数据量的时候，我们可以使用交叉验证（Cross Validation）：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003067.png" alt="image-20220717152008204" style="zoom: 80%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003067.png" alt="image-20220717152008204" style="zoom: 80%;" />
 <p>我们将训练集中的数据拿出一部分来进行验证，从而保证最大限度的利用的原始数据集。但是，这就又有一个问题，我们如何进行分组呢？</p>
 <p>这就是我曾经在Matlab中的K折交叉验证（N fold Cross Validation），我们从下图中可以看到，我们取不同的验证集，不同的模型，可以得到不同的MSE，我们将MSE取平均就可以的到可行性之内的最佳模型，这个模型可以说是很“中庸”，因为它既不会因为Loss太大而失去作用，也不会因为对原始数据的过拟合，导致在测试集上的表现很差。</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003068.png" alt="image-20220717152439105" style="zoom: 67%;" /></p>
-<h3 id="局部最小值与鞍点"><a href="#局部最小值与鞍点" class="headerlink" title="局部最小值与鞍点"></a>局部最小值与鞍点</h3><p>我们在迭代模型的时候，使用的方法为梯度下降，而当我们使用梯度下降时的两个所谓的局限性便是：局部最小值与鞍点。</p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003068.png" alt="image-20220717152439105" style="zoom: 67%;" />
+<h3 id="局部最小值与鞍点">局部最小值与鞍点</h3>
+<p>我们在迭代模型的时候，使用的方法为梯度下降，而当我们使用梯度下降时的两个所谓的局限性便是：局部最小值与鞍点。</p>
 <p>根据高等数学的知识，我们知道鞍点其实不是最小值，他只有两个方向比它高，两个方向比它小。</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003069.png" alt="image-20220717165345748" style="zoom:80%;" /></p>
-<h4 id="鞍点"><a href="#鞍点" class="headerlink" title="鞍点"></a>鞍点</h4><p>我们先看鞍点，在这个点，我们梯度求解为0，所以我们的计算机不知道像哪边走？但是我们知道其实这不是最小的点。我们如何判断这个点是鞍点还是最小值点呢？</p>
-<p>我们只要知道这个点附近的值与他自己的值的比较。是全部都大于它还是有大有小。其实我们只要知道Loss函数是什么样子就能求出来这个点附近的情况。但是Loss函数过于复杂，我们一般不太可能把它写出来，于是我们就是用泰勒逼近，考察一下这个点附近的取值如何。</p>
-<script type="math/tex; mode=display">
-L\left( \theta \right) \approx L\left( \theta ' \right) +\left( \theta -\theta ' \right) ^Tg+\frac{1}{2}\left( \theta -\theta ' \right) ^TH\left( \theta -\theta ' \right)</script><p>上图中的g是是梯度向量，我们知道在这个点的梯度是0，所以我们的公式便是：</p>
-<script type="math/tex; mode=display">
-L\left( \theta \right) \approx L\left( \theta ' \right) +\frac{1}{2}\left( \theta -\theta ' \right) ^TH\left( \theta -\theta ' \right)</script><p>上图中的H为海瑟<strong>矩阵</strong>：</p>
-<script type="math/tex; mode=display">
-H_{i j}=\frac{\partial^{2}}{\partial \boldsymbol{\theta}_{i} \partial \boldsymbol{\theta}_{j}} L\left(\boldsymbol{\theta}^{\prime}\right)</script><p>到现在我们最关注的应该是最右边的这个含有海瑟矩阵的部分，我们进行如下替换，便可得到：</p>
-<script type="math/tex; mode=display">
-\left( \theta -\theta ' \right) \rightarrow v
-\\
-\left( \theta -\theta ' \right) ^TH\left( \theta -\theta ' \right)\rightarrow v^THv</script><p>这个时候我们有:</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003070.png" alt="image-20220717171843672" style="zoom: 67%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003069.png" alt="image-20220717165345748" style="zoom:80%;" />
+<h4 id="鞍点">鞍点</h4>
+<p>我们先看鞍点，在这个点，我们梯度求解为0，所以我们的计算机不知道像哪边走？但是我们知道其实这不是最小的点。我们如何判断这个点是鞍点还是最小值点呢？</p>
+<p>我们只要知道这个点附近的值与他自己的值的比较。是全部都大于它还是有大有小。其实我们只要知道Loss函数是什么样子就能求出来这个点附近的情况。但是Loss函数过于复杂，我们一般不太可能把它写出来，于是我们就是用泰勒逼近，考察一下这个点附近的取值如何。<br>
+$$<br>
+L\left( \theta \right) \approx L\left( \theta ’ \right) +\left( \theta -\theta ’ \right) ^Tg+\frac{1}{2}\left( \theta -\theta ’ \right) ^TH\left( \theta -\theta ’ \right)<br>
+$$<br>
+上图中的g是是梯度向量，我们知道在这个点的梯度是0，所以我们的公式便是：<br>
+$$<br>
+L\left( \theta \right) \approx L\left( \theta ’ \right) +\frac{1}{2}\left( \theta -\theta ’ \right) ^TH\left( \theta -\theta ’ \right)<br>
+$$<br>
+上图中的H为海瑟<strong>矩阵</strong>：<br>
+$$<br>
+H_{i j}=\frac{\partial^{2}}{\partial \boldsymbol{\theta}<em>{i} \partial \boldsymbol{\theta}</em>{j}} L\left(\boldsymbol{\theta}^{\prime}\right)<br>
+$$<br>
+到现在我们最关注的应该是最右边的这个含有海瑟矩阵的部分，我们进行如下替换，便可得到：<br>
+$$<br>
+\left( \theta -\theta ’ \right) \rightarrow v<br>
+\<br>
+\left( \theta -\theta ’ \right) ^TH\left( \theta -\theta ’ \right)\rightarrow v^THv<br>
+$$<br>
+这个时候我们有:</p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003070.png" alt="image-20220717171843672" style="zoom: 67%;" />
 <blockquote>
 <p>eigen values：特征值</p>
 <p>eigen vector：特征向量</p>
@@ -474,12 +531,13 @@ H_{i j}=\frac{\partial^{2}}{\partial \boldsymbol{\theta}_{i} \partial \boldsymbo
 <p>其实海瑟矩阵就能完成这个任务，我们需要利用特征向量完成梯度的作用，如下:</p>
 <p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003071.png" alt="image-20220717173148643"></p>
 <p>在这堂课的最后，老师说了，其实利用这个方法来代替梯度其实不是最优解，因为计算时间很长。</p>
-<h4 id="局部最小值"><a href="#局部最小值" class="headerlink" title="局部最小值"></a>局部最小值</h4><p>我们在真实的训练情况中，大多数情况下都不会遇到局部最小值，<a href="Source:https
-://docs.google.com/presentation/d/1siUFXARYRpNiMeSRwgFbt7mZVjkMPhR5od09w0Z8xaU/edit#slide=id.g3
-1470fd33a_0_33">大部分情况还是鞍点的情况多一点。</a></p>
+<h4 id="局部最小值">局部最小值</h4>
+<p>我们在真实的训练情况中，大多数情况下都不会遇到局部最小值，[大部分情况还是鞍点的情况多一点。](Source:https<br>
+://docs.google.com/presentation/d/1siUFXARYRpNiMeSRwgFbt7mZVjkMPhR5od09w0Z8xaU/edit#slide=id.g3<br>
+1470fd33a_0_33)</p>
 <p>下面会说如何对局部最小值进行处理。</p>
-<h3 id="训练技巧（Batch-amp-Momentum）"><a href="#训练技巧（Batch-amp-Momentum）" class="headerlink" title="训练技巧（Batch &amp; Momentum）"></a>训练技巧（Batch &amp; Momentum）</h3><p>老师上课又重新回顾了一下Batch的概念，然后提出了用每一个Batch中的训练数据与用一整个数据集进行训练的差别，具体如下：</p>
-<div class="table-container">
+<h3 id="训练技巧（Batch-Momentum）">训练技巧（Batch &amp; Momentum）</h3>
+<p>老师上课又重新回顾了一下Batch的概念，然后提出了用每一个Batch中的训练数据与用一整个数据集进行训练的差别，具体如下：</p>
 <table>
 <thead>
 <tr>
@@ -521,131 +579,174 @@ H_{i j}=\frac{\partial^{2}}{\partial \boldsymbol{\theta}_{i} \partial \boldsymbo
 </tr>
 </tbody>
 </table>
-</div>
 <p>对了，每一个Batch的大小也是一个hyperparameter。</p>
 <p><strong>Momentum(动量)</strong>，这是物理中的一个描述量，通过这个方法，我们可以减小我们的模型进入局部最小值的概率，因为如果我们的模型梯度下降到最小的梯度的时候，我们还有动量可以进行调整。具象化的图示如下：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003072.png" alt="image-20220717225459101" style="zoom:80%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003072.png" alt="image-20220717225459101" style="zoom:80%;" />
 <p>那么用数学的方式来表达是怎样的呢？其实也就是在梯度下降的方向上加上动量：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003073.png" alt="image-20220717225739831" style="zoom: 67%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003073.png" alt="image-20220717225739831" style="zoom: 67%;" />
 <p>值得注意的是，我们当前进行下降的判断<strong>并不是</strong>来自上一步的动量加上梯度乘以学习率。我们通过上图可以看出来，其实是将所有之前的步的动量都累加在一起了。</p>
-<h3 id="自动调整学习速率"><a href="#自动调整学习速率" class="headerlink" title="自动调整学习速率"></a>自动调整学习速率</h3><p>首先我们以一个简单的例子来说明为什么要动态调整学习速率呢？</p>
+<h3 id="自动调整学习速率">自动调整学习速率</h3>
+<p>首先我们以一个简单的例子来说明为什么要动态调整学习速率呢？</p>
 <p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003074.png" alt="image-20220718120809506"></p>
 <p>我们看上图的右侧的的Loss，这个时候其实Loss其实已经降得很低了，但这就是我们想要达到的目的吗？如果观察梯度就可以知道这个时候的梯度依旧波动很大，其实这个时候右边的这个图就很能反应状况，我们的学习率太大，导致太两侧的山脊上来回横跳。</p>
 <p>那这个时候是不是我们只要调小学习率（步长）就可以了呢？其实不是，如果我们的学习率调的过于小的时候，我们就会发现在这个Error Surface很平缓的地方，我们就很难继续前进。这个时候我们就要引入我们的可变学习率。那么我们学习率的变化的参照是什么呢？我们想要在地形平缓的时候走的快一点，地形陡峭的时候，走的缓慢一点。</p>
-<p>我们原先的参数更新过程就会变成：</p>
-<script type="math/tex; mode=display">
-\boldsymbol{\theta }_{i}^{\boldsymbol{t}+\mathbf{1}}\gets \boldsymbol{\theta }_{i}^{\boldsymbol{t}}-\eta \boldsymbol{g}_{i}^{\boldsymbol{t}}
-\\
-\boldsymbol{g}_{i}^{\boldsymbol{t}}=\left. \frac{\partial L}{\partial \boldsymbol{\theta }_i} \right|_{\boldsymbol{\theta }=\boldsymbol{\theta }^{\boldsymbol{t}}}
-\\
-\downarrow 
-\\
-\boldsymbol{\theta }_{i}^{\boldsymbol{t}+\mathbf{1}}\gets \boldsymbol{\theta }_{i}^{\boldsymbol{t}}-\frac{\eta}{\sigma _{i}^{t}}\boldsymbol{g}_{i}^{\boldsymbol{t}}</script><p>这个时候，我们如何处理学习率下面的这个参数<strong>𝜎</strong>就成了很重要的问题。</p>
-<h4 id="RMS-Root-Mean-Square-均方根"><a href="#RMS-Root-Mean-Square-均方根" class="headerlink" title="RMS(Root Mean Square,均方根)"></a>RMS(Root Mean Square,均方根)</h4><script type="math/tex; mode=display">
-\begin{aligned}
-&\boldsymbol{\theta}_{i}^{\mathbf{1}} \leftarrow \boldsymbol{\theta}_{i}^{0}-\frac{\eta}{\sigma_{i}^{0}} g_{i}^{0} \quad \sigma_{i}^{0}=\sqrt{\left(g_{i}^{0}\right)^{2}}=\left|g_{i}^{0}\right|\\
-&\boldsymbol{\theta}_{i}^{2} \leftarrow \boldsymbol{\theta}_{i}^{\mathbf{1}}-\frac{\eta}{\sigma_{i}^{1}} g_{i}^{1} \quad \sigma_{i}^{1}=\sqrt{\frac{1}{2}\left[\left(g_{i}^{0}\right)^{2}+\left(g_{i}^{1}\right)^{2}\right]}\\
-&\boldsymbol{\theta}_{i}^{3} \leftarrow \boldsymbol{\theta}_{i}^{2}-\frac{\eta}{\sigma_{i}^{2}} g_{i}^{2} \quad \sigma_{i}^{2}=\sqrt{\frac{1}{3}\left[\left(g_{i}^{0}\right)^{2}+\left(g_{i}^{1}\right)^{2}+\left(g_{i}^{2}\right)^{2}\right]}\\
-&\boldsymbol{\theta}_{i}^{\boldsymbol{t}+1} \leftarrow \boldsymbol{\theta}_{i}^{\boldsymbol{t}}-\frac{\eta}{\sigma_{i}^{t}} \boldsymbol{g}_{i}^{t} \quad \sigma_{i}^{t}=\sqrt{\frac{1}{t+1} \sum_{i=0}^{t}\left(\boldsymbol{g}_{i}^{t}\right)^{2}}
-\end{aligned}</script><p>我们看上述方程的递推，每一步都考虑了以前所有布的情况，如果之前的所有梯度大的话，相对应的在分母上就会使整体下降的便慢，如果之前的梯度小的话，下降的就会快一点。</p>
-<h4 id="RMSProp"><a href="#RMSProp" class="headerlink" title="RMSProp"></a>RMSProp</h4><p>在上面RMS的方法中，我们没有考虑到就算是同一个参数，它需要的学习率也是随着时间的变化而不同的。我们想要一个可以在同一个参数，同一个方向也可以进行动态调整的学习率。</p>
-<p>所以我们提出了第二种方法：RMSProp</p>
-<script type="math/tex; mode=display">
-\sigma _{i}^{0}=\sqrt{\left( g_{i}^{0} \right) ^2}
-\\
-\sigma _{i}^{1}=\sqrt{\alpha \left( \sigma _{i}^{0} \right) ^2+(1-\alpha )\left( g_{i}^{1} \right) ^2}
-\\
-\,\,\sigma _{i}^{2}=\sqrt{\alpha \left( \sigma _{i}^{1} \right) ^2+(1-\alpha )\left( g_{i}^{2} \right) ^2}
-\\
-\,\,\downarrow 
-\\
-\sigma _{i}^{t}=\sqrt{\alpha \left( \sigma _{i}^{t-1} \right) ^2+(1-\alpha )\left( g_{i}^{t} \right) ^2}</script><p>我们从公式中可以看出来α是一个<strong>Hyper Parameter</strong>（超参数），这个参数说明了现在的的梯度相较于以前所有的梯度的重要性，这个参数的取值是0~1，越靠近1，越说明当前的梯度更加不重要。</p>
-<h4 id="Adam"><a href="#Adam" class="headerlink" title="Adam"></a>Adam</h4><p>其实Adam就是前面几个好的算法的集合：<strong>Adam = RMSProp  +  Momentum</strong>这个Adam的算法在Pytorch里了，所以不用过多了解。</p>
-<h4 id="Learning-Rate-Decay"><a href="#Learning-Rate-Decay" class="headerlink" title="Learning Rate Decay"></a>Learning Rate Decay</h4><p>下图是一个椭球，我们从一边下降到最低点，利用RMS算法，我们得到如下图所示的结果：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003075.png" alt="image-20220718132031671" style="zoom:50%;" /></p>
+<p>我们原先的参数更新过程就会变成：<br>
+$$<br>
+\boldsymbol{\theta }<em>{i}^{\boldsymbol{t}+\mathbf{1}}\gets \boldsymbol{\theta }</em>{i}^{\boldsymbol{t}}-\eta \boldsymbol{g}<em>{i}^{\boldsymbol{t}}<br>
+\<br>
+\boldsymbol{g}</em>{i}^{\boldsymbol{t}}=\left. \frac{\partial L}{\partial \boldsymbol{\theta }<em>i} \right|</em>{\boldsymbol{\theta }=\boldsymbol{\theta }^{\boldsymbol{t}}}<br>
+\<br>
+\downarrow<br>
+\<br>
+\boldsymbol{\theta }<em>{i}^{\boldsymbol{t}+\mathbf{1}}\gets \boldsymbol{\theta }</em>{i}^{\boldsymbol{t}}-\frac{\eta}{\sigma <em>{i}^{t}}\boldsymbol{g}</em>{i}^{\boldsymbol{t}}<br>
+$$<br>
+这个时候，我们如何处理学习率下面的这个参数<strong>𝜎</strong>就成了很重要的问题。</p>
+<h4 id="RMS-Root-Mean-Square-均方根">RMS(Root Mean Square,均方根)</h4>
+<p>$$<br>
+\begin{aligned}<br>
+&amp;\boldsymbol{\theta}<em>{i}^{\mathbf{1}} \leftarrow \boldsymbol{\theta}</em>{i}^{0}-\frac{\eta}{\sigma_{i}^{0}} g_{i}^{0} \quad \sigma_{i}^{0}=\sqrt{\left(g_{i}^{0}\right)^{2}}=\left|g_{i}^{0}\right|\<br>
+&amp;\boldsymbol{\theta}<em>{i}^{2} \leftarrow \boldsymbol{\theta}</em>{i}^{\mathbf{1}}-\frac{\eta}{\sigma_{i}^{1}} g_{i}^{1} \quad \sigma_{i}^{1}=\sqrt{\frac{1}{2}\left[\left(g_{i}^{0}\right)^{2}+\left(g_{i}^{1}\right)^{2}\right]}\<br>
+&amp;\boldsymbol{\theta}<em>{i}^{3} \leftarrow \boldsymbol{\theta}</em>{i}^{2}-\frac{\eta}{\sigma_{i}^{2}} g_{i}^{2} \quad \sigma_{i}^{2}=\sqrt{\frac{1}{3}\left[\left(g_{i}^{0}\right)^{2}+\left(g_{i}^{1}\right)^{2}+\left(g_{i}^{2}\right)^{2}\right]}\<br>
+&amp;\boldsymbol{\theta}<em>{i}^{\boldsymbol{t}+1} \leftarrow \boldsymbol{\theta}</em>{i}^{\boldsymbol{t}}-\frac{\eta}{\sigma_{i}^{t}} \boldsymbol{g}<em>{i}^{t} \quad \sigma</em>{i}^{t}=\sqrt{\frac{1}{t+1} \sum_{i=0}^{t}\left(\boldsymbol{g}_{i}^{t}\right)^{2}}<br>
+\end{aligned}<br>
+$$</p>
+<p>我们看上述方程的递推，每一步都考虑了以前所有布的情况，如果之前的所有梯度大的话，相对应的在分母上就会使整体下降的便慢，如果之前的梯度小的话，下降的就会快一点。</p>
+<h4 id="RMSProp">RMSProp</h4>
+<p>在上面RMS的方法中，我们没有考虑到就算是同一个参数，它需要的学习率也是随着时间的变化而不同的。我们想要一个可以在同一个参数，同一个方向也可以进行动态调整的学习率。</p>
+<p>所以我们提出了第二种方法：RMSProp<br>
+$$<br>
+\sigma <em>{i}^{0}=\sqrt{\left( g</em>{i}^{0} \right) ^2}<br>
+\<br>
+\sigma _{i}^{1}=\sqrt{\alpha \left( \sigma <em>{i}^{0} \right) ^2+(1-\alpha )\left( g</em>{i}^{1} \right) ^2}<br>
+\<br>
+,,\sigma _{i}^{2}=\sqrt{\alpha \left( \sigma <em>{i}^{1} \right) ^2+(1-\alpha )\left( g</em>{i}^{2} \right) ^2}<br>
+\<br>
+,,\downarrow<br>
+\<br>
+\sigma _{i}^{t}=\sqrt{\alpha \left( \sigma <em>{i}^{t-1} \right) ^2+(1-\alpha )\left( g</em>{i}^{t} \right) ^2}<br>
+$$<br>
+我们从公式中可以看出来α是一个<strong>Hyper Parameter</strong>（超参数），这个参数说明了现在的的梯度相较于以前所有的梯度的重要性，这个参数的取值是0~1，越靠近1，越说明当前的梯度更加不重要。</p>
+<h4 id="Adam">Adam</h4>
+<p>其实Adam就是前面几个好的算法的集合：<strong>Adam = RMSProp  +  Momentum</strong>这个Adam的算法在Pytorch里了，所以不用过多了解。</p>
+<h4 id="Learning-Rate-Decay">Learning Rate Decay</h4>
+<p>下图是一个椭球，我们从一边下降到最低点，利用RMS算法，我们得到如下图所示的结果：</p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003075.png" alt="image-20220718132031671" style="zoom:50%;" />
 <p>我们可以看到从开始到底部的平坦区域是正常的，然后在底部区域开始了一段时间后，突然有了一场，这是怎么回事呢？我们知道这个算法会累积梯度，所以一开始的时候我们纵向下降时累积了许多梯度的，所以在某一个时间就会有这样的“爆炸的”现象。在最后的时候我们的梯度会在纵向上来回反复，然后横向前进一段时间，又开始了波动，不过最后算是可以到达终点。</p>
-<p>有什么方法可以避免这种反复横跳呢?我们可以将学习率与时间进行挂钩，我们知道越到终点，所需要的前面的梯度数据就越少，所以我们将学习率设置成一个函数：</p>
-<script type="math/tex; mode=display">
-\boldsymbol{\theta}_{i}^{\boldsymbol{t}+\mathbf{1}} \leftarrow \boldsymbol{\theta}_{i}^{\boldsymbol{t}}-\frac{\eta^{t}}{\sigma_{i}^{t}} \boldsymbol{g}_{i}^{\boldsymbol{t}}</script><p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003076.png" alt="image-20220718144436251" style="zoom: 33%;" /></p>
+<p>有什么方法可以避免这种反复横跳呢?我们可以将学习率与时间进行挂钩，我们知道越到终点，所需要的前面的梯度数据就越少，所以我们将学习率设置成一个函数：<br>
+$$<br>
+\boldsymbol{\theta}<em>{i}^{\boldsymbol{t}+\mathbf{1}} \leftarrow \boldsymbol{\theta}</em>{i}^{\boldsymbol{t}}-\frac{\eta^{t}}{\sigma_{i}^{t}} \boldsymbol{g}_{i}^{\boldsymbol{t}}<br>
+$$<br>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003076.png" alt="image-20220718144436251" style="zoom: 33%;" /></p>
 <p>于是我们的图像就不会出现最后左右横跳的无效下降了</p>
-<h4 id="Warm-Up"><a href="#Warm-Up" class="headerlink" title="Warm Up"></a>Warm Up</h4><p>用上面方法中将时间与学习率进行关联的方法其实过于简单，我们考虑到在一开始的时候信息量并没有之后的大，所以一开始的时候有一个预热，要多读一些之前的梯度，然后再根据时间进行减少便可以很好的达到训练的目的。这个时候训练率与时间的图像大致为：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003077.png" alt="image-20220718144921882" style="zoom:33%;" /></p>
+<h4 id="Warm-Up">Warm Up</h4>
+<p>用上面方法中将时间与学习率进行关联的方法其实过于简单，我们考虑到在一开始的时候信息量并没有之后的大，所以一开始的时候有一个预热，要多读一些之前的梯度，然后再根据时间进行减少便可以很好的达到训练的目的。这个时候训练率与时间的图像大致为：</p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003077.png" alt="image-20220718144921882" style="zoom:33%;" />
 <hr>
 <p>总结来看，我们对梯度下降方法的改进便在三个地方，一个是学习率，一个是均方根，一个是动量。见下图：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003078.png" alt="image-20220718145204033" style="zoom:67%;" /></p>
-<h3 id="Loss函数的选择"><a href="#Loss函数的选择" class="headerlink" title="Loss函数的选择"></a>Loss函数的选择</h3><p>如果我们训练的问题时一个分类问题，我们很有可能在训练的时候找不到Loss最小，这个时候我们要考虑使用不一样的Loss函数。通常在分类问题中我们需要的是Cross entropy。</p>
-<p>这个函数与原本的MSE（均方差）张这个样子：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-&e=\sum_{i}\left(\widehat{\boldsymbol{y}}_{i}-\boldsymbol{y}_{i}^{\prime}\right)^{2} \\
-&e=-\sum_{i} \widehat{y}_{i} \ln \boldsymbol{y}_{i}^{\prime}
-\end{aligned}</script><p>从下面两个图中我们可以看出来，在使用Cross entropy时，我们的Loss函数更加的连续，所以更容易走到Loss更低的地方去。</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003079.png" alt="image-20220718151435227" style="zoom:67%;" /></p>
-<h2 id="Lecture-3"><a href="#Lecture-3" class="headerlink" title="Lecture 3"></a>Lecture 3</h2><h3 id="机器学习原理"><a href="#机器学习原理" class="headerlink" title="机器学习原理"></a>机器学习原理</h3><p>我们回顾机器学习的基本步骤：</p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003078.png" alt="image-20220718145204033" style="zoom:67%;" />
+<h3 id="Loss函数的选择">Loss函数的选择</h3>
+<p>如果我们训练的问题时一个分类问题，我们很有可能在训练的时候找不到Loss最小，这个时候我们要考虑使用不一样的Loss函数。通常在分类问题中我们需要的是Cross entropy。</p>
+<p>这个函数与原本的MSE（均方差）张这个样子：<br>
+$$<br>
+\begin{aligned}<br>
+&amp;e=\sum_{i}\left(\widehat{\boldsymbol{y}}<em>{i}-\boldsymbol{y}</em>{i}^{\prime}\right)^{2} \<br>
+&amp;e=-\sum_{i} \widehat{y}<em>{i} \ln \boldsymbol{y}</em>{i}^{\prime}<br>
+\end{aligned}<br>
+$$<br>
+从下面两个图中我们可以看出来，在使用Cross entropy时，我们的Loss函数更加的连续，所以更容易走到Loss更低的地方去。</p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003079.png" alt="image-20220718151435227" style="zoom:67%;" />
+<h2 id="Lecture-3">Lecture 3</h2>
+<h3 id="机器学习原理">机器学习原理</h3>
+<p>我们回顾机器学习的基本步骤：</p>
 <pre><code class=" mermaid">graph TD
 A[Step 1: function with unknown ]
 --&gt;B[Step 2: define loss]
 --&gt;C[Step 3: optimization]
 </code></pre>
 <p>我们以数码宝贝与宝可梦分类器为例。我们需要输入数码宝贝或者宝可梦的图像，输出是一个分类判断。我们观察到宝可梦与数码宝贝的线条疏密程度不一样，而线条又以点构成，我们就可以将图片的边缘处理出来，然后统计黑白点的数目，这样就可以很好的达到分类的作用。</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003080.png" alt="image-20220725180421975" style="zoom:67%;" /></p>
-<p>所以我们到这一步就确定了我们的未知函数，如上图所示，接下来，便是我们的参数确定方法即损失函数的确定。我们将损失函数设定成错误判断的累计，有如下函数:</p>
-<script type="math/tex; mode=display">
-L(h, \mathcal{D})=\frac{1}{N} \sum_{n=1}^{N} l\left(h, x^{n}, \hat{y}^{n}\right)</script><p>我们看到这个函数L的里面有一个l函数，这个函数有三个参数，x是数据集D中的图片，y是该图片所对应的正确的生物。所以我们可以得到这个三个参数的函数为：</p>
-<script type="math/tex; mode=display">
-\text{If  }  f_h\left( x^{\mathrm{n}} \right) \ne \mathrm{\hat{y}}^{\mathrm{n}}\,\, \text{ , } \text{Output 1} 
-\\ \text{Otherwise , Output 0} 
-\\</script><p>在这个函数的选择上，我们也可以用cross-entropy 但是为了方便，我们还是使用上面的方法定义Loss。</p>
-<p>我们再来看训练集相关的事情，我们假设可以收集到全宇宙的宝可梦与神奇宝贝，我们就可以将这些收集到资料，进行训练。之后就会得到理想的参数选择，我们设为h:</p>
-<script type="math/tex; mode=display">
-{\color{red} h^{all}}=\mathrm{arg}\min_h L\left( h,{\color{red} \mathcal{D} _{all}} \right)</script><p>但去掉这个假设，其实我们不能得到所有宝可梦与数码宝贝的图片，因为会出新的生物。这个时候，我们只有部分训练资料，我们进行训练，这个时候我们可以得到：</p>
-<script type="math/tex; mode=display">
-{\color{blue} h^{\mathrm{train}}}=\mathrm{arg}\min_h L\left( h,{\color{blue} \mathcal{D} _{\mathrm{train}}} \right)</script><p>我们所希望的是这个h-train尽量的靠近h-all。我们自行设置一个阈值，如果这两者之差小于这个阈值我们就认定这个模型好：</p>
-<script type="math/tex; mode=display">
-\text{We want } L\left( {\color{blue} h^{\mathrm{train}}},{\color{red} \mathcal{D} _{all}} \right) -L\left( {\color{red} h^{all}},{\color{red} \mathcal{D} _{all}} \right) \le \delta</script><p>这个时候我们探究哪一种D-train可以满足条件，我们验证发现<strong>存在</strong>一个h满足如下规律：</p>
-<script type="math/tex; mode=display">
-\forall {\color{green} h}\in \mathcal{H} ,\left| L\left( {\color{green} h},{\color{blue} \mathcal{D} _{\mathrm{train}}} \right) -L\left( {\color{green} h},{\color{red} \mathcal{D} _{\mathrm{all}}} \right) \right|\le \delta /2</script><p>数学证明如下:</p>
-<script type="math/tex; mode=display">
-L\left(h^{\text {train }}, \mathcal{D}_{\text {all }}\right) \leq L\left(h^{\text {train }}, \mathcal{D}_{\text {train }}\right)+\delta / 2</script><script type="math/tex; mode=display">
-\leq L\left(h^{a l l}, \mathcal{D}_{\operatorname{train}}\right)+\delta / 2</script><script type="math/tex; mode=display">
-\leq L\left(h^{\text {all }}, \mathcal{D}_{\text {all }}\right)+\delta / 2+\delta / 2=L\left(h^{\text {all }}, \mathcal{D}_{\text {all }}\right)+\delta</script><p>我们将满足上面的这个式子叫做好的训练资料，把没有满足上面这个式子的叫做坏的资料，然后我们将其分成一个个训练集，在下图中蓝色是好的训练资料，橙色是坏的训练资料：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003081.png" alt="image-20220726123257415" style="zoom: 50%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003080.png" alt="image-20220725180421975" style="zoom:67%;" />
+<p>所以我们到这一步就确定了我们的未知函数，如上图所示，接下来，便是我们的参数确定方法即损失函数的确定。我们将损失函数设定成错误判断的累计，有如下函数:<br>
+$$<br>
+L(h, \mathcal{D})=\frac{1}{N} \sum_{n=1}^{N} l\left(h, x^{n}, \hat{y}^{n}\right)<br>
+$$<br>
+我们看到这个函数L的里面有一个l函数，这个函数有三个参数，x是数据集D中的图片，y是该图片所对应的正确的生物。所以我们可以得到这个三个参数的函数为：<br>
+$$<br>
+\text{If  }  f_h\left( x^{\mathrm{n}} \right) \ne \mathrm{\hat{y}}^{\mathrm{n}},, \text{ , } \text{Output 1}<br>
+\ \text{Otherwise , Output 0}<br>
+\<br>
+$$<br>
+在这个函数的选择上，我们也可以用cross-entropy 但是为了方便，我们还是使用上面的方法定义Loss。</p>
+<p>我们再来看训练集相关的事情，我们假设可以收集到全宇宙的宝可梦与神奇宝贝，我们就可以将这些收集到资料，进行训练。之后就会得到理想的参数选择，我们设为h:<br>
+$$<br>
+{\color{red} h^{all}}=\mathrm{arg}\min_h L\left( h,{\color{red} \mathcal{D} _{all}} \right)<br>
+$$<br>
+但去掉这个假设，其实我们不能得到所有宝可梦与数码宝贝的图片，因为会出新的生物。这个时候，我们只有部分训练资料，我们进行训练，这个时候我们可以得到：<br>
+$$<br>
+{\color{blue} h^{\mathrm{train}}}=\mathrm{arg}\min_h L\left( h,{\color{blue} \mathcal{D} _{\mathrm{train}}} \right)<br>
+$$<br>
+我们所希望的是这个h-train尽量的靠近h-all。我们自行设置一个阈值，如果这两者之差小于这个阈值我们就认定这个模型好：<br>
+$$<br>
+\text{We want } L\left( {\color{blue} h^{\mathrm{train}}},{\color{red} \mathcal{D} _{all}} \right) -L\left( {\color{red} h^{all}},{\color{red} \mathcal{D} _{all}} \right) \le \delta<br>
+$$<br>
+这个时候我们探究哪一种D-train可以满足条件，我们验证发现<strong>存在</strong>一个h满足如下规律：<br>
+$$<br>
+\forall {\color{green} h}\in \mathcal{H} ,\left| L\left( {\color{green} h},{\color{blue} \mathcal{D} <em>{\mathrm{train}}} \right) -L\left( {\color{green} h},{\color{red} \mathcal{D} <em>{\mathrm{all}}} \right) \right|\le \delta /2<br>
+$$<br>
+数学证明如下:<br>
+$$<br>
+L\left(h^{\text {train }}, \mathcal{D}</em>{\text {all }}\right) \leq L\left(h^{\text {train }}, \mathcal{D}</em>{\text {train }}\right)+\delta / 2<br>
+$$</p>
+<p>$$<br>
+\leq L\left(h^{a l l}, \mathcal{D}_{\operatorname{train}}\right)+\delta / 2<br>
+$$</p>
+<p>$$<br>
+\leq L\left(h^{\text {all }}, \mathcal{D}<em>{\text {all }}\right)+\delta / 2+\delta / 2=L\left(h^{\text {all }}, \mathcal{D}</em>{\text {all }}\right)+\delta<br>
+$$</p>
+<p>我们将满足上面的这个式子叫做好的训练资料，把没有满足上面这个式子的叫做坏的资料，然后我们将其分成一个个训练集，在下图中蓝色是好的训练资料，橙色是坏的训练资料：</p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003081.png" alt="image-20220726123257415" style="zoom: 50%;" />
 <p>我们想要知道所有坏的数据所占的比例有多大，如果一个点一个点算会太麻烦。我们在一片区域中，只要存在一个可以弄坏数据的h我们就称之为坏数据，所以我们可以有以下范围的框定：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003082.png" alt="image-20220726151158001" style="zoom: 50%;" /></p>
-<p>我们可以看到每个区域的概论是可以算出来的，比如说h1区域的概率就是以h1为参数的L（h，D-train）的概率。考虑到每个区域的概率是由重叠的，所以我们不能直接将各个区域的概率相加，所以我们取并集。而该并集一定小于所有概率面积之和。</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-P\left(\mathcal{D}_{\text {train }} \text { is } \boldsymbol{b a d}\right) &=\bigcup_{h \in \mathcal{H}} P\left(\mathcal{D}_{\text {train }} \text { is bad due to } h\right) \\
-& \leq \sum_{h \in \mathcal{H}} P\left(\mathcal{D}_{\text {train }} \text { is bad due to } h\right)
-\end{aligned}</script><p>有统计学概率的知识，我们可以得到：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-&\leq \sum_{h \in \mathcal{H}} 2 \exp \left(-2 N \varepsilon^{2}\right) \\
-&=|\mathcal{H}| \cdot 2 \exp \left(-2 N \varepsilon^{2}\right)
-\end{aligned}</script><p>我们如何要让这个P（D-train is bad）尽可能的小呢？有两种方法：第一种是缩小|H|，即缩小可以选择的方程的数目（别忘了前面所讲的H的意义）。第二种是增加N即增加训练资料的数目。</p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003082.png" alt="image-20220726151158001" style="zoom: 50%;" />
+<p>我们可以看到每个区域的概论是可以算出来的，比如说h1区域的概率就是以h1为参数的L（h，D-train）的概率。考虑到每个区域的概率是由重叠的，所以我们不能直接将各个区域的概率相加，所以我们取并集。而该并集一定小于所有概率面积之和。<br>
+$$<br>
+\begin{aligned}<br>
+P\left(\mathcal{D}<em>{\text {train }} \text { is } \boldsymbol{b a d}\right) &amp;=\bigcup</em>{h \in \mathcal{H}} P\left(\mathcal{D}<em>{\text {train }} \text { is bad due to } h\right) \<br>
+&amp; \leq \sum</em>{h \in \mathcal{H}} P\left(\mathcal{D}<em>{\text {train }} \text { is bad due to } h\right)<br>
+\end{aligned}<br>
+$$<br>
+有统计学概率的知识，我们可以得到：<br>
+$$<br>
+\begin{aligned}<br>
+&amp;\leq \sum</em>{h \in \mathcal{H}} 2 \exp \left(-2 N \varepsilon^{2}\right) \<br>
+&amp;=|\mathcal{H}| \cdot 2 \exp \left(-2 N \varepsilon^{2}\right)<br>
+\end{aligned}<br>
+$$<br>
+我们如何要让这个P（D-train is bad）尽可能的小呢？有两种方法：第一种是缩小|H|，即缩小可以选择的方程的数目（别忘了前面所讲的H的意义）。第二种是增加N即增加训练资料的数目。</p>
 <p>但我们发现这两种方法其实是鱼与熊掌不可兼得的方法，如下图所示：</p>
 <p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003083.png" alt="image-20220726152625940"></p>
 <p>而我们如何做到鱼与熊掌兼得（调参）呢？深度学习！！</p>
-<h3 id="卷积神经网络-Convolutional-Neural-Networks-CNN"><a href="#卷积神经网络-Convolutional-Neural-Networks-CNN" class="headerlink" title="卷积神经网络 (Convolutional Neural Networks, CNN)"></a>卷积神经网络 (Convolutional Neural Networks, CNN)</h3><h4 id="第一种理解方式（神经元版）"><a href="#第一种理解方式（神经元版）" class="headerlink" title="第一种理解方式（神经元版）"></a>第一种理解方式（神经元版）</h4><p>卷积神经网络是为图片设计的神经网络，当然不是说只能用于图片，我们等会会提到。首先我们假设有一张100x100的图片，我们需要识别这个图片，那么我们就需要将其转化成Tensor，我们就需要将图片分成RGB三个通道，每个通道都有100x100的数字。如下图所示：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003084.png" alt="image-20220723144656588" style="zoom: 80%;" /></p>
+<h3 id="卷积神经网络-Convolutional-Neural-Networks-CNN">卷积神经网络 (Convolutional Neural Networks, CNN)</h3>
+<h4 id="第一种理解方式（神经元版）">第一种理解方式（神经元版）</h4>
+<p>卷积神经网络是为图片设计的神经网络，当然不是说只能用于图片，我们等会会提到。首先我们假设有一张100x100的图片，我们需要识别这个图片，那么我们就需要将其转化成Tensor，我们就需要将图片分成RGB三个通道，每个通道都有100x100的数字。如下图所示：</p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003084.png" alt="image-20220723144656588" style="zoom: 80%;" />
 <p>我们将这三个通道的所有数据都拉长放入一个列向量里面。按照通常的处理方法我们接着需要进入Fully Connected Network，但是我们仔细想想就会发现，如果要是别图中的物体是什么的话就需要将这个物体的特征识别出来，这个特征肯定不是整张图片，这样我们就可以将一部分神经元负责一部分。我们人类其实也是这个方法去辨识物体，我们观察物体的特征，然后做出判断。</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003085.jpg" alt="乌鸦还是猫" style="zoom:50%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003085.jpg" alt="乌鸦还是猫" style="zoom:50%;" />
 <p>针对这种特性，我们让每一组神经元只观察部分（Receptive field）：</p>
 <p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003086.png" alt="image-20220723145915740"></p>
 <p>不同的Receptive field可以有重叠（overlapped），因为如果一个特征在两个区域的交界处就不能很好的起到检测的作用。在CNN中我们通常来说都会去看三个通道的数值，所以我们在描述的时候只描述它的平面数值。我们在一次检测中平移这个Receptive field,每次移动的步长我们叫做：stride,我们从开始移动到结束的时候，我们去考虑移动结束的时候，有的时候不会是完全的覆盖，会超出去一部分，我们把超出去的这一部分就叫做：Padding，而Padding的填充方法有很多，常见的是全部补充成0，或者全部区域取平均，或者部分区域取平均。</p>
 <p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003087.png" alt="image-20220723150650412"></p>
 <p>我们继续思考，在同一张图片，每一图片的不同特征很有可能出现在不同的区域，比如说一张景点打卡照，要检测其中的人脸，但人脸不一定出现在完全相同的区域。</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003088.png" alt="image-20220723151035895" style="zoom:67%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003088.png" alt="image-20220723151035895" style="zoom:67%;" />
 <p>这就引入了我们的下一个概念：<strong>共用参数</strong></p>
 <p>在最开始我们不同的区域是为了检测物体的特征，现在我们共用参数，即将不同Receptive field传递到神经元的权重设为一致，这是一种将模型的伸缩性减少的方法，但是对于图片的检测即为有用。需要注意的是，我们共用参数，但这不代表神经元输出的值完全相等。其实我们每<strong>一组</strong>Receptive field其实对应了一组参数，而我们把这些参数叫做：Filter</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003089.png" alt="image-20220723152349986" style="zoom: 80%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003089.png" alt="image-20220723152349986" style="zoom: 80%;" />
 <p>说了这么多，我们来总结一下，Fully Connected的网络弹性是最大的，但是对于特定领域的识别是由缺陷的，而我们加入Receptive Field，进一步减少了模型的弹性，而最后一步的Parameter Sharing更是限制了它的弹性。</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003090.png" alt="image-20220723152741069" style="zoom:67%;" /></p>
-<h4 id="第二种理解方式（过滤器）"><a href="#第二种理解方式（过滤器）" class="headerlink" title="第二种理解方式（过滤器）"></a>第二种理解方式（过滤器）</h4><p>我们先假设图片都是两个通道的，我们假设有很多过滤器（Filter），去扫面整张图片，我们的过滤器里面就装着图片的部分特征，如鸟嘴部分或者人脸部分。我们把这个过滤器放在图片的各个位置上相对的位置做内乘（Inner product），我们就能的到一个数值，这个数值越大呢，就代表这个区域与filter越相似。</p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003090.png" alt="image-20220723152741069" style="zoom:67%;" />
+<h4 id="第二种理解方式（过滤器）">第二种理解方式（过滤器）</h4>
+<p>我们先假设图片都是两个通道的，我们假设有很多过滤器（Filter），去扫面整张图片，我们的过滤器里面就装着图片的部分特征，如鸟嘴部分或者人脸部分。我们把这个过滤器放在图片的各个位置上相对的位置做内乘（Inner product），我们就能的到一个数值，这个数值越大呢，就代表这个区域与filter越相似。</p>
 <p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003092.png" alt="image-20220723153707217"></p>
 <p>这只是一个过滤器的结果，我们有多少个过滤器就可以叠多少层，我们把这个处理的结果叫做：Feature Map。其实我们折磨处理完，还是一个“图片“，只是这个图片不是三个通道而是上一个卷积层的Filter数目。通过这个方法，我们可以叠很多的卷积层：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003093.png" alt="image-20220723154244569" style="zoom:80%;" /></p>
-<h4 id="两个理解方法的对比"><a href="#两个理解方法的对比" class="headerlink" title="两个理解方法的对比"></a>两个理解方法的对比</h4><div class="table-container">
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003093.png" alt="image-20220723154244569" style="zoom:80%;" />
+<h4 id="两个理解方法的对比">两个理解方法的对比</h4>
 <table>
 <thead>
 <tr>
@@ -664,31 +765,34 @@ P\left(\mathcal{D}_{\text {train }} \text { is } \boldsymbol{b a d}\right) &=\bi
 </tr>
 </tbody>
 </table>
-</div>
 <p><strong>其实是一样的。</strong></p>
 <p>要额外提一下的方法是：<strong>Pooling</strong>。实际上是一种化简，如下图所示：</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003094.png" alt="image-20220723155029664" style="zoom:80%;" /></p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003095.png" alt="image-20220723155048379" style="zoom:80%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003094.png" alt="image-20220723155029664" style="zoom:80%;" />
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003095.png" alt="image-20220723155048379" style="zoom:80%;" />
 <p>我们知道不同的图片如果把所有的像素拿掉一半的话，其实图片的特征大概率还是存在的，所以我们每次Polling的时候就选取一片区域然后对该区域进行一个运算（取最高或者取平均），传导到下一层。但polling存在的理由很大一部分是因为，为了节省计算的资源，但在今天也是有很多模型没有Polling的。</p>
-<h2 id="Lecture-4"><a href="#Lecture-4" class="headerlink" title="Lecture 4"></a>Lecture 4</h2><h3 id="自注意力机制-Self-attention"><a href="#自注意力机制-Self-attention" class="headerlink" title="自注意力机制(Self-attention)"></a>自注意力机制(Self-attention)</h3><h4 id="基本模型框架"><a href="#基本模型框架" class="headerlink" title="基本模型框架"></a>基本模型框架</h4><p>我们前面所说的所有深度网路模型都是基于一个向量输入，但是无法处理多个向量输入的问题，如不同图片像素的处理，不同语句文段的处理。要处理以上的信息需要有多个向量输入。再说输出的类型，我们常见的输出是，给模型喂入N个向量，结果返回N个结果，这些结果可能是类别或者数字或者其他类型。也有可能输出一个类别或回归结果，最后还有一种可能是输出不定类的结果个数。</p>
+<h2 id="Lecture-4">Lecture 4</h2>
+<h3 id="自注意力机制-Self-attention">自注意力机制(Self-attention)</h3>
+<h4 id="基本模型框架">基本模型框架</h4>
+<p>我们前面所说的所有深度网路模型都是基于一个向量输入，但是无法处理多个向量输入的问题，如不同图片像素的处理，不同语句文段的处理。要处理以上的信息需要有多个向量输入。再说输出的类型，我们常见的输出是，给模型喂入N个向量，结果返回N个结果，这些结果可能是类别或者数字或者其他类型。也有可能输出一个类别或回归结果，最后还有一种可能是输出不定类的结果个数。</p>
 <p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003096.png" alt="image-20220729161524674">我们着重学习关于N个输入，然后输出N个结果相关的问题。对于这种输入与输出数目一样多的类型我们叫做：Sequence Labeling。我们在HW2中对于每一段语音讯号，我们对前后的单词都作为输入的向量，以此来考虑其他输入对于本输入的影响。这种方法也有局限性，如果像是HW2中的如果我们考虑所有Sequence也足够，因为一个Sequence足够小，显然这种方式不是一种很好方法，因为如果我们的Sequence足够长的话就会很棘手。我们需要一个新的方法来考虑所有的Sequence。</p>
-<p><strong>新的方法就叫做：Self-attention</strong> </p>
+<p><strong>新的方法就叫做：Self-attention</strong></p>
 <p>对于以前的方法是直接把所有的Sequence通过一个Fully-connect的Network。那如果我们加一层让他考虑所有的input再通过FC就可以处理我们前面的问题。当然我们通过FC中的得到的结果可以继续通过一个Self-attention考虑所有的Sequence。</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003097.png" alt="image-20220730114620543" style="zoom:67%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003097.png" alt="image-20220730114620543" style="zoom:67%;" />
 <p>接下来我们探究这个Self-attention是如何运作的。我们以输入a1为例，我们<strong>首先</strong>需要考虑的就是a1与其他向量输入的关系。因为我们说过我们不可能考虑一整个Sequence所以我们要有所侧重，考虑重要的vector忽略不重要的。往下一步就是如何决定两个向量之间的关系的问题。</p>
 <p>比较常见的处理方法有两种：第一种是Dot-product，第二种是Additive。</p>
 <p>我们常用的是点乘，也就是Dot-product。我们先对两个输入的向量乘以一个矩阵，对于结果点乘。而第二种方法就是对于矩阵相乘完了之后进行相加之后经过一个激活函数tanh最后过一个transform。</p>
 <p>不管哪一种情况我们最终得到的这个数值我们就称为<strong>attention score</strong>。对了，我们在计算相关度的时候，也要计算对于自己的相关度。</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003098.png" alt="image-20220730115747317" style="zoom:67%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003098.png" alt="image-20220730115747317" style="zoom:67%;" />
 <p>当a1得到了所有的attention score之后会进行一个Soft-max。当然不一定用这个激励函数，也可以用别的。再往后我们就要利用这个经过激励函数的attention score进行计算关联。</p>
 <p>接下来我们对于所有的input乘以一个矩阵，然后分别于每个经过激励函数的attention score进行相乘，再把他们所有的都加起来得到b1。</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003099.png" alt="image-20220730120800262" style="zoom:67%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003099.png" alt="image-20220730120800262" style="zoom:67%;" />
 <p>我们从线性代数的角度来看这一系列的过程，其实就是对input做一系列的矩阵变换，得到output。计算机则需要帮我们确定我们的W矩阵。</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003100.png" alt="image-20220730121930117" style="zoom:67%;" /></p>
-<h4 id="改进版本"><a href="#改进版本" class="headerlink" title="改进版本"></a>改进版本</h4><p>我们有一个改进的版本，即对于每个q，k，v产生两个分支，再让这两个分支的b通过一个W矩阵，得到最后的b。</p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003100.png" alt="image-20220730121930117" style="zoom:67%;" />
+<h4 id="改进版本">改进版本</h4>
+<p>我们有一个改进的版本，即对于每个q，k，v产生两个分支，再让这两个分支的b通过一个W矩阵，得到最后的b。</p>
 <p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003101.png" alt="image-20220730122536455"></p>
 <p>我们回顾上面的模型，我们发现我们并没有考虑input顺序（位置的信息），我们上面的a1,a2,a3只是一种标注，我们并不知道a1于a3之间的距离是否大于a1到a2。没有存在谁在sequence的最前面或者最后。所以我们对模型要输入Positional Encoding，即对于每一个input a,都有一个向量的加入。每一个不同的位置都有它专属的位置。对于Positional Encoding的方法各有不同还是一个待解决的问题。</p>
-<p><img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003102.png" alt="image-20220730163359256" style="zoom:67%;" /></p>
+<img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301281003102.png" alt="image-20220730163359256" style="zoom:67%;" />
 
               
             </div>
@@ -714,9 +818,9 @@ P\left(\mathcal{D}_{\text {train }} \text { is } \boldsymbol{b a d}\right) &=\bi
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/01/10/%E6%89%98%E7%A6%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Toefl Learning Note">
+                      <a href="/2023/01/10/%E6%89%98%E7%A6%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Toefl Learning Note</span>
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
