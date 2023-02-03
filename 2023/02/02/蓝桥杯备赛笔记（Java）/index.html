@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://static.shiyanlou.com/lanqiao/frontend/dist/img/contest.378a5cb.png">
 <meta property="article:published_time" content="2023-02-02T08:53:09.012Z">
-<meta property="article:modified_time" content="2023-02-02T09:04:33.032Z">
+<meta property="article:modified_time" content="2023-02-03T09:06:14.323Z">
 <meta property="article:author" content="John Wen">
 <meta property="article:tag" content="DS">
 <meta name="twitter:card" content="summary_large_image">
@@ -191,7 +191,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          939 字
+          3.2k 字
         
       </span>
     
@@ -202,7 +202,7 @@
         
         
         
-          6 分钟
+          21 分钟
         
       </span>
     
@@ -281,15 +281,62 @@
 </li>
 </ul>
 <h2 id="1-31学习笔记">1.31学习笔记</h2>
-<p>在最开始使用Eclipse的时侯，先测试OJ，用的A+B问题。输入阻塞问题值得记录一下。在输入一个不定长的数据的时侯，使用<code>.hasNext()</code>进行判断的时侯会发现程序其实是没办法判断是否真正结束的，这个时候我们需要使用快捷键结束流的重定向的。但是在测试系统的时侯会自动重定向，所以不需要太在意这个。</p>
+<p>在最开始使用Eclipse的时侯，先测试OJ，用的A+B问题。输入阻塞问题值得记录一下。在输入一个不定长的数据的时侯，使用<code>.hasNext()</code>进行判断的时侯会发现程序其实是没办法判断是否真正结束的，这个时候我们需要使用快捷键结束流的重定向的,详细见：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/realzhangsan/p/15659025.html" title="Java Scanner的hasNext()方法">1</a>。但是在测试系统的时侯会自动重定向，所以不需要太在意这个。</p>
 <p>于此同时，为了方便以后测试数据的使用，学习了如何使用重定向文本输入：</p>
 <img src="https://jwj-1256942975.cos.ap-nanjing.myqcloud.com/Blog202301311424625.png" alt="Eclipse如何重定向" style="zoom:67%;" />
-<p>参考资料：</p>
+<p>参考资料（可能不会显示）：</p>
 <h3 id="蓝桥杯2022初赛-星期计算">[蓝桥杯2022初赛] 星期计算</h3>
 <p>题目：<a target="_blank" rel="noopener" href="http://oj.ecustacm.cn/problem.php?id=2056">http://oj.ecustacm.cn/problem.php?id=2056</a></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.math.BigInteger;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>&#123;<br>	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] strings)</span> </span>&#123;<br>		BigInteger numBigInteger = BigInteger.valueOf(<span class="hljs-number">20</span>).pow(<span class="hljs-number">22</span>).add(BigInteger.valueOf(-<span class="hljs-number">1</span>));<br><br>		<span class="hljs-keyword">int</span> res = numBigInteger.mod(BigInteger.valueOf(<span class="hljs-number">7</span>)).intValue();<br>		<span class="hljs-keyword">if</span> (res != <span class="hljs-number">0</span>) &#123;<br>			System.out.println(res);<br>		&#125; <span class="hljs-keyword">else</span> &#123;<br>			System.out.println(<span class="hljs-number">7</span>);<br>		&#125;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>这道题主要考察的是使用java处理超大数的能力，写的过程参考了<a target="_blank" rel="noopener" href="https://www.cnblogs.com/realzhangsan/p/15659025.html" title="Java Scanner的hasNext()方法">1</a>，Java中处理超大数使用的类叫做BigInteger，详细用法见<a target="_blank" rel="noopener" href="http://t.csdn.cn/1RDUH" title="Java中BigInteger类的使用方法详解">2</a>。</p>
-<p>参考资料：</p>
+<p>参考资料（可能不会显示）：</p>
+<h2 id="2-3学习笔记">2.3学习笔记</h2>
+<p>今天的第一道题目是昨天没写完的，今天终于写完了，中途一直报错，颇有我刚学算法竞赛时的感觉。简单总结一下吧：</p>
+<h3 id="蓝桥杯2022初赛-山">[蓝桥杯2022初赛] 山</h3>
+<p>题目：<a target="_blank" rel="noopener" href="http://oj.ecustacm.cn/problem.php?id=2057">http://oj.ecustacm.cn/problem.php?id=2057</a></p>
+<p>打表代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">mountain</span> </span>&#123;<br>	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>		Long countLong = <span class="hljs-keyword">new</span> Long(<span class="hljs-number">0</span>);<br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">long</span> i = <span class="hljs-number">2022</span>; i &lt;= <span class="hljs-number">2022222022</span>; i++) &#123;<br>			<span class="hljs-keyword">if</span> (check(i)) &#123;<br>				countLong++;<br>				System.out.println(i);<br>			&#125;<br>		&#125;<br>		System.out.println(countLong);<br>	&#125;<br><br>	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">check</span><span class="hljs-params">(<span class="hljs-keyword">long</span> num)</span> </span>&#123;<br>		<span class="hljs-keyword">int</span> shorts = <span class="hljs-number">0</span>;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">long</span> i = <span class="hljs-number">1</span>; i &lt;= num; i *= <span class="hljs-number">10</span>) &#123;<br>			shorts++;<br>		&#125;<br>		<span class="hljs-keyword">int</span>[] digs = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[shorts];<br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; shorts; i++) &#123;<br>			digs[i] = (<span class="hljs-keyword">int</span>) (num % <span class="hljs-number">10</span>);<br>			num /= <span class="hljs-number">10</span>;<br>		&#125;<br>		<span class="hljs-keyword">int</span> length = digs.length;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; length / <span class="hljs-number">2</span>; i++) &#123;<br>			<span class="hljs-keyword">if</span> (digs[i] != digs[length - i - <span class="hljs-number">1</span>] || digs[i] &gt; digs[i + <span class="hljs-number">1</span>]) &#123;<br>				<span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;<br>			&#125;<br>		&#125;<br>		<span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;<br>	&#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<p>本题是一道填空题（正确答案3138），所以在计算回文数的时侯，使用的最古老的方式：穷举。对于题目所给的范围，每一个数字进行判断，需要注意的是，在本题中处理数字位数保存的时侯，频频出错，在正式的考场上不应该有这么低级的错误。首先是没有注意到题目所给的数据范围所以没有使用<code>long</code>，在中途想起来了，但是在控制循环的<code>for</code>旁边并没有改过来，导致解题缓慢。在此处，重新记忆一下int的取值范围：<strong>-2,147,483,648至2,147,483,647(20亿)</strong></p>
+<p>另外，在解题的过程中，搜到了如何应对程序打表慢的问题，一个小技巧就是要学会使用提取变量的功能<code>Shift + Alt + L</code>，在计算比如说数组大小或者字符串大小的时侯，要在循环体外面进行计算，而不是每次循环一边就计算一边。</p>
+<p>本题的另一种思路是利用构造来做，在基于题目的限制进行生成数字然后统计便可，但我个人猜测会有漏掉的生成，于是还是采用了暴力枚举。</p>
+<h3 id="蓝桥杯2022初赛-字符统计">[蓝桥杯2022初赛] 字符统计</h3>
+<p>今天的第二题，题目地址：<a target="_blank" rel="noopener" href="http://oj.ecustacm.cn/problem.php?id=2058">http://oj.ecustacm.cn/problem.php?id=2058</a></p>
+<p>代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;<br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>&#123;<br>	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>		String inputString = <span class="hljs-keyword">new</span> String();<br>		Scanner scanner = <span class="hljs-keyword">new</span> Scanner(System.in);<br>		inputString = scanner.nextLine();<br>		scanner.close();<br>		<span class="hljs-keyword">int</span>[] bucket = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">26</span>];<br>		<span class="hljs-keyword">int</span> length = inputString.length();<br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; length; i++) &#123;<br>			bucket[inputString.charAt(i)-<span class="hljs-string">&#x27;A&#x27;</span>]++;<br>		&#125;<br>		<span class="hljs-keyword">int</span> max = <span class="hljs-number">1</span>;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; bucket.length; i++) &#123;<br>			<span class="hljs-keyword">if</span> (bucket[i]&gt;max) &#123;<br>				max = bucket[i];<br>			&#125;<br>		&#125;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; bucket.length; i++) &#123;<br>			<span class="hljs-keyword">if</span> (bucket[i]==max) &#123;<br>				<span class="hljs-keyword">char</span> tmp = (<span class="hljs-keyword">char</span>) (<span class="hljs-string">&#x27;A&#x27;</span>+(<span class="hljs-keyword">char</span>)i);<br>				System.out.print(tmp);<br>			&#125;<br>		&#125;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>本题做的算是比较顺利，很清楚的知道自己要干什么，首先是读取字符串，然后遍历整个字符串，把每个出现的字符串放到桶里，最后找到最大的桶，然后输出最大的桶之中的字母。</p>
+<p>需要注意的是，在处理<code>char-&gt;int</code>的时侯，要注意在java中如何进行<code>char tmp = (char) ('A'+i);</code>最后的转换应该发生在赋值或者计算的时侯，我每次只是想着在int后面直接强制转型，但是没有注意到两个char不能直接相加。</p>
+<p>值得一提的是本题我以为会考到<code>StringBuffer</code>，但其实没有，已经忘了字符串相关的一些知识点了，在此回顾一下。</p>
+<h3 id="String、StringBuffer、StringBuilder的区别1：">String、StringBuffer、StringBuilder的区别<a target="_blank" rel="noopener" href="https://www.cnblogs.com/realzhangsan/p/15659025.html" title="Java Scanner的hasNext()方法">1</a>：</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>String</th>
+<th>StringBuffer</th>
+<th>StringBuilder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>执行速度</td>
+<td>最差</td>
+<td>其次(字符串连接操作中效率要比String高</td>
+<td>最高</td>
+</tr>
+<tr>
+<td>线程安全</td>
+<td>线程安全</td>
+<td>线程安全</td>
+<td>线程不安全</td>
+</tr>
+<tr>
+<td>使用场景</td>
+<td>少量字符串操作</td>
+<td>多线程环境下的大量操作</td>
+<td>单线程环境下的大量操作</td>
+</tr>
+</tbody>
+</table>
 
               
             </div>
