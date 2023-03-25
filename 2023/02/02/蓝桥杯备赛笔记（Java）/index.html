@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://static.shiyanlou.com/lanqiao/frontend/dist/img/contest.378a5cb.png">
 <meta property="article:published_time" content="2023-02-02T08:53:09.012Z">
-<meta property="article:modified_time" content="2023-02-17T10:44:16.364Z">
+<meta property="article:modified_time" content="2023-03-25T12:08:34.599Z">
 <meta property="article:author" content="John Wen">
 <meta property="article:tag" content="DS">
 <meta name="twitter:card" content="summary_large_image">
@@ -191,7 +191,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          5.6k 字
+          8.7k 字
         
       </span>
     
@@ -202,7 +202,7 @@
         
         
         
-          36 分钟
+          55 分钟
         
       </span>
     
@@ -353,6 +353,48 @@
 <p>AC代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>&#123;<br><br>	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>		Scanner scanner = <span class="hljs-keyword">new</span> Scanner(System.in);<br>		<span class="hljs-keyword">int</span> T = scanner.nextInt();<br>		Double[] resFloats = <span class="hljs-keyword">new</span> Double[T];<br><br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; T; i++) &#123;<br>			resFloats[i] = ans(scanner.nextInt());<br>		&#125;<br>		scanner.close();<br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; T; i++) &#123;<br>			System.out.printf(<span class="hljs-string">&quot;%.3f\n&quot;</span>, resFloats[i]);<br>		&#125;<br>	&#125;<br><br>	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">ans</span><span class="hljs-params">(<span class="hljs-keyword">int</span> num)</span> </span>&#123;<br>		<span class="hljs-keyword">double</span> l = Math.pow(num, <span class="hljs-number">0.3</span>);<br>		<span class="hljs-keyword">double</span> r = Math.pow(num, <span class="hljs-number">0.5</span>);<br><br>		<span class="hljs-keyword">while</span> (r - l &gt; <span class="hljs-number">0.0001</span>) &#123;<br>			<span class="hljs-keyword">double</span> mid = (l + r) / <span class="hljs-number">2</span>;<br>			<span class="hljs-keyword">double</span> Mid_Pow = Math.pow(mid, <span class="hljs-number">3</span>);<br>			<span class="hljs-keyword">if</span> (Mid_Pow &lt; num) &#123;<br>				l = mid;<br>			&#125; <span class="hljs-keyword">else</span> &#123;<br>				r = mid;<br>			&#125;<br>		&#125;<br>		<span class="hljs-keyword">return</span> r;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>本题是二分代码的模板题目，由于我们的寻找目标是在最后的时侯找到这个立方根的数字，并且根据题目所给的条件我们确定二分的迭代条件为：(r - l &gt; 0.0001) 在每一二分求解的过程中，我们都要进行对比，结果与理想解的大小关系。在此处，理想解为需要开立方根的数字，而结果为我们设定的数字的三次方。</p>
+<h2 id="3-25-学习笔记">3.25 学习笔记</h2>
+<p>发现了自己在集合的使用上有很大的问题，故重新学习一下Java中的集合问题。主要要关注的问题是：</p>
+<ol>
+<li>如何创建一个集合，这个集合可以包含我想要的类型</li>
+<li>如何查找某个元素在集合中是否存在</li>
+</ol>
+<h3 id="集合">集合</h3>
+<p>当我们需要存储一些元素，但是不需要考虑元素的顺序，也不需要存储重复的元素时，Java中的Set就是一个很好的选择。</p>
+<p>Set是一个接口，它继承自Collection接口，因此它继承了Collection中的大部分方法。Set中的元素是不按照特定的顺序排列的，并且不允许重复元素。</p>
+<p>Java中常用的Set实现类有：</p>
+<ol>
+<li>HashSet：基于哈希表实现的Set，元素无序，但是插入、删除、查找元素的速度非常快。</li>
+<li>TreeSet：基于红黑树实现的Set，元素按照自然顺序排列（例如数字从小到大），或者根据构造函数传入的Comparator进行排序。</li>
+<li>LinkedHashSet：基于哈希表和双向链表实现的Set，元素按照插入顺序排列，速度比TreeSet快，但是不支持按照自然顺序或者自定义顺序排列元素。</li>
+</ol>
+<p>使用Set时需要注意：</p>
+<ol>
+<li>Set不允许重复元素，如果插入了重复元素，后续插入操作会被忽略。</li>
+<li>Set中的元素必须实现hashCode()和equals()方法，以便能够进行元素的查找和去重。</li>
+<li>HashSet和LinkedHashSet允许插入null元素，但是TreeSet不允许。</li>
+<li>TreeSet中的元素必须实现Comparable接口，或者在构造函数中传入一个Comparator对象，以便能够进行元素的排序。</li>
+</ol>
+<p>可以利用Java中的Set方法来保存一个二维坐标系上的一些整数点，可以将每个点看作一个元素，然后将这些元素添加到Set中。由于Set不允许重复元素，我们可以利用元素的唯一性来保证不会出现重复的点。</p>
+<p>具体的实现方法如下：</p>
+<ol>
+<li>定义一个Point类来表示二维坐标系上的点，Point类需要实现hashCode()和equals()方法，以便能够进行元素的查找和去重。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs java">javaCopy codepublic <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span> </span>&#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> x;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> y;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Point</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y)</span> </span>&#123;<br>        <span class="hljs-keyword">this</span>.x = x;<br>        <span class="hljs-keyword">this</span>.y = y;<br>    &#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">hashCode</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> Objects.hash(x, y);<br>    &#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span><span class="hljs-params">(Object obj)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span> (obj == <span class="hljs-keyword">this</span>) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (!(obj <span class="hljs-keyword">instanceof</span> Point)) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;<br>        &#125;<br>        Point other = (Point) obj;<br>        <span class="hljs-keyword">return</span> x == other.x &amp;&amp; y == other.y;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<ol>
+<li>创建一个Set对象，例如HashSet。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">javaCopy code<br>Set&lt;Point&gt; points = <span class="hljs-keyword">new</span> HashSet&lt;&gt;();<br></code></pre></td></tr></table></figure>
+<ol>
+<li>将每个点作为一个元素添加到Set中。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java">javaCopy codePoint p1 = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);<br>Point p2 = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);<br>Point p3 = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);<br>points.add(p1);<br>points.add(p2);<br>points.add(p3);  <span class="hljs-comment">// 添加p3时会被忽略，因为p1和p3相等</span><br></code></pre></td></tr></table></figure>
+<p>现在，points中包含了两个点：(1, 2)和(3, 4)。可以使用Set的方法来操作这些点，例如遍历、查找、删除等。</p>
+<p><strong>注意：<strong>需要在Point类中手动输入hashCode()和equals()方法。Eclipse可以</strong>自动生成</strong>这些方法的模板，只需要在Point类中右键点击，选择“Source” -&gt; “Generate hashCode() and equals()…”，然后根据提示选择需要比较的字段即可。如果不手动实现hashCode()和equals()方法，那么默认情况下，Java会使用对象的地址来生成哈希值和比较对象是否相等，这样可能会导致相同内容的对象被认为是不相等的。</p>
+<h3 id="蓝桥杯2021初赛-货物摆放">[蓝桥杯2021初赛] 货物摆放</h3>
+<p>这题费了老大的功夫，终于搞出来了。再次有一次again，复习了BigInt的用法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> 货物摆放test;<br><br><span class="hljs-keyword">import</span> java.math.BigInteger;<br><span class="hljs-keyword">import</span> java.util.ArrayList;<br><span class="hljs-keyword">import</span> java.util.List;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>&#123;<br>	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>		BigInteger n = <span class="hljs-keyword">new</span> BigInteger(<span class="hljs-string">&quot;2021041820210418&quot;</span>);<br>		BigInteger n_powhalf = <span class="hljs-keyword">new</span> BigInteger(<span class="hljs-string">&quot;44955999&quot;</span>);<span class="hljs-comment">// 这个地方求的是上面内个数的开方，系统计算器求的</span><br>		List&lt;BigInteger&gt; factors = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<span class="hljs-comment">// 这个地方的链表用来存求的因子</span><br>		<span class="hljs-keyword">for</span> (BigInteger i = BigInteger.ONE; i.multiply(i).compareTo(n) &lt;= <span class="hljs-number">0</span>; i = i.add(BigInteger.ONE)) &#123;<br>			<span class="hljs-comment">// 在这个for里面遍历，每次都看能不能整除，如果可以的话，就把这个数和被他整除的数字都放入链表中</span><br>			<span class="hljs-comment">// 由于BigInteger的特性，所以在for中的条件控制就是i*i&lt;=n,这个其实应该写成：i&lt;n.pow(0.5)</span><br>			<span class="hljs-keyword">if</span> (n.mod(i).equals(BigInteger.ZERO)) &#123;<br>				factors.add(i);<br>				<span class="hljs-keyword">if</span> (!i.multiply(i).equals(n)) &#123;<br>					factors.add(n.divide(i));<br>				&#125;<br>			&#125;<br>		&#125;<br>		<span class="hljs-comment">// 下面这个代码调用了它本身的排序函数，为了方便之后的三重for</span><br>		factors.sort(<span class="hljs-keyword">null</span>);<br>		<span class="hljs-keyword">for</span> (BigInteger i : factors) &#123;<br>			System.out.println(i);<br>		&#125;<br>		<span class="hljs-keyword">int</span> counts = <span class="hljs-number">0</span>;<span class="hljs-comment">// 用于计数</span><br>		<span class="hljs-keyword">for</span> (BigInteger i : factors) &#123;<br>			<span class="hljs-comment">// 抽出第一个数字</span><br>			<span class="hljs-keyword">for</span> (BigInteger j : factors) &#123;<br>				<span class="hljs-comment">// 抽出第二个数字</span><br>				<span class="hljs-keyword">for</span> (BigInteger k : factors) &#123;<br>					<span class="hljs-comment">// 抽滴三个数字</span><br>					<span class="hljs-keyword">if</span> (i.multiply(j).multiply(k).equals(n)) &#123;<br>						<span class="hljs-comment">// 判断这三个数字是不是等于所求</span><br>						<span class="hljs-comment">// 由于整个因子的链表只有128个，所以三重for的时间复杂度也不算太大</span><br>						counts++;<br>					&#125;<br>				&#125;<br>			&#125;<br>		&#125;<br>		System.out.println(counts);<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>这题的关键就在于有没有想到如何使用因子来简化计算，因子其实就是可能的结果，在这题中，可能的结果是有范围的，这就导致很容易在小范围内求出解。<strong>以后在做题的过程中要考虑答案的空间，以及有没有可能先求出部分答案的组合</strong>。</p>
 
               
             </div>
